@@ -1,0 +1,31 @@
+---
+layout: default
+---
+<style>body {background-color: #fafafa;}</style>
+
+<div class="jumbotron">
+  <div class="container">
+
+    <h1>Engineering Blog</h1>
+    <p>Technical blog posts on Android internals.</p>
+    <a class="btn btn-primary" href="{{ site.baseurl }}/feed-engineering.xml">{% include svg/rss_feed.svg %} RSS Feed</a>
+  </div>
+</div>
+
+<div class="container post">
+  {% for post in site.engineering reversed %}
+  <div class="card">
+
+    <div class="card-body">
+      <h6>{{ post.excerpt }}</h6>
+      <h2 class="card-title"><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h2>
+      <p class="card-text">{% include svg/clock.svg %} {{ post.date | date: '%B %d, %Y' }}{% if post.author %} {% include svg/author.svg %} {{ post.author }}{% endif %}</p>
+    </div>
+
+    <div class="card-button">
+      <a href="{{ site.baseurl }}{{ post.url }}" class="btn btn-link text-primary">Read More</a>
+    </div>
+
+  </div>
+  {% endfor %}
+</div>
