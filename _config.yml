@@ -67,6 +67,6 @@ exclude:
   - CNAME
 
 collections:
-  changelog:
+  engineering:
     output: true
     permalink: /changelog/:path/
