@@ -17,13 +17,13 @@ author: melles1991
 * **Thanks**: @Dhina_17, @mylove90, @IDGAF88, @kostyajrz, @johnmart19;
 
 
-##INFORMATION
+## INFORMATION
 MoKee is based on the Android Open Source Project (AOSP).
 
-##CHANGELOG
-★ Rewrite LED driver
-★ Set selinux label /firmware
-★ Set DT2W permissions
-★ Drop useless mkbootimg args
-★ Update sepolice denials (#16)
-★ TEST Fix random Fingerprint touches 
+## CHANGELOG
+* Rewrite LED driver
+* Set selinux label /firmware
+* Set DT2W permissions
+* Drop useless mkbootimg args
+* Update sepolice denials (#16)
+* TEST Fix random Fingerprint touches 
