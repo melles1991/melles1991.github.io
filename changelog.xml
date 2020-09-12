@@ -4,10 +4,10 @@ layout: null
 <?xml version="1.0" encoding="utf-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>LineageOS Engineering Blog</title>
-    <description>Technical blog posts on Android internals</description>
+    <title>All changelog</title>
+    <description>All changelog</description>
     <link>{{ site.url }}</link>
-    {% for post in site.engineering reversed %}
+    {% for post in site.changelog reversed %}
         <item>
             <title>{{ post.title | xml_escape }}</title>
             <description> {{ post.excerpt  | xml_escape }}</description>
