@@ -2,12 +2,12 @@
 layout: post
 title: MOKEE 100.0 | FBE | A10
 date: 2020-09-13
-category: changelog
+category: engineering
 excerpt: 'melles1991'
 author: melles1991
 ---
 
-![hero]({{site.baseurl}}/images/changelog/Xiaomi-Redmi-7-mokee.jpg){: .blog_post_image }
+![hero]({{site.baseurl}}/images/engineering/Xiaomi-Redmi-7-mokee.jpg){: .blog_post_image }
 
 * **Date**: 2020-09-13;
 * **Status**: NIGHTLY;

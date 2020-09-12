@@ -69,4 +69,4 @@ exclude:
 collections:
   engineering:
     output: true
-    permalink: /changelog/:path/
+    permalink: /engineering/:path/

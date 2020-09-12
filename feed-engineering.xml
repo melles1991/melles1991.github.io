@@ -7,7 +7,7 @@ layout: null
     <title>All changelog</title>
     <description>All changelog</description>
     <link>{{ site.url }}</link>
-    {% for post in site.changelog reversed %}
+    {% for post in site.engineering reversed %}
         <item>
             <title>{{ post.title | xml_escape }}</title>
             <description> {{ post.excerpt  | xml_escape }}</description>
