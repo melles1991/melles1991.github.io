@@ -5,7 +5,7 @@ date: 2020-09-13
 category: engineering
 excerpt: 'melles1991'
 author: melles1991
-disqus: true
+url: https://download.mokeedev.com/onclite.html
 ---
 
 ![hero]({{site.baseurl}}/images/engineering/Xiaomi-Redmi-7-mokee.jpg){: .blog_post_image }
