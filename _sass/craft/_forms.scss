@@ -1,20 +1,4 @@
 @charset "UTF-8";
-
-// stylelint-disable selector-no-qualifying-type
-
-  .form-check-input {
-    .was-validated &:#{$state},
-    &.is-#{$state} {
-      ~ .form-check-label {
-        color: $color;
-      }
-
-      ~ .#{$state}-feedback,
-      ~ .#{$state}-tooltip {
-        display: block;
-      }
-    }
-  }
   
   // Checkboxes and radios
 //
