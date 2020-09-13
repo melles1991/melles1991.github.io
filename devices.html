@@ -17,12 +17,14 @@ function toggleDiscontinued()
   });
 }
 </script>
-
-<div class="container page">
-
-  <h1>{{ page.title }}</h1>
-
-  Rows with a lower opacity are no longer officially supported and the pages exist for reference only.<br/>
+<style>body {background-color: #fafafa;}</style>
+<div class="jumbotron">
+  <div class="container">
+     <h1>{{ page.title }}</h1>
+     <p>Rows with a lower opacity are no longer officially supported and the pages exist for reference only.</p>
+  </div>
+</div>
+<div class="container post">
   You can hide them by unchecking the following checkbox:<br/><br/>
 
 {% assign devices = "" | split: " " %}
