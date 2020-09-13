@@ -7,7 +7,7 @@ layout: null
     <title>CraftRom</title>
     <description>Module from the CraftRom team - Blog</description>
     <link>{{ site.url }}</link>
-    {% for post in site.categories.module %}
+    {% for post in site.categories.file %}
         <item>
             <title>{{ post.title | xml_escape }}</title>
             <description> {{ post.excerpt  | xml_escape }}</description>

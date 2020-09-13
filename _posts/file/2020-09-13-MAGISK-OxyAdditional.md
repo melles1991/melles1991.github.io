@@ -1,7 +1,7 @@
 ---
 layout: post
 title: OxyAdditional
-category: blog
+category: file
 excerpt: MAGISK MODULE
 author: melles1991
 durl: https://github.com/melles1991/melles1991.github.io/releases/download/magisk/MAGISK.OxyAdditional_v0.6.zip
