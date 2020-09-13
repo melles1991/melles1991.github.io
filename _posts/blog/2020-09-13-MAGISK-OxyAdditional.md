@@ -1,8 +1,8 @@
 ---
 layout: post
-title: [MAGISK] OxyAdditional
+title: OxyAdditional
 category: blog
-excerpt: news
+excerpt: MAGISK MODULE
 author: melles1991
 durl: https://github.com/melles1991/melles1991.github.io/releases/download/magisk/MAGISK.OxyAdditional_v0.6.zip
 ---
