@@ -1,4 +1,4 @@
- @charset "UTF-8";
+@charset "UTF-8";
 
 // Typography
 //
@@ -22,14 +22,12 @@ $font-size-base:             1rem !default;
 //$font-size-xs:               .75rem !default;
 //
 
-$font-size-h1:                 3.3125rem !default;
-$font-size-h2:                 2.25rem !default;
+$font-size-h1:                 3rem !default;
+$font-size-h2:                 2rem !default;
 $font-size-h3:                 1.5625rem;
 $font-size-h4:                 1.125rem !default;
 $font-size-h5:                 1.0625rem !default;
 $font-size-h6:                 0.75rem !default;
-$font-paragraph:               1rem !default;
-$font-size-navbar:             1rem !default;
 
 // $font-size-h1:                $font-size-base * 2.5 !default;
 // $font-size-h2:                $font-size-base * 2 !default;
@@ -42,13 +40,7 @@ $font-paragraph:               16px !default;
 $font-size-navbar:             16px !default;
 $font-size-small:              12px !default;
 
-$display1-size: 7rem !default;
-$display2-size: 3.5rem !default;
-$display3-size: 2.8125rem !default;
-$display4-size: 2.125rem !default;
 
-$headings-margin-bottom:       .5rem !default;
-$headings-font-weight:         400 !default;
 //
 $display1-size: 7rem !default; // md display-4 112px was 6rem;
 $display2-size: 3.5rem !default; // md display-3 56px was 5.5rem
