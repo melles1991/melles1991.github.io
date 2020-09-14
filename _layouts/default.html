@@ -17,38 +17,8 @@
   </head>
 
   <body id="page-top">
-    <nav class="navbar fixed-top navbar-expand-lg bg-white">
-      <div class="container">
-        <div class="navbar-translate">
-          <a class="navbar-brand" href="{{ site.baseurl }}/">
-            {% include svg/craftrom.svg %}
-          </a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="navbar-toggler-icon"></span>
-            <span class="navbar-toggler-icon"></span>
-            <span class="navbar-toggler-icon"></span>
-          </button>
-        </div>
-        <div id="navbarNav" class="collapse navbar-collapse">
-          <ul class="nav navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link" href="{{ site.baseurl }}/blog/">Blog</a></li>
-			<li class="nav-item">
-              <a class="nav-link" href="{{ site.baseurl }}/file/">Download</a></li>
-            <li class="nav-item">
-              <a class="nav-link" href="{{ site.baseurl }}/devices/">Devices</a></li>
-            <li class="nav-item">
-              <a class="nav-link" href="{{ site.baseurl }}/about/">About</a></li>
-            <li class="nav-item">
-              <a class="nav-link" href="{{ site.baseurl }}/community/">Community</a></li>
-            <li class="nav-item">
-              <a class="nav-link" href="{{ site.baseurl }}/legal/">Legal</a></li>
-            <li class="nav-item">
-          </ul>
-        </div>
-      </div>
-    </nav>
+
+    {% include layout/navbar.html %}
 
     <div id="main" role="main">
 
@@ -64,27 +34,14 @@
       {{ content }}
     </div>
 
-    <footer class="footer">
-      <div class="container">
-        <div class="row">
-          <div class="col-md footer-logo">
-            {% include svg/craftrom_logo.svg %}
-            <p class="footer-text">
-              <b>&copy; 2020 - {{ site.time | date: '%Y' }} The CraftRom </b><br />
-              PayPal: <a target="_blank" href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=2AA4WX3SX45YS&source=url">paypal.me/CraftRom</a> <br />
-            </p>
-          </div>
-          <div class="col-md">
-            <div class="footer-icons">
-              {% include footer-icons.html %}
-            </div>
-          </div>
-        </div>
-      </div>
-    </footer>
+    {% include layout/footer.html %}
+
+    {% unless page.disable_anchor %}<script>anchors.add().remove('h1');</script>{% endunless %}
 
     {% include analytics.html %}
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E=" crossorigin="anonymous"></script>
+    <script src="{{ site.baseurl }}/assets/js/main.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/3.2.2/anchor.min.js" integrity="sha256-WofcoLT8gToeaSmVRe28qpnlFxdBJH1n4K6Bk3YowvU=" crossorigin="anonymous"></script>
     <script src="{{ site.baseurl }}/assets/js/material-kit.js"></script>
     {% if page.scrolljs %}
     <script>
