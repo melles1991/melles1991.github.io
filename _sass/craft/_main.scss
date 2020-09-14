@@ -4,6 +4,57 @@
   padding-top: 1rem;
 }
 
+// Tables
+
+
+.table td,
+.table th {
+  word-break: normal;
+}
+
+.table.device tbody th {
+  word-break: break-all !important;
+}
+
+.deviceinfo.table {
+  margin-top: 20px;
+  border-radius: 50px;
+
+  th {
+    word-break: normal !important;
+    &[colspan='2'] {
+      text-align: center;
+    }
+  }
+
+  td {
+    text-align: right;
+    word-break: break-word;
+  }
+  ul, ol {
+    text-align: left;
+  }
+  tr.image td {
+    text-align: center;
+    img {
+      max-height: 400px;
+      max-width: 100%;
+    }
+  }
+
+}
+
+@include media-breakpoint-up(lg) {
+  table.table.device thead th {
+    &.first{
+      width: 50%
+    }
+    &.last{
+      width: 25%
+    }
+  }
+}
+
 // Devices page - vendor list
 .vendor-container {
   -webkit-column-count: 4; /* Chrome, Safari, Opera */
