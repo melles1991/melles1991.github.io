@@ -15,7 +15,7 @@ layout: default
             <div class="summary">{{page.summary}}</div>
            {% endif %}
 
-            {% unless toc == false %}
+            {% unless page.toc == false %}
             {% include toc.html %}
             {% endunless %}
 
