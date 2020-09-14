@@ -1,32 +1,86 @@
 ---
 ---
 /*!
- * Bootstrap v4.0.0 (https://getbootstrap.com)
- * Copyright 2011-2018 The Bootstrap Authors
- * Copyright 2011-2018 Twitter, Inc.
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
- * ==========================================
- * Material Kit - Copyright (c) 2018 Creative Tim
- * Licensed under MIT (https://github.com/creativetimofficial/material-kit/blob/master/LICENSE.md)
+
+ =========================================================
+ * Material Kit - v2.0.5
+ =========================================================
+
+ * Product Page: https://www.creative-tim.com/product/material-kit
+ * Copyright 2018 Creative Tim (http://www.creative-tim.com)
+
+ =========================================================
+
+ * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
  */
 
-@import "craft/variables";
-@import "craft/mixins";
+ @import "craft/variables";
+ @import "craft/mixins";
+ @import "material-kit/core-bootstrap";
+ @import "material-kit/reboot";
 
-@import "craft/jumbotron";
-@import "craft/grid";
-@import "craft/navbar";
-@import "craft/footer";
-@import "craft/buttons";
-@import "craft/cards";
-@import "craft/posts";
-@import "craft/sections";
-@import "craft/misc";
-@import "craft/ripple";
-@import "craft/type";
-@import "craft/responsive";
-@import "craft/utilities";
-@import "craft/tables";
-@import "craft/main"
+ // Core Components
+ @import "material-kit/layout";
+ @import "material-kit/buttons";
+ @import "material-kit/misc";
+ @import "material-kit/checkboxes";
+ @import "material-kit/custom-forms";
+ @import "material-kit/switches";
+ @import "material-kit/radios";
+ //@import "material-kit/carousel";
+ @import "material-kit/forms";
+ @import "material-kit/input-group";
+ @import "material-kit/list-group";
+ @import "material-kit/nav";
+ @import "material-kit/images";
+ @import "material-kit/navbar";
+ @import "material-kit/badges";
+ @import "material-kit/alerts";
+ @import "material-kit/pagination";
+ @import "material-kit/pills";
+ @import "material-kit/info-areas";
+ @import "material-kit/type";
+ @import "material-kit/tabs";
+ //@import "material-kit/tooltip";
+ //@import "material-kit/popover";
+ //@import "material-kit/modal";
+ @import "material-kit/dropdown";
+ @import "material-kit/drawer";
+ //@import "material-kit/progress";
+ //@import "material-kit/togglebutton";
+ @import "material-kit/ripples";
+ @import "material-kit/headers";
+ @import "material-kit/footers";
 
+ // Cards
+ @import 'material-kit/cards';
+// @import 'material-kit/cards/card-carousel';
+// @import 'material-kit/cards/card-login';
+// @import 'material-kit/cards/card-plain';
 
+ // Core Plugins
+ //@import 'material-kit/plugins/plugin-datetime-picker';
+ //@import 'material-kit/plugins/plugin-nouislider';
+
+ // Sections and Example pages
+ //@import "material-kit/example-pages";
+ @import "material-kit/responsive";
+
+ @import "craft/main";
+ @import "craft/syntax"
+ @import "craft/jumbotron";
+ @import "craft/grid";
+ @import "craft/navbar";
+ @import "craft/footer";
+ @import "craft/buttons";
+ @import "craft/cards";
+ @import "craft/posts";
+ @import "craft/sections";
+ @import "craft/misc";
+ @import "craft/ripple";
+ @import "craft/type";
+ @import "craft/responsive";
+ @import "craft/utilities";
+ @import "craft/tables";
+ @import "craft/main";
