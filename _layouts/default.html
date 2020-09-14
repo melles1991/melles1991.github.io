@@ -20,11 +20,20 @@
 
   </head>
 
-  <body>
+  <body id="page-top">
 
     {% include layout/navbar.html %}
 
-    <div class="main-content">
+    <div id="main" role="main">
+
+      <noscript>
+        <div class="no-script">
+          <div class="container">
+            For full functionality of this site it is necessary to enable JavaScript.
+            Here are the <a href="http://www.enable-javascript.com/" target="_blank"> instructions how to enable JavaScript in your web browser</a>.
+          </div>
+        </div>
+      </noscript>
       {{ content }}
     </div>
 
