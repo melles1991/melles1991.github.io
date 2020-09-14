@@ -25,7 +25,15 @@ function toggleDiscontinued()
   </div>
 </div>
 <div class="container page">
-  
+
+{% assign devices = "" | split: " " %}
+{% for device in site.data.devices %}
+{% assign devices = devices | push: device[1] %}
+{% endfor %}
+
+{% assign sorted = devices | sort_natural: 'name' | sort_natural: 'vendor' %}
+{% assign lastVendor = "" %}
+
 Select a vendor to jump to:<br/>
 
 <div class="vendor-container">
