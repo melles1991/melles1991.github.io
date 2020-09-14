@@ -24,25 +24,8 @@ function toggleDiscontinued()
      <p>Rows with a lower opacity are no longer officially supported and the pages exist for reference only.</p>
   </div>
 </div>
-<div class="container post">
-  You can hide them by unchecking the following checkbox:<br/><br/>
-
-{% assign devices = "" | split: " " %}
-{% for device in site.data.devices %}
-{% assign devices = devices | push: device[1] %}
-{% endfor %}
-
-{% assign sorted = devices | sort_natural: 'name' | sort_natural: 'vendor' %}
-{% assign lastVendor = "" %}
-
-<div class="form-check form-check-inline">
-  <label class="form-check-label">
-    <input class="form-check-input" type="checkbox" onclick="toggleDiscontinued()" checked="checked">Show discontinued devices<span class="form-check-sign">
-        <span class="check"></span>
-    </span>
-  </label>
-</div><br/><br/>
-
+<div class="container page">
+  
 Select a vendor to jump to:<br/>
 
 <div class="vendor-container">
