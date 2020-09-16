@@ -51,98 +51,7 @@ definitions:
     - x86
     - x86_64
     type: string
-  valid_branches:
-    description: Valid branches a device can be on
-    enum:
-    - 13.0
-    - 14.1
-    - 15.1
-    - 16.0
-    - 17.1
-    type: number
-  valid_dimension:
-    oneOf:
-    - "$ref": "#/definitions/dimension_string"
-    - description: Array of maps of model numbers dimension
-      examples:
-      - SM-9000A: 254 mm (10 in)
-      - SM-9000B:  127 mm (5 in)
-      items:
-        additionalProperties:
-          "$ref": "#/definitions/dimension_string"
-        description: Map of model number to dimension
-        type: object
-      type: array
-  valid_networks:
-    description: All valid networks a device can support
-    enum:
-    - 2G GSM
-    - 2G CDMA
-    - 3G UMTS
-    - 3G CDMA2000
-    - 4G LTE
-    - 5G
-    type: string
-  valid_peripherals:
-    description: All valid peripherals a device can have
-    items:
-      enum:
-      - A-GPS
-      - Accelerometer
-      - Audio Coprocessor
-      - Barometer
-      - Color spectrum sensor
-      - Compass
-      - Depth Sensor
-      - Dot Projector
-      - Dual SIM
-      - Dual front speakers
-      - Dual side NFC
-      - Dual-frequency GNSS
-      - Essential Accessories
-      - FM radio
-      - Fingerprint reader
-      - BeiDou
-      - Galileo
-      - GLONASS
-      - GPS
-      - NAVIC
-      - SBAS
-      - QZSS
-      - Gesture sensor
-      - Gyroscope
-      - HDMI
-      - Hall effect sensor
-      - Hardware keyboard
-      - Heart rate sensor
-      - Hygrometer
-      - IR blaster
-      - IR camera
-      - Iceview Cases
-      - Infrared sensor
-      - Light sensor
-      - MHL
-      - MHL 2.0
-      - MHL HDMI
-      - Mobility DisplayPort (MyDP)
-      - Motion Coprocessor
-      - Moto Mods
-      - NFC
-      - Pedometer
-      - Proximity sensor
-      - Qi wireless charging
-      - Radar
-      - RGB ambient light
-      - SNS integration
-      - Sensor hub
-      - Thermometer
-      - Ultrasound proximity sensor
-      - USB OTG
-      - Wi-Fi Display
-      type: string
-    type: array
-    uniqueItems: True
-properties:
+ properties:
   architecture:
     "$id": "/properties/architecture"
     description: The CPU architecture of the device.
@@ -167,44 +76,6 @@ properties:
       type: array
     - enum:
       - None
-  bluetooth:
-    "$id": "/properties/bluetooth"
-    properties:
-      profiles:
-        items:
-          description: Bluetooth profile
-          enum:
-          - A2DP
-          - A2DP + aptX
-          - A2DP + aptX HD
-          type: string
-        minItems: 1
-        type: array
-      spec:
-        description: Bluetooth specification
-        enum:
-        - '1.0'
-        - '1.0B'
-        - '1.1'
-        - '1.2'
-        - '2.0'
-        - '2.0 + EDR'
-        - '2.1'
-        - '2.1 + EDR'
-        - '3.0'
-        - '3.0 + HS'
-        - '4.0'
-        - '4.0 + LE'
-        - '4.1'
-        - '4.2'
-        - '5'
-        type: string
-    required:
-    - spec
-    type: object
-  carrier:
-    "$carrier": "/properties/carrier"
-    type: string
   codename:
     "$id": "/properties/codename"
     minLength: 1
@@ -253,9 +124,6 @@ properties:
     "$id": "/properties/cpu_freq"
     minLength: 3
     type: string
-  current_branch:
-    "$id": "/properties/current_branch"
-    "$ref": "#/definitions/valid_branches"
   custom_recovery_codename:
     "$id": "/properties/custom_recovery_codename"
     type: string

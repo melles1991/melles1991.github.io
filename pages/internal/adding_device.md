@@ -1,22 +1,12 @@
 ---
 sidebar: home_sidebar
-title: How to add a new device to the wiki
+title: How to add a new device 
 folder: internal
 permalink: addingdevice-howto.html
 search: exclude
 tags:
  - internal
 ---
-
-## Requirements for adding a device
-
-The LineageOS wiki provides instructions based on the assumption that your device has got its device tree/kernel
-under the [LineageOS GitHub organization](https://github.com/LineageOS), and that it supports building Lineage 13.0 or higher. If your device meets
-both those requirements, follow the instructions below to get your device set up.
-
-## Setting up the wiki locally
-
-See [contributing using repo](contributing.html#using-repo) for detailed instructions on setting up the wiki locally.
 
 ## Adding your device
 
@@ -62,17 +52,6 @@ For `tech` you can use:
   - Model2: {removable: True, capacity: 2000, tech: 'Li-Po'}
   ```
 
-* `bluetooth`: The proper format is either `{spec: '<version>'}` with `version` being the version of the BT protocol supported, or `{spec: '<version>', profiles: '<profiles>'}` when your device
-  supports additional profiles. These are the possible values:
-
-  ```
-  For the specification:
-  {{ properties.bluetooth.properties.spec.enum | join: ', ' }}
-
-  For the optional profiles:
-  {{ properties.bluetooth.properties.profiles.items.enum | join: ', ' }}
-  ```
-
 * `cpu`: The CPU type of the device, can be one of the following list:
 
   ```
@@ -84,8 +63,6 @@ For `tech` you can use:
 * `image`: The image located under `images/devices/` to use for this device. Instructions on adding an image are below.
 * `install_method`: Used to determine the recovery install template to use. Templates can be found in \_includes/templates/recovery\_install\_`install_method`.md.
 * `kernel`: The repo name of the kernel - for example, `android_kernel_oneplus_msm8974`.
-* `network`: The frequencies and channels for the various network technologies. You can look them up [here](https://www.frequencycheck.com/models/). Keep the non-available technologies empty.
-* `peripherals`: A list of peripherals available on the device, can be any of the following list:
 
   ```
   {{ definitions.valid_peripherals.items.enum | join: ", " }}
@@ -102,24 +79,6 @@ For `tech` you can use:
 
 * `tree`: The repo name of the device tree - for example, `android_device_oneplus_bacon`.
 * `vendor_short`: The vendor name used for the device tree - for example, `oneplus`.
-
-
-Additionally there are some optional properties which you might not need, but in case you do, they are documented below:
-
-* `carrier`: If the device was released for a specific carrier, the name of that carrier. Remove this if not used!
-* `custom_recovery_link`: A custom recovery link in case no official recovery exists for the specific device or it doesn't work properly. Remove this if not used!
-* `custom_recovery_codename`: If an official recovery exists for the device, but it uses a different codename, specify the used one here. Remove this if not used!
-* `custom_unlock_cmd`: Used if the command to unlock your device via fastboot is different than `fastboot oem unlock`. Remove this if not used!
-* `format_on_upgrade`: Used if the device needs to wiped on major LineageOS version due to unfixable device specific issues. Remove if not used!
-* `is_ab_device`: Used if the device has an A/B partition scheme. Remove this if not applicable to your device!
-* `is_unlockable`: Set to false if there is no official method to unlock the bootloader. A hint will appear on the device's overview and install page. If this property is not set, it defaults to `True`
-* `required_bootloader`: Specify the bootloader versions which are required to install LineageOS. If no special requirement exists, remove this line! Example:
-
-  ```
-  required_bootloader: [Version1, Version2]
-  ```
-
-* `uses_twrp`: Used if the device doesn't use Lineage Recovery (the default)
 
 {% include alerts/note.html content="If you need to assign a value to one of the fields which is not allowed by the time you create your change, update the schema validator or contact us to add it" %}
 
@@ -141,7 +100,3 @@ ruby ./test/validate.rb
 ```
 
 If the script doesn't give you an output, all the validated fields have a proper format. Otherwise, read the messages carefully to see which fields have to be corrected.
-
-## Submitting your device
-
-After verifying the device-specific pages, commit and upload your changes to Gerrit, and add the "Wiki Editors" group as reviewers.
