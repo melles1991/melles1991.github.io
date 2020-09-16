@@ -7,19 +7,14 @@
 {% include alerts/warning_bootloader_not_unlockable.html %}
 {% endif %}
 
-## Get LineageOS for the {{ device.vendor }} {{ device.name }}
-{% if device.maintainers != empty %}
-[Get the builds here](https://download.lineageos.org/{{ device.codename }})
-{% endif %}
-
 ## Guides
 
 - [Installation]({{ "devices/" | append: device.codename | append: "/install" | relative_url }})
 - [Build for yourself]({{ "devices/" | append: device.codename | append: "/build" | relative_url }})
-- [Update to a newer build of the same LineageOS version]({{ "devices/" | append: device.codename | append: "/update" | relative_url }})
+- [Update to a newer build of the same Android version]({{ "devices/" | append: device.codename | append: "/update" | relative_url }})
 {% assign versions_count = device.versions|size -%}
 {%- if versions_count > 1 -%}
-- [Upgrade to a higher version of LineageOS (e.g. lineage-15.1 -> lineage-16.0)]({{ "devices/" | append: device.codename | append: "/upgrade" | relative_url }})
+- [Upgrade to a higher version of Android (e.g. Android 9 -> Android 10)]({{ "devices/" | append: device.codename | append: "/upgrade" | relative_url }})
 {%- endif -%}
 
 {% if device.note_show and device.note_show == true %}
@@ -36,7 +31,3 @@
 * **Download**: {{ device.download_boot }}
 {% endif %}
 {% endif %}
-
-## Find help online
-
-You can find assistance with LineageOS on [our subreddit](https://reddit.com/r/LineageOS), or in [#LineageOS on freenode](https://webchat.freenode.net/?channels=LineageOS).
