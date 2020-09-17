@@ -46,9 +46,11 @@ There are no recovery installation instructions for this discontinued device.
 {%- endif -%}
 {%- endcapture -%}
 
-
+{% if device.maintainers != empty %}
 1. Download the [Custom Android Rom](https://melles1991.github.io/devices/{{ device.codename }}) that you would like to install.
-
+{% else %}
+1. Download the [Custom Android Rom](https://melles1991.github.io/devices/{{ device.codename }}) that you would like to install.
+{% endif %}
     * Optionally, download additional application packages such as [Google Apps]({{ "gapps.html" | relative_url }}) (use the `{{ userspace_architecture }}` architecture).
 2. If you are not in recovery, reboot into recovery:
     * {{ device.recovery_boot }}
