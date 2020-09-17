@@ -1,6 +1,6 @@
 ---
 sidebar: home_sidebar
-title: Install LineageOS on onclite
+title: Install custom Android OS on onclite
 folder: install
 permalink: /devices/onclite/install
 device: onclite
