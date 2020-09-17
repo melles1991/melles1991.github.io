@@ -46,6 +46,7 @@ There are no recovery installation instructions for this discontinued device.
 {%- endif -%}
 {%- endcapture -%}
 
+
 1. Download the [Custom Android Rom](https://melles1991.github.io/devices/{{ device.codename }}) that you would like to install.
 
     * Optionally, download additional application packages such as [Google Apps]({{ "gapps.html" | relative_url }}) (use the `{{ userspace_architecture }}` architecture).
@@ -53,6 +54,7 @@ There are no recovery installation instructions for this discontinued device.
     * {{ device.recovery_boot }}
 3. Now tap **Wipe**.
 4. Now tap **Format Data** and continue with the formatting process. This will remove encryption and delete all files stored in the internal storage.
+
     {% include alerts/note.html content="If you want Google Apps on your device, you must follow this step **before** booting into LineageOS for the first time!" %}
 5. _(Optional)_: Root your device by installing [Magisk](https://github.com/topjohnwu/Magisk/releases/download/v20.4/Magisk-v20.4.zip).
 6. Once you have installed everything successfully, click the back arrow in the top left of the screen, then "Reboot system now".
