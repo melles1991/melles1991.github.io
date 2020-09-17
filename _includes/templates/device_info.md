@@ -10,8 +10,7 @@
 ## Guides
 
 - [Installation]({{ "devices/" | append: device.codename | append: "/install" | relative_url }})
-- [Build for yourself]({{ "devices/" | append: device.codename | append: "/build" | relative_url }})
-- [Update to a newer build of the same Android version]({{ "devices/" | append: device.codename | append: "/update" | relative_url }})
+- [How to submit a bug report]({{ site.baseurl }}/bugreport-howto)
 {% assign versions_count = device.versions|size -%}
 {%- if versions_count > 1 -%}
 - [Upgrade to a higher version of Android (e.g. Android 9 -> Android 10)]({{ "devices/" | append: device.codename | append: "/upgrade" | relative_url }})
