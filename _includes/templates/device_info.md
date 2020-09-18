@@ -33,5 +33,5 @@
 
 ## Rom list
 
-{% include templates/device_rom_list.html %}
+{% include device_rom_list.html %}
 
