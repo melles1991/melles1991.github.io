@@ -1,6 +1,6 @@
 {% assign rom = site.data.roms[page.rom] %}
 {% assign device = site.data.devices[page.device] %}
-
+{% if rom.rom_device != 'none' & rom.rom_device = device.codename %}
 <script type="text/javascript">
 function toggleDiscontinued()
 {
@@ -18,11 +18,10 @@ function toggleDiscontinued()
 
 
 {% assign roms = "" | split: " " %}
-{% if rom.rom_device != 'none' & rom.rom_device = device.codename %}
 {% for rom in site.data.roms %}
 {% assign roms = roms | push: rom[1] %}
 {% endfor %}
-{% endif %}
+
 
 {% assign sorted = roms | sort_natural: 'name' | sort_natural: 'rom_name' %}
 {% assign lastVendor = "" %}
@@ -58,4 +57,4 @@ function toggleDiscontinued()
 {% if sorted[forloop.index].rom_name != lastVendor %}{% endif %}</table>
 {% endfor %}
 
-
+{% endif %}
