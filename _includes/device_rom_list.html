@@ -17,9 +17,11 @@ function toggleDiscontinued()
 
 
 {% assign roms = "" | split: " " %}
+{% if rom.rom_device != 'none' %}
 {% for rom in site.data.roms %}
 {% assign roms = roms | push: rom[1] %}
 {% endfor %}
+{% endif %}
 
 {% assign sorted = roms | sort_natural: 'name' | sort_natural: 'rom_name' %}
 {% assign lastVendor = "" %}
