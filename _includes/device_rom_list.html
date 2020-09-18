@@ -16,7 +16,7 @@
     <th scope="col" class="last"><b>Type</b></th>
   </tr>
   </thead>
-{% endif %}
+
 {% if rom.rom_name == "OnePlus" %}{% assign romName = rom.rom_name | append: ' ' | append: rom.name %}
 {% else %}{% assign romName = rom.name %}{% endif %}
 {% assign url = append: rom_url %}
