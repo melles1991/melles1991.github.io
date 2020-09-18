@@ -30,3 +30,8 @@
 * **Download**: {{ device.download_boot }}
 {% endif %}
 {% endif %}
+
+## Rom list
+
+{% include templates/device_rom_list.html %}
+
