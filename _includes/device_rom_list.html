@@ -1,6 +1,5 @@
 {% assign device = site.data.devices[page.device] %}
 
-<div class="container page">
 
 {% assign roms = "" | split: " " %}
 {% for rom in site.data.roms %}
@@ -32,4 +31,4 @@
   </tr>
 {% if sorted[forloop.index].rom_name != lastRom %}</table>{% endif %}
 {% endfor %}
-</div>
+
