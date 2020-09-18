@@ -1,4 +1,19 @@
-{% assign device = site.data.devices[page.device] %}
+{% assign rom = site.data.roms[page.rom] %}
+
+<script type="text/javascript">
+function toggleDiscontinued()
+{
+  $('.discontinued').toggle();
+  $("table.rom").each(function () {
+    rom_name = $(this).attr("rom_name");
+    if ($(this).find("tbody > tr:visible").length == 0 && $(this).is(":visible")) {
+      $("*[rom_name=" + rom_name + "]").hide();
+    } else {
+      $("*[rom_name=" + rom_name + "]").show();
+    }
+  });
+}
+</script>
 
 
 {% assign roms = "" | split: " " %}
@@ -7,28 +22,49 @@
 {% endfor %}
 
 {% assign sorted = roms | sort_natural: 'name' | sort_natural: 'rom_name' %}
-{% assign lastRom = "" %}
+{% assign lastVendor = "" %}
+
+Select a vendor to jump to:<br/>
+
+<div class="vendor-container">
+{%- assign vendors = "" | split: " " %}
+{%- for rom in sorted %}
+{%- if rom.rom_name != lastVendor %}
+{%- assign vendors = vendors | push: rom.rom_name %}
+{%- assign lastVendor = rom.rom_name %}
+  <div rom_name="{{ lastVendor | slugify }}"><a href="#{{ lastVendor | slugify }}" rom_name="{{ lastVendor | slugify }}">{{ lastVendor }}</a></div>
+{%- endif %}
+{%- endfor %}
+</div>
+
+{% for rom in sorted %}
+{% if rom.rom_name != lastVendor %}
+{% assign lastVendor = rom.rom_name %}
+
+<h2 class="h3" id="{{ rom.rom_name | slugify }}" rom_name="{{ rom.rom_name | slugify }}">{{ rom.rom_name}}</h2>
+
 <table class="table rom" rom_name="{{ rom.rom_name | slugify }}">
   <thead>
   <tr>
-    <th scope="col" class="first"><b>Rom</b></th>
+    <th scope="col" class="first"><b>rom</b></th>
     <th scope="col"><b>Codename</b></th>
     <th scope="col" class="last"><b>Type</b></th>
   </tr>
   </thead>
-
+{% endif %}
 {% if rom.rom_name == "OnePlus" %}{% assign romName = rom.rom_name | append: ' ' | append: rom.name %}
 {% else %}{% assign romName = rom.name %}{% endif %}
-{% assign url = append: rom_url %}
+{% assign url = append: rom.rom_url | relative_url %}
 {%- if rom.rom_device != device.codename %}{% assign class="discontinued" %}
 {%- else %}
 {%- assign class="" %}
 {%- endif %}
   <tr class="{{ class }}">
     <th scope="row" onClick="location.href='{{ url }}'"><a href="{{ url }}">{{ romName }}</a></th>
-    <td onClick="location.href='{{ url }}'"><a href="{{ url }}">{{ device.codename }}</a></td>
+    <td onClick="location.href='{{ url }}'"><a href="{{ url }}">{{ rom.codename }}</a></td>
     <td>{{ rom.type | capitalize }}</td>
   </tr>
-{% if sorted[forloop.index].rom_name != lastRom %}</table>{% endif %}
+{% if sorted[forloop.index].rom_name != lastVendor %}</table>{% endif %}
+{% endfor %}
 
 
