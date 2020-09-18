@@ -9,26 +9,6 @@
 
 {% assign sorted = roms | sort_natural: 'name' | sort_natural: 'rom_name' %}
 {% assign lastRom = "" %}
-
-Select a rom name to jump to:<br/>
-
-<div class="rom_name-container">
-{%- assign rom_names = "" | split: " " %}
-{%- for rom in sorted %}
-{%- if rom.rom_name != lastRom %}
-{%- assign rom_names = rom_names | push: rom.rom_name %}
-{%- assign lastRom = rom.rom_name %}
-  <div rom_name="{{ lastRom | slugify }}"><a href="#{{ lastRom | slugify }}" rom_name="{{ lastRom | slugify }}">{{ lastRom }}</a></div>
-{%- endif %}
-{%- endfor %}
-</div>
-
-{% for rom in sorted %}
-{% if rom.rom_name != lastRom %}
-{% assign lastRom = rom.rom_name %}
-
-<h2 class="h3" id="{{ rom.rom_name | slugify }}" rom_name="{{ rom.rom_name | slugify }}">{{ rom.rom_name}}</h2>
-
 <table class="table rom" rom_name="{{ rom.rom_name | slugify }}">
   <thead>
   <tr>
@@ -41,7 +21,7 @@ Select a rom name to jump to:<br/>
 {% if rom.rom_name == "OnePlus" %}{% assign romName = rom.rom_name | append: ' ' | append: rom.name %}
 {% else %}{% assign romName = rom.name %}{% endif %}
 {% assign url = append: rom_url %}
-{%- if rom.maintainers == empty %}{% assign class="discontinued" %}
+{%- if rom.rom_device != devices.codename %}{% assign class="discontinued" %}
 {%- else %}
 {%- assign class="" %}
 {%- endif %}
