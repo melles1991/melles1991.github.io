@@ -1,4 +1,5 @@
 {% assign rom = site.data.roms[page.rom] %}
+{% assign device = site.data.devices[page.device] %}
 
 <script type="text/javascript">
 function toggleDiscontinued()
@@ -17,7 +18,7 @@ function toggleDiscontinued()
 
 
 {% assign roms = "" | split: " " %}
-{% if rom.rom_device != 'none' %}
+{% if rom.rom_device != 'none' & rom.rom_device = device.codename %}
 {% for rom in site.data.roms %}
 {% assign roms = roms | push: rom[1] %}
 {% endfor %}
