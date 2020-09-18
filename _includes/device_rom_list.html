@@ -27,10 +27,10 @@ function toggleDiscontinued()
 Select a vendor to jump to:<br/>
 
 <div class="vendor-container">
-{%- assign vendors = "" | split: " " %}
+{%- assign roms = "" | split: " " %}
 {%- for rom in sorted %}
 {%- if rom.rom_name != lastVendor %}
-{%- assign vendors = vendors | push: rom.rom_name %}
+{%- assign roms = roms | push: rom.rom_name %}
 {%- assign lastVendor = rom.rom_name %}
   <div rom_name="{{ lastVendor | slugify }}"><a href="#{{ lastVendor | slugify }}" rom_name="{{ lastVendor | slugify }}">{{ lastVendor }}</a></div>
 {%- endif %}
@@ -43,10 +43,10 @@ Select a vendor to jump to:<br/>
 
 <h2 class="h3" id="{{ rom.rom_name | slugify }}" rom_name="{{ rom.rom_name | slugify }}">{{ rom.rom_name}}</h2>
 
-<table class="table rom" rom_name="{{ rom.rom_name | slugify }}">
+<table class="table device" rom_name="{{ rom.rom_name | slugify }}">
   <thead>
   <tr>
-    <th scope="col" class="first"><b>rom</b></th>
+    <th scope="col" class="first"><b>Rom</b></th>
     <th scope="col"><b>Codename</b></th>
     <th scope="col" class="last"><b>Type</b></th>
   </tr>
@@ -64,7 +64,7 @@ Select a vendor to jump to:<br/>
     <td onClick="location.href='{{ url }}'"><a href="{{ url }}">{{ rom.codename }}</a></td>
     <td>{{ rom.type | capitalize }}</td>
   </tr>
-{% if sorted[forloop.index].rom_name != lastVendor %}</table>{% endif %}
+{% if sorted[forloop.index].rom_name != lastVendor %}{% endif %}</table>
 {% endfor %}
 
 
