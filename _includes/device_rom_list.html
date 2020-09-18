@@ -20,13 +20,13 @@
 {% if rom.rom_name == "OnePlus" %}{% assign romName = rom.rom_name | append: ' ' | append: rom.name %}
 {% else %}{% assign romName = rom.name %}{% endif %}
 {% assign url = append: rom_url %}
-{%- if rom.rom_device != devices.codename %}{% assign class="discontinued" %}
+{%- if rom.rom_device != device %}{% assign class="discontinued" %}
 {%- else %}
 {%- assign class="" %}
 {%- endif %}
   <tr class="{{ class }}">
     <th scope="row" onClick="location.href='{{ url }}'"><a href="{{ url }}">{{ romName }}</a></th>
-    <td onClick="location.href='{{ url }}'"><a href="{{ url }}">{{ devices.codename }}</a></td>
+    <td onClick="location.href='{{ url }}'"><a href="{{ url }}">{{ device }}</a></td>
     <td>{{ rom.type | capitalize }}</td>
   </tr>
 {% if sorted[forloop.index].rom_name != lastRom %}</table>{% endif %}
