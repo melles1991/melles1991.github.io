@@ -11,9 +11,18 @@
   </thead>
 
   <tr>
-    <th scope="row" onClick="location.href='{{ url }}'"><a href="{{ url }}">{{ romName }}</a></th>
-    <td onClick="location.href='{{ url }}'"><a href="{{ url }}">{{ device.codename }}</a></td>
-    <td>{{ device.type | capitalize }}</td>
+    {% if rom.rom_list != 'None' %}
+            {%- if rom.rom_list.first.size == 1 %}
+                {%- for model in rom.rom_list %}
+                
+                    {{ model.first[0] }}. 
+                        {% assign rom_list = model.first[1] %}
+                        {% include snippets/peripherals.html %}
+                {%- endfor %}
+            {%- else %}
+                {%- assign rom_list = rom.rom_list %}
+                {%- include snippets/peripherals.html %}
+            {%- endif %}
   </tr>
 
 </table>
