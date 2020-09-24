@@ -11,7 +11,6 @@
 {% for rom in sorted %}
 {% if rom.rom_name != lastVendor %}
 {% assign lastVendor = rom.rom_name %}
-<h2 class="h3" id="{{ rom.rom_name | slugify }}" rom_name="{{ rom.rom_name | slugify }}">{{ rom.rom_name}}</h2>
 <table class="table device" rom_name="{{ rom.rom_name | slugify }}">
   <thead>
   <tr>
@@ -20,7 +19,15 @@
     <th scope="col" class="last"><b>Type</b></th>
   </tr>
   </thead>
-{% endif %}
+
+{% if rom.rom_name == "Mokee OS" %}{% assign romName = rom.rom_name | append: ' ' | append: rom.name %}
+{% else %}{% assign romName = rom.name %}{% endif %}
+{% assign class="discontinued" %}
+
+  <tr class="{{ class }}">
+    <th scope="row" onClick="location.href='{{ url }}'"><a href="{{ url }}">{{ romName }}</a></th>
+    <td onClick="location.href='{{ url }}'"><a href="{{ url }}">{{ rom.codename }}</a></td>
+    <td>{{ rom.type | capitalize }}</td>
 
 
         <td>
@@ -38,5 +45,7 @@
                 {%- include snippets/peripherals.html %}
             {%- endif %}
         </td>
+
+{% endif %}
 {% if sorted[forloop.index].rom_name != lastVendor %}{% endif %}</table>
 {% endfor %}
