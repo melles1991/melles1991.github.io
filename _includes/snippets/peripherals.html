@@ -1,5 +1,7 @@
 <ul>
     {%- for rom_list in rom_list %}
-    <li>{{ rom_list }}</li>
+    {%- if rom.codename == rom_list
+<li>{{rome_name}}</li>
+    {%- endif %}
     {%- endfor %}
 </ul>
