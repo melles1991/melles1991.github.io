@@ -9,8 +9,6 @@
     <th scope="col" class="last"><b>Download</b></th>
   </tr>
   </thead>
-
-  <tr class="discontinued">
             {%- if rom.rom_list.first.size == 1 %}
                 {%- for model in rom.rom_list %}
                 
@@ -22,7 +20,5 @@
                 {%- assign rom_list = rom.rom_list %}
                 {%- include snippets/peripherals.html %}
             {%- endif %}
-  </tr>
-
 </table>
 {% endif %}
