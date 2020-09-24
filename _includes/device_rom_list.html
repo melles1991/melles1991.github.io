@@ -9,16 +9,15 @@
     <th scope="col" class="last"><b>Download</b></th>
   </tr>
   </thead>
-            {%- if rom.rom_list.first.size == 1 %}
-                {%- for model in rom.rom_list %}
-                
-                    {{ model.first[0] }}. 
-                        {% assign rom_list = model.first[1] %}
-                        {% include snippets/peripherals.html %}
-                {%- endfor %}
-            {%- else %}
-                {%- assign rom_list = rom.rom_list %}
-                {%- include snippets/peripherals.html %}
-            {%- endif %}
+    {%- if rom.rom_list.first.size == 1 %}
+        {%- for model in rom.rom_list %}
+            {{ model.first[0] }}. 
+            {% assign rom_list = model.first[1] %}
+            {% include snippets/peripherals.html %}
+        {%- endfor %}
+    {%- else %}
+            {%- assign rom_list = rom.rom_list %}
+            {%- include snippets/peripherals.html %}
+    {%- endif %}
 </table>
 {% endif %}
