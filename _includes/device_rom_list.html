@@ -6,11 +6,14 @@
 {% endfor %}
 
 
-{% assign sorted = roms | sort_natural: 'name' | sort_natural: 'rom_name' %}
 {% assign lastVendor = "" %}
-{% for rom in sorted %}
 {% if rom.rom_name != lastVendor %}
 {% assign lastVendor = rom.rom_name %}
+
+{% if lastVendor == "Mokee OS" %}{% assign romName = rom.rom_name | append: ' ' | append: rom.name %}
+{% else %}{% assign romName = rom.name %}{% endif %}
+{% assign class="discontinued" %}
+
 <table class="table device">
   <thead>
   <tr>
@@ -20,9 +23,7 @@
   </tr>
   </thead>
 
-{% if rom.rom_name == "Mokee OS" %}{% assign romName = rom.rom_name | append: ' ' | append: rom.name %}
-{% else %}{% assign romName = rom.name %}{% endif %}
-{% assign class="discontinued" %}
+
 
   <tr class="{{ class }}">
     <th scope="row" onClick="location.href='{{ url }}'"><a href="{{ url }}">{{ romName }}</a></th>
@@ -47,5 +48,4 @@
         </td>
 
 {% endif %}
-{% if sorted[forloop.index].rom_name != lastVendor %}{% endif %}</table>
-{% endfor %}
+</table>
