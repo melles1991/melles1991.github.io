@@ -1,7 +1,5 @@
-<ul>
-    {%- for rom_list in rom_list %}
-    {%- if rom.codename == rom_list %}
-<li>{{rom.rome_name}}</li>
-    {%- endif %}
-    {%- endfor %}
-</ul>
+  {%- for rom_list in rom_list %}
+    <th scope="row"><a href="{{ rom.rom_url }}">{{ rom.{{rom_list}}_name }}</a></th>
+    <td><a href="{{ rom.rom_url }}">{{ rom_list }}</a></td>
+    <td>{{ device.type | capitalize }}</td>
+   {%- endfor %}
