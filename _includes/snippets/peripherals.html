@@ -1,4 +1,3 @@
-
 <tr>
     <th scope="row"><a href="{{ rom.url }}">{{ rom.name }}</a></th>
     <td>{%- if rom.android.first.size == 1 %}
@@ -13,7 +12,14 @@
             {%- else %}
                 {%- assign android = rom.android %}
                 {%- include snippets/android_version.html %}
-            {%- endif %}</td>
+            {%- endif %}
+	</td>
+	<td>{%- if device.battery != 'None' %}
+	     {{ rom.type }}
+		{%- else %}
+		null
+	    {%- endif -%}
+	</td>		
     <td><a href="{{ rom.url }}">DOWNLOAD</a></td>
 </tr>
 

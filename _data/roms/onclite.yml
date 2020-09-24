@@ -2,8 +2,10 @@ device: onclite
 roms:
   - name: MoKee OS
     url: https://download.mokeedev.com/onclite
+    type: Nightly
     android: [10, 11]
   - name: Lineage OS
     url: https://sourceforge.net/projects/exodusos/files/lineage/onclite/unofficial/
+    type: 
     android: [10]
 
