@@ -1,5 +1,7 @@
 <ul>
-    <li>{{ android }}</li>
+    {%- for android_version in android %}
+    <li>{{ android_version}}</li>
+    {%- endfor %}
 </ul>
 
 
