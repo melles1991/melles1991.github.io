@@ -25,4 +25,4 @@ tree: android_device_xiaomi_onclite
 type: phone
 vendor: Xiaomi
 vendor_short: xiaomi
-rom_list:{mk, lineage, aex}
+rom_list: {mk, lineage, aex}
