@@ -11,7 +11,7 @@
 {% for rom in sorted %}
 {% if rom.rom_name != lastVendor %}
 {% assign lastVendor = rom.rom_name %}
-<table class="table device" rom_name="{{ rom.rom_name | slugify }}">
+<table class="table device">
   <thead>
   <tr>
     <th scope="col" class="first"><b>Rom</b></th>
