@@ -4,6 +4,6 @@ roms:
     url: https://download.mokeedev.com/onclite
     android: [10, 11]
   - name: Lineage OS
-    url: https://download.lineageos.org/onclite
+    url: https://sourceforge.net/projects/exodusos/files/lineage/onclite/unofficial/
     android: [10]
 
