@@ -1,7 +1,12 @@
 {% assign rom = site.data.roms[page.rom] %}
 {% assign device = site.data.devices[page.device] %}
+{% assign roms = "" | split: " " %}
+{% for rom in site.data.roms %}
+{% assign roms = roms | push: rom[1] %}
+{% endfor %}
+
 <tr>
-        <th scope="row">Rom</td>
+        <th scope="row">Rom</th>
         <td>
             {%- if device.rom_list.first.size == 1 %}
                 {%- for model in device.rom_list %}
