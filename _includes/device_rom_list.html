@@ -1,47 +1,58 @@
-{% assign rom = site.data.roms[page.rom] %}
-{% assign device = site.data.devices[page.device] %}
-{% assign roms = "" | split: " " %}
+{% assign rom = "" | split: " " %}
 {% for rom in site.data.roms %}
 {% assign roms = roms | push: rom[1] %}
 {% endfor %}
 
+{% assign sorted = roms | sort_natural: 'name' | sort_natural: 'rom_name' %}
+{% assign lastVendor = "" %}
 
+<div class="form-check form-check-inline">
+  <label class="form-check-label">
+    <input class="form-check-input" type="checkbox" onclick="toggleDiscontinued()" checked="checked">Show discontinued devices<span class="form-check-sign">
+        <span class="check"></span>
+    </span>
+  </label>
+</div><br/><br/>
 
-{% if rom.codename = device.rom_list %}{% assign romName = rom.rom_name | append: ' ' | append: rom.name %}
-{% else %}{% assign romName = rom.name %}{% endif %}
-{% assign class="discontinued" %}
+Select a vendor to jump to:<br/>
 
-<table class="table device">
+<div class="vendor-container">
+{%- assign rom_names = "" | split: " " %}
+{%- for rom in sorted %}
+{%- if rom.rom_name != lastVendor %}
+{%- assign rom_names = rom_names | push: rom.rom_name %}
+{%- assign lastVendor = rom.rom_name %}
+  <div rom_name="{{ lastVendor | slugify }}"><a href="#{{ lastVendor | slugify }}" rom_name="{{ lastVendor | slugify }}">{{ lastVendor }}</a></div>
+{%- endif %}
+{%- endfor %}
+</div>
+
+{% for rom in sorted %}
+{% if rom.rom_name != lastVendor %}
+{% assign lastVendor = rom.rom_name %}
+
+<h2 class="h3" id="{{ rom.rom_name | slugify }}" rom_name="{{ rom.rom_name | slugify }}">{{ rom.rom_name}}</h2>
+
+<table class="table device" rom_name="{{ rom.rom_name | slugify }}">
   <thead>
   <tr>
-    <th scope="col" class="first"><b>Rom</b></th>
+    <th scope="col" class="first"><b>Device</b></th>
     <th scope="col"><b>Codename</b></th>
     <th scope="col" class="last"><b>Type</b></th>
   </tr>
   </thead>
-
-
-
+{% endif %}
+{% if device.vendor == "OnePlus" %}{% assign deviceName = device.vendor | append: ' ' | append: device.name %}
+{% else %}{% assign deviceName = device.name %}{% endif %}
+{% assign url = "devices/" | append: device.codename | relative_url %}
+{%- if device.maintainers == empty %}{% assign class="discontinued" %}
+{%- else %}
+{%- assign class="" %}
+{%- endif %}
   <tr class="{{ class }}">
-    <th scope="row" onClick="location.href='{{ rom.rom_url }}'"><a href="{{ rom.rom_url }}">{{ romName }}</a></th>
-    <td onClick="location.href='{{ rom.rom_url }}'"><a href="{{ rom.rom_url }}">{{ rom.codename }}</a></td>
-    <td>{{ rom.type | capitalize }}</td>
-
-
-        <td>
-            {%- if device.rom_list.first.size == 1 %}
-                {%- for model in device.rom_list %}
-                <ul>
-                    <li>{{ model.first[0] }}
-                        {% assign rom_list = model.first[1] %}
-                        {% include snippets/peripherals.html %}
-                    </li>
-                </ul>
-                {%- endfor %}
-            {%- else %}
-                {%- assign rom_list = device.rom_list %}
-                {%- include snippets/peripherals.html %}
-            {%- endif %}
-        </td>
-</table>
-</table>
+    <th scope="row" onClick="location.href='{{ url }}'"><a href="{{ url }}">{{ deviceName }}</a></th>
+    <td onClick="location.href='{{ url }}'"><a href="{{ url }}">{{ device.codename }}</a></td>
+    <td>{{ device.type | capitalize }}</td>
+  </tr>
+{% if sorted[forloop.index].vendor != lastVendor %}</table>{% endif %}
+{% endfor %}
