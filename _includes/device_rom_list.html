@@ -10,7 +10,7 @@
 {% if rom.rom_name != lastVendor %}
 {% assign lastVendor = rom.rom_name %}
 
-{% if lastVendor == "Mokee OS" %}{% assign romName = rom.rom_name | append: ' ' | append: rom.name %}
+{% if rom.codename = device.rom_list %}{% assign romName = rom.rom_name | append: ' ' | append: rom.name %}
 {% else %}{% assign romName = rom.name %}{% endif %}
 {% assign class="discontinued" %}
 
@@ -46,6 +46,6 @@
                 {%- include snippets/peripherals.html %}
             {%- endif %}
         </td>
-
+</table>
 {% endif %}
 </table>
