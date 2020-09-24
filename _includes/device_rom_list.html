@@ -6,9 +6,6 @@
 {% endfor %}
 
 
-{% assign lastVendor = "" %}
-{% if rom.rom_name != lastVendor %}
-{% assign lastVendor = rom.rom_name %}
 
 {% if rom.codename = device.rom_list %}{% assign romName = rom.rom_name | append: ' ' | append: rom.name %}
 {% else %}{% assign romName = rom.name %}{% endif %}
@@ -26,8 +23,8 @@
 
 
   <tr class="{{ class }}">
-    <th scope="row" onClick="location.href='{{ url }}'"><a href="{{ url }}">{{ romName }}</a></th>
-    <td onClick="location.href='{{ url }}'"><a href="{{ url }}">{{ rom.codename }}</a></td>
+    <th scope="row" onClick="location.href='{{ rom.rom_url }}'"><a href="{{ rom.rom_url }}">{{ romName }}</a></th>
+    <td onClick="location.href='{{ rom.rom_url }}'"><a href="{{ rom.rom_url }}">{{ rom.codename }}</a></td>
     <td>{{ rom.type | capitalize }}</td>
 
 
@@ -47,5 +44,4 @@
             {%- endif %}
         </td>
 </table>
-{% endif %}
 </table>
