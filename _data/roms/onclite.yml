@@ -1,6 +1,9 @@
 device: onclite
-rom_list: { mokee, lineage}
-mokee_url: https://download.mokeedev.com/
-mokee_android: {10, 11}
-lineage_url: https://download.mokeedev.com/
-lineage_android: {10}
+roms:
+  - name: MoKee OS
+    url: https://download.mokeedev.com/
+    android: {10, 11}
+  - name: Lineage OS
+    url: https://download.mokeedev.com/
+    android: {10}
+
