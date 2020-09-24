@@ -42,17 +42,17 @@ Select a vendor to jump to:<br/>
   </tr>
   </thead>
 {% endif %}
-{% if device.vendor == "OnePlus" %}{% assign deviceName = device.vendor | append: ' ' | append: device.name %}
-{% else %}{% assign deviceName = device.name %}{% endif %}
-{% assign url = "devices/" | append: device.codename | relative_url %}
+{% if rom.rom_name == "MoKee OS" %}{% assign romName = rom.rom_name | append: ' ' | append: rom.rom_name %}
+{% else %}{% assign romName = rom.name %}{% endif %}
+{% assign url = "" | append: device.codename | relative_url %}
 {%- if device.maintainers == empty %}{% assign class="discontinued" %}
 {%- else %}
 {%- assign class="" %}
 {%- endif %}
   <tr class="{{ class }}">
-    <th scope="row" onClick="location.href='{{ url }}'"><a href="{{ url }}">{{ deviceName }}</a></th>
+    <th scope="row" onClick="location.href='{{ url }}'"><a href="{{ url }}">{{ romName }}</a></th>
     <td onClick="location.href='{{ url }}'"><a href="{{ url }}">{{ device.codename }}</a></td>
     <td>{{ device.type | capitalize }}</td>
   </tr>
-{% if sorted[forloop.index].vendor != lastVendor %}</table>{% endif %}
+{% if sorted[forloop.index].rom_name != lastVendor %}</table>{% endif %}
 {% endfor %}
