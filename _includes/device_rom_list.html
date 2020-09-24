@@ -1,3 +1,18 @@
+<script type="text/javascript">
+function toggleDiscontinued()
+{
+  $('.discontinued').toggle();
+  $("table.device").each(function () {
+    rom_name = $(this).attr("rom_name");
+    if ($(this).find("tbody > tr:visible").length == 0 && $(this).is(":visible")) {
+      $("*[rom_name=" + rom_name + "]").hide();
+    } else {
+      $("*[rom_name=" + rom_name + "]").show();
+    }
+  });
+}
+</script>
+
 {% assign rom = "" | split: " " %}
 {% for rom in site.data.roms %}
 {% assign roms = roms | push: rom[1] %}
