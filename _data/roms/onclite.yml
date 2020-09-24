@@ -1,9 +1,9 @@
 device: onclite
 roms:
   - name: MoKee OS
-    url: https://download.mokeedev.com/
+    url: https://download.mokeedev.com/onclite
     android: {10, 11}
   - name: Lineage OS
-    url: https://download.mokeedev.com/
+    url: https://download.lineageos.org/onclite
     android: {10}
 

@@ -1,8 +1,20 @@
 
 <tr>
-    <th scope="row">{{ rom.name }}</th>
-    <td>{{ rom_list }}</td>
-    <td>{{ device.type | capitalize }}</td>
+    <th scope="row"><a href="{{ rom.url }}">{{ rom.name }}</a></th>
+    <td>{%- if rom.android.first.size == 1 %}
+                {%- for version in rom.android %}
+                <ul>
+                    <li>{{ version.first[0] }}
+                        {% assign android = version.first[1] %}
+                        {% include snippets/android_version.html %}
+                    </li>
+                </ul>
+                {%- endfor %}
+            {%- else %}
+                {%- assign android = rom.android %}
+                {%- include snippets/android_version.html %}
+            {%- endif %}</td>
+    <td><a href="{{ rom.url }}">DOWNLOAD</a></td>
 </tr>
 
 
