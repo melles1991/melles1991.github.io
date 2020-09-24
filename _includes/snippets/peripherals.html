@@ -14,8 +14,8 @@
                 {%- include snippets/android_version.html %}
             {%- endif %}
 	</td>
-	<td>{%- if device.battery != 'None' %}
-	     {{ rom.type }}
+	<td>{%- if rom.type != empty %}
+		 {{ rom.type }}
 		{%- else %}
 		null
 	    {%- endif -%}
