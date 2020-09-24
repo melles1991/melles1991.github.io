@@ -38,3 +38,5 @@
                 {%- include snippets/peripherals.html %}
             {%- endif %}
         </td>
+{% if sorted[forloop.index].rom_name != lastVendor %}{% endif %}</table>
+{% endfor %}
