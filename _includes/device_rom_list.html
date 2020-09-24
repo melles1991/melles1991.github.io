@@ -21,7 +21,5 @@
     {%- endif %}
 </table>
 {% else %}
-<table class="table device">
-ERROR... Not Found ROM's
-</table>
+{% include alerts/warning_not_found.html %}
 {% endif %}
