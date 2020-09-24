@@ -1,6 +1,8 @@
 {%- for rom_list in rom_list %}
+<tr>
     <th scope="row">{{ rom_list }}</th>
     <td>{{ rom_list }}</td>
     <td>{{ device.type | capitalize }}</td>
+</tr>
 {%- endfor %}
 
