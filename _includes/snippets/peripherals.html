@@ -1,5 +1,5 @@
   {%- for rom_list in rom_list %}
-    <th scope="row"><a href="{{ rom.{{ rom_list }}_url }}">{{ rom_list }}</a></th>
-    <td><a href="{{ rom.{{ rom_list }}_url }}">{{ rom_list }}</a></td>
+    <th scope="row">{{ rom_list }}</th>
+    <td>{{ rom_list }}</td>
     <td>{{ device.type | capitalize }}</td>
    {%- endfor %}
