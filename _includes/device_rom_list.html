@@ -5,8 +5,24 @@
 {% assign roms = roms | push: rom[1] %}
 {% endfor %}
 
-<tr>
-        <th scope="row">Rom</th>
+
+{% assign sorted = roms | sort_natural: 'name' | sort_natural: 'rom_name' %}
+{% assign lastVendor = "" %}
+{% for rom in sorted %}
+{% if rom.rom_name != lastVendor %}
+{% assign lastVendor = rom.rom_name %}
+<h2 class="h3" id="{{ rom.rom_name | slugify }}" rom_name="{{ rom.rom_name | slugify }}">{{ rom.rom_name}}</h2>
+<table class="table device" rom_name="{{ rom.rom_name | slugify }}">
+  <thead>
+  <tr>
+    <th scope="col" class="first"><b>Rom</b></th>
+    <th scope="col"><b>Codename</b></th>
+    <th scope="col" class="last"><b>Type</b></th>
+  </tr>
+  </thead>
+{% endif %}
+
+
         <td>
             {%- if device.rom_list.first.size == 1 %}
                 {%- for model in device.rom_list %}
@@ -22,4 +38,3 @@
                 {%- include snippets/peripherals.html %}
             {%- endif %}
         </td>
-</tr>
