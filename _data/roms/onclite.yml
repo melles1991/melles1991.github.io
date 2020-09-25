@@ -8,4 +8,8 @@ roms:
     url: https://sourceforge.net/projects/exodusos/files/lineage/onclite/unofficial/
     type: [Unofficial]
     android: [10]
+  - name: crDroid
+    url: https://sourceforge.net/projects/exodusos/files/crDroid/onclite/
+    type: [Unofficial]
+    android: [10]
 
