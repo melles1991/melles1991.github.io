@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<url>
+  <loc>https://melles1991.github.io/</loc>
+  <lastmod>2020-09-25T06:37:17+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://melles1991.github.io/blog/</loc>
+  <lastmod>2020-09-25T06:37:17+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://melles1991.github.io/file/</loc>
+  <lastmod>2020-09-25T06:37:17+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://melles1991.github.io/devices/</loc>
+  <lastmod>2020-09-25T06:37:17+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://melles1991.github.io/about/</loc>
+  <lastmod>2020-09-25T06:37:17+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://melles1991.github.io/community/</loc>
+  <lastmod>2020-09-25T06:37:17+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://melles1991.github.io/legal/</loc>
+  <lastmod>2020-09-25T06:37:17+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://melles1991.github.io/MAGISK-OxyAdditional/</loc>
+  <lastmod>2020-09-25T06:37:17+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://melles1991.github.io/devices/wt88047/</loc>
+  <lastmod>2020-09-25T06:37:17+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://melles1991.github.io/devices/onclite/</loc>
+  <lastmod>2020-09-25T06:37:17+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://melles1991.github.io/devices/wt88047/install</loc>
+  <lastmod>2020-09-25T06:37:17+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://melles1991.github.io/bugreport-howto</loc>
+  <lastmod>2020-09-25T06:37:17+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://melles1991.github.io/devices/onclite/install</loc>
+  <lastmod>2020-09-25T06:37:17+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://melles1991.github.io/gapps.html</loc>
+  <lastmod>2020-09-25T06:37:17+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://melles1991.github.io/logcat.html</loc>
+  <lastmod>2020-09-25T06:37:17+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://melles1991.github.io/bugreport-howto.html</loc>
+  <lastmod>2020-09-25T06:37:17+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+</urlset>
