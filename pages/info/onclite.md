@@ -5,6 +5,5 @@ folder: info
 layout: deviceinfo
 permalink: /devices/onclite/
 device: onclite
-tags: onclite, redmi, xiaomi, mokee, lineage
 ---
 {% include templates/device_info.md %}
