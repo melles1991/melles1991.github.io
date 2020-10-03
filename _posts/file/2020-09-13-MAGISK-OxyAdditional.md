@@ -4,13 +4,13 @@ title: OxyAdditional
 category: file
 excerpt: MAGISK MODULE
 author: melles1991
-durl: https://github.com/CraftRom/MAGISK-OxyAdditional/releases/download/v0.8/MAGISK.OxyAdditional_v0.8.zip
+durl: https://github.com/CraftRom/MAGISK-OxyAdditional/releases/download/v0.9/MAGISK.OxyAdditional_v0.9.zip
 ---
 
 ![hero]({{site.baseurl}}/assets/img/module.png){: .blog_post_image_full }
 
 * **Date**: 2020-10-03;
-* **Version**: 0.8;
+* **Version**: 0.9;
 * **Maintainer**: @mrshterben;
 
 Magisk Module that will turn your Android phone into a OnePlus device by adding:
@@ -26,6 +26,10 @@ Magisk Module that will turn your Android phone into a OnePlus device by adding:
 1. Flash this module.
 2. Reboot.
 3. Enjoy!
+
+### V 0.9
+* Update MMT-Extended to v1.6
+* Update install script 
 
 ### V 0.8
 * Add ShapeSquare Overlay
