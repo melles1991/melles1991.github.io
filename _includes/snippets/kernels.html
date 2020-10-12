@@ -13,12 +13,6 @@
                 {%- assign android = kernel.android %}
                 {%- include snippets/android_version.html %}
             {%- endif %}
-	</td>
-	<td>{%- if kernel.type != empty %}
-		 {{ kernel.type }}
-		{%- else %}
-		null
-	    {%- endif -%}
 	</td>		
     <td><a href="{{ kernel.url }}">DOWNLOAD</a></td>
 </tr>
