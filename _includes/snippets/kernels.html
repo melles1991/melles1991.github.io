@@ -1,0 +1,26 @@
+<tr>
+    <th scope="row"><a href="{{ kernel.url }}">{{ kernel.name }}</a></th>
+    <td>{%- if kernel.android.first.size == 1 %}
+                {%- for version in kernel.android %}
+                <ul>
+                    <li>{{ version.first[0] }}
+                        {% assign android = version.first[1] %}
+                        {% include snippets/android_version.html %}
+                    </li>
+                </ul>
+                {%- endfor %}
+            {%- else %}
+                {%- assign android = kernel.android %}
+                {%- include snippets/android_version.html %}
+            {%- endif %}
+	</td>
+	<td>{%- if kernel.type != empty %}
+		 {{ kernel.type }}
+		{%- else %}
+		null
+	    {%- endif -%}
+	</td>		
+    <td><a href="{{ kernel.url }}">DOWNLOAD</a></td>
+</tr>
+
+

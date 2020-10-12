@@ -1,17 +1,16 @@
 {% assign device = site.data.devices[page.device] %}
-{% assign rom = site.data.roms[page.device] %}
-{% if rom.device == device.codename %}
+{% assign kernel = site.data.kernels[page.device] %}
+{% if kernel.device == device.codename %}
 <table class="table device">
   <thead>
   <tr>
     <th scope="col" class="first"><b>Name</b></th>
     <th scope="col"><b>Android</b></th>
-	<th scope="col"><b>Type</b></th>
     <th scope="col" class="last"><b>Download</b></th>
   </tr>
   </thead>
-        {%- for rom in rom.roms %}
-            {% include snippets/roms.html %}
+        {%- for kernel in kernel.kernels %}
+            {% include snippets/kernels.html %}
         {%- endfor %}
 </table>
 {% else %}
