@@ -37,4 +37,4 @@
 
 ## Kernel list
 
-{% include device_rom_list.html %}
+{% include device_kernel_list.html %}
