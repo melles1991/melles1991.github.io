@@ -9,8 +9,8 @@ durl: https://github.com/CraftRom/MAGISK-OxyAdditional/releases/download/v0.9/MA
 
 ![hero]({{site.baseurl}}/assets/img/module.png){: .blog_post_image_full }
 
-* **Date**: 2020-10-03;
-* **Version**: 0.9;
+* **Date**: 2020-12-06;
+* **Version**: 1.2;
 * **Maintainer**: @mrshterben;
 
 Magisk Module that will turn your Android phone into a OnePlus device by adding:
@@ -26,6 +26,16 @@ Magisk Module that will turn your Android phone into a OnePlus device by adding:
 1. Flash this module.
 2. Reboot.
 3. Enjoy!
+
+### V 1.2
+* OnePlus Launcher to 4.6.5
+* Update MMT-Extended-Addons - Volume-Key-Selector
+
+### V 1.0
+* Updated Widget app
+* Updated Weather app
+* Removed unnecessary overlays
+* Added check for Android version
 
 ### V 0.9
 * Update MMT-Extended to v1.6
