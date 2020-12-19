@@ -5,7 +5,7 @@ category: file
 excerpt: MAGISK MODULE
 author: melles1991
 version: v1.2
-durl: https://github.com/CraftRom/MAGISK-OxyAdditional/releases/download/{{page.version}}/MAGISK.OxyAdditional_{{page.version}}.zip
+durl: https://github.com/CraftRom/MAGISK-OxyAdditional/releases/download/v1.2/MAGISK.OxyAdditional_v1.2.zip
 ---
 
 ![hero]({{site.baseurl}}/assets/img/module.png){: .blog_post_image_full }
