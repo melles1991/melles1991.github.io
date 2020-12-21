@@ -4,13 +4,13 @@ title: OxyAdditional
 category: file
 excerpt: MAGISK MODULE
 author: melles1991
-version: v1.2
-durl: https://github.com/CraftRom/MAGISK-OxyAdditional/releases/download/v1.2/MAGISK.OxyAdditional_v1.2.zip
+version: v1.3
+durl: https://github.com/CraftRom/MAGISK-OxyAdditional/releases/download/v1.3/MAGISK.OxyAdditional_v1.3.zip
 ---
 
 ![hero]({{site.baseurl}}/assets/img/module.png){: .blog_post_image_full }
 
-* **Date**: 2020-12-06;
+* **Date**: 2020-12-21;
 * **Version**: {{page.version}};
 * **Maintainer**: @mrshterben;
 
@@ -27,6 +27,18 @@ Magisk Module that will turn your Android phone into a OnePlus device by adding:
 1. Flash this module.
 2. Reboot.
 3. Enjoy!
+
+### V 1.3
+- Update OPLauncher
+* Rebased/Crossport 4.6.5 to 5.0.0
+* Support Accent, Sytem Light Mode and DarkMode
+* Hide Swipe Up Icon by Default
+* Optimised Rounded Corner
+* Linear Dot Animation Optimised Value
+* Added More Grid Option
+* Fixed tinted Ram TextView
+* Fixed Notification Icon Badging not Showing
+* General bug fixes.
 
 ### V 1.2
 * OnePlus Launcher to 4.6.5
