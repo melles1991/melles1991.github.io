@@ -1,10 +1,14 @@
 device: onclite
 roms:
-  - name: MoKee OS
+  - name: MoKee OS 110
+    url: https://sourceforge.net/projects/exodusos/files/onclite/MoKee/
+    type: [Experimental]
+    android: [11] 
+  - name: MoKee OS 100
     url: https://download.mokeedev.com/onclite
     type: [Nightly]
-    android: [10]
-  - name: Lineage OS
+    android: [10]   
+  - name: Lineage OS 17.1
     url: https://sourceforge.net/projects/exodusos/files/lineage/onclite/unofficial/
     type: [Unofficial]
     android: [10]
