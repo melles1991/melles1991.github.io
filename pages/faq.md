@@ -10,8 +10,6 @@ permalink: faq.html
    - You are attempting to migrate from an unofficial build to official Android OS. _A full data wipe is needed if you are coming from something other than an official build of Android OS._
    - Your vendor/modem/bootloader is too old (or maybe too new). _Flash the correct stock image for your device, before wiping data and attempting to install Android OS again_. This information should be listed on the device's wiki page.
    - Your recovery is outdated. _Flash the newest available version of the recommended recovery image for your device_.
- - If your error still persists after confirming these are not causing your issue, ask someone for help IRC (#lineageos@freenode) or on the [Subreddit](http://reddit.com/r/lineageos) and provide a recovery log.
-
 
 ## I found a bug. What do I do?
  - You can report it! Please _carefully_ read the [How to submit a bug]({{ "bugreport-howto.html" | relative_url }}) page before reporting it.
