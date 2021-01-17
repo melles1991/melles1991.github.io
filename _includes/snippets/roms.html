@@ -20,7 +20,12 @@
 		null
 	    {%- endif -%}
 	</td>		
-    <td><a href="{{ rom.url }}">DOWNLOAD</a></td>
+    <td>{%- if rom.bage == true %}
+        <a href="{{ rom.url }}"><img alt="SourceForge" src="{{ rom.bageurl }}"></a>
+        {%- else%}
+    <a href="{{ rom.url }}">DOWNLOAD</a>
+        {%- endif %}
+    </td>  
 </tr>
 
 
