@@ -1,10 +1,7 @@
 device: onclite
 kernels:
   - name: Chidori Kernel
-    url: https://github.com/CraftRom/Chidori-Kernel_onclite/releases/download/v10/Chidori-Kernel-10-onclite-20201102-0243.zip
-    android: [10]
-  - name: Chidori Kernel
-    url:   https://github.com/CraftRom/Chidori-Kernel_onclite/releases/download/1/Chidori-Kernel-11-onclite-20201229-1559.zip 
-    android: [11]   
+    url: https://sourceforge.net/projects/exodusos/files/Chidori%20Kernel/onclite/
+    android: [10 , 11]  
 
 
