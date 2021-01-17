@@ -16,7 +16,7 @@
 	</td>
     <td>{{ kernel.linux }}</td>	
     <td>{%- if kernel.bage == true %}
-        <img alt="SourceForge" src="{{ kernel.url }}">
+        <a href="{{ kernel.url }}"><img alt="SourceForge" src="{{ kernel.bageurl }}"></a>
         {%- else%}
     <a href="{{ kernel.url }}">DOWNLOAD</a>
         {%- endif %}
