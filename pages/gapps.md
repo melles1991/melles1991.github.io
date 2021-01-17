@@ -13,7 +13,7 @@ These packages are only dependent on your OS version and architecture, which can
 
 |Version                   |Link                                                   |
 |--------------------------|-------------------------------------------------------|
-|Android 11|[Open GApps [TEST ARM]](https://sourceforge.net/projects/opengapps/files/arm/test/), [Open GApps [TEST ARM64]](https://sourceforge.net/projects/opengapps/files/arm64/test/)|
+|Android 11|[Open GApps [TEST ARM]](https://sourceforge.net/projects/opengapps/files/arm/test/), [Open GApps [TEST ARM64]](https://sourceforge.net/projects/opengapps/files/arm64/test/), [NikGapps](https://sourceforge.net/projects/nikgapps/files/Releases/NikGapps-R/)|
 |Android 10|[Open GApps](http://opengapps.org/?api=10&variant=nano)|
 |Android 9.0|[MindTheGapps](http://downloads.codefi.re/jdcteam/javelinanddart/gapps) ([mirror](https://androidfilehost.com/?w=files&flid=170282)), [Open GApps](http://opengapps.org/?api=9.0&variant=nano)|
 |Android 8.1|[MindTheGapps](http://downloads.codefi.re/jdcteam/javelinanddart/gapps) ([mirror](https://androidfilehost.com/?w=files&flid=170282)), [Open GApps](http://opengapps.org/?api=8.1&variant=nano)|
