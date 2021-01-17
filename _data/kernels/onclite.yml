@@ -3,4 +3,5 @@ kernels:
   - name: Chidori Kernel
     android: [10 , 11]  
     linux: [4.9.x]
-    url: https://sourceforge.net/projects/exodusos/files/Chidori%20Kernel/onclite/
+    bage: true
+    url: https://img.shields.io/sourceforge/dt/exodusos/Chidori%20Kernel/onclite?style=for-the-badge
