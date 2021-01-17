@@ -1,7 +1,6 @@
 device: onclite
 kernels:
   - name: Chidori Kernel
-    url: https://sourceforge.net/projects/exodusos/files/Chidori%20Kernel/onclite/
     android: [10 , 11]  
-
-
+    linux: [4.9.x]
+    url: https://sourceforge.net/projects/exodusos/files/Chidori%20Kernel/onclite/
