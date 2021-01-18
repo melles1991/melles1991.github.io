@@ -11,13 +11,13 @@ layout: default
 
     </div>
   </div>
-
+{% if post.category.blog %}
   <div class="container post">
 
     {{ content }}
 
   </div>
-
+{% endif %}
   {% include disqus.html %}
 
 </article>
