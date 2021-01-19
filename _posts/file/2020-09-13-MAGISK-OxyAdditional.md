@@ -4,8 +4,8 @@ title: OxyAdditional
 category: file
 excerpt: MAGISK MODULE
 author: melles1991
-version: v1.3
-durl: https://github.com/CraftRom/MAGISK-OxyAdditional/releases/download/v1.3/MAGISK.OxyAdditional_v1.3.zip
+version: v1.5
+durl: https://sourceforge.net/projects/exodusos/files/MagiskModules/OxyAdditional/
 ---
 
 ![hero]({{site.baseurl}}/assets/img/module.png){: .blog_post_image_full }
