@@ -5,6 +5,7 @@ category: file
 excerpt: MAGISK MODULE
 author: melles1991
 version: v1.5
+badgeurl: https://img.shields.io/sourceforge/dt/exodusos/MagiskModules/OxyAdditional?style=for-the-badge
 durl: https://sourceforge.net/projects/exodusos/files/MagiskModules/OxyAdditional/
 ---
 
