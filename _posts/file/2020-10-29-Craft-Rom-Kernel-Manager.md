@@ -17,17 +17,17 @@ durl: https://github.com/CraftRom/CraftRom-Kernel-Manager/releases/download/R.1.
 [![Crowdin](https://badges.crowdin.net/craft-rom-km/localized.svg)](https://crowdin.com/project/craft-rom-km)
 ![](https://img.shields.io/github/license/craftrom/CraftRom-Kernel-Manager)
 
-# Introduction
+## Introduction
 Welcome to the <strong>stable</strong> development channel of CraftRom Kernel Manager.
 
-## Features
+### Features
 * Only for Chidori Kernel
 
-## Android Version Support
+### Android Version Support
 
 - Android 10+: only Redmi 7/Y3
 
-## Credits
+### Credits
 
 #### Willi Ye
 
@@ -37,14 +37,14 @@ Welcome to the <strong>stable</strong> development channel of CraftRom Kernel Ma
 
 * [libsu](https://github.com/topjohnwu/libsu)
 
-## Translations
+### Translations
 Default string resources for CraftRom Kernel Manager are located here:
 
 - `app/src/main/res/values/strings.xml`
 
 * [Translate page](https://crowdin.com/project/craft-rom-km)
 
-## License
+### License
 
     Copyright (C) 2020-2021 melles1991 <melles.android@gmail.com>
 
@@ -63,7 +63,7 @@ Default string resources for CraftRom Kernel Manager are located here:
 
 ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** *****
 
-### R1.7.20201029
+#### R1.7.20201029
 * Update build.gradle by cocka11 
       -- Minisdk to 29
 * Update Dark Theme App and some colors
@@ -71,22 +71,22 @@ Default string resources for CraftRom Kernel Manager are located here:
 * Fix view app version in About layout
 * Update Hungarian, Brazilian, Albanian  languages 
 
-### R1.5.20201025
+#### R1.5.20201025
 * Add Albania language
 * Update Russian, Ukrainian, Brazilian languages
 * Update style
 * Add Super battery save 
 * Some fixeds and optimizations
 
-### R1.4.20201024
+#### R1.4.20201024
 * Fix splash animation error
 * Fix text color for Nighty Mode
 * Update Ru, Uk language
 * Add check device, kernel support 
 
-### R1.2.20201023
+#### R1.2.20201023
 * Add translation Russian, Ukrainian, Brazilian, Hungarian
 
-### R1.1.20201023
+#### R1.1.20201023
 * Update Splash
 * Fix check new kernel
