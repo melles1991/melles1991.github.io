@@ -1,5 +1,5 @@
 User-agent: *
-Host: melles1991.github.io
-Sitemap: http://melles1991.github.io/sitemap.xml
+Host: www.craft-rom.ml
+Sitemap: https://www.craft-rom.ml/sitemap.xml
 Disallow: /?*s=
 
