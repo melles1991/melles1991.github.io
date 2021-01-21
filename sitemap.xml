@@ -7,111 +7,129 @@
 <!-- www.check-domains.com sitemap generator -->
 
 <url>
-   <loc>https://melles1991.github.io/</loc>
-   <lastmod>2020-09-26T11:42:33+00:00</lastmod>
-   <changefreq>daily</changefreq>
+   <loc>https://www.craft-rom.ml/</loc>
+   <lastmod>2021-01-21T22:54:26+00:00</lastmod>
+   <changefreq>monthly</changefreq>
    <priority>1.0000</priority>
 </url>
 <url>
-   <loc>https://melles1991.github.io/feed.xml</loc>
-   <lastmod>2020-09-26T11:42:33+00:00</lastmod>
-   <changefreq>daily</changefreq>
+   <loc>https://www.craft-rom.ml/feed.xml</loc>
+   <lastmod>2021-01-21T23:32:55+00:00</lastmod>
+   <changefreq>monthly</changefreq>
    <priority>0.8000</priority>
 </url>
 <url>
-   <loc>https://melles1991.github.io/blog/</loc>
-   <lastmod>2020-09-26T11:42:33+00:00</lastmod>
-   <changefreq>daily</changefreq>
+   <loc>https://www.craft-rom.ml/blog/</loc>
+   <lastmod>2021-01-21T22:54:26+00:00</lastmod>
+   <changefreq>monthly</changefreq>
    <priority>0.8000</priority>
 </url>
 <url>
-   <loc>https://melles1991.github.io/file/</loc>
-   <lastmod>2020-09-26T11:42:33+00:00</lastmod>
-   <changefreq>daily</changefreq>
+   <loc>https://www.craft-rom.ml/file/</loc>
+   <lastmod>2021-01-21T22:54:26+00:00</lastmod>
+   <changefreq>monthly</changefreq>
    <priority>0.8000</priority>
 </url>
 <url>
-   <loc>https://melles1991.github.io/devices/</loc>
-   <lastmod>2020-09-26T11:42:33+00:00</lastmod>
-   <changefreq>daily</changefreq>
+   <loc>https://www.craft-rom.ml/devices/</loc>
+   <lastmod>2021-01-21T22:54:26+00:00</lastmod>
+   <changefreq>monthly</changefreq>
    <priority>0.8000</priority>
 </url>
 <url>
-   <loc>https://melles1991.github.io/about/</loc>
-   <lastmod>2020-09-26T11:42:33+00:00</lastmod>
-   <changefreq>daily</changefreq>
+   <loc>https://www.craft-rom.ml/about/</loc>
+   <lastmod>2021-01-21T22:54:26+00:00</lastmod>
+   <changefreq>monthly</changefreq>
    <priority>0.8000</priority>
 </url>
 <url>
-   <loc>https://melles1991.github.io/community/</loc>
-   <lastmod>2020-09-26T11:42:33+00:00</lastmod>
-   <changefreq>daily</changefreq>
+   <loc>https://www.craft-rom.ml/community/</loc>
+   <lastmod>2021-01-21T22:54:26+00:00</lastmod>
+   <changefreq>monthly</changefreq>
    <priority>0.8000</priority>
 </url>
 <url>
-   <loc>https://melles1991.github.io/legal/</loc>
-   <lastmod>2020-09-26T11:42:33+00:00</lastmod>
-   <changefreq>daily</changefreq>
+   <loc>https://www.craft-rom.ml/legal/</loc>
+   <lastmod>2021-01-21T22:54:26+00:00</lastmod>
+   <changefreq>monthly</changefreq>
    <priority>0.8000</priority>
 </url>
 <url>
-   <loc>https://melles1991.github.io/file.xml</loc>
-   <lastmod>2020-09-26T11:42:33+00:00</lastmod>
-   <changefreq>daily</changefreq>
+   <loc>https://www.craft-rom.ml/Happy-New-Year/</loc>
+   <lastmod>2021-01-21T22:54:26+00:00</lastmod>
+   <changefreq>monthly</changefreq>
+   <priority>0.8000</priority>
+</url>
+<url>
+   <loc>https://www.craft-rom.ml/Merry-Christmas/</loc>
+   <lastmod>2021-01-21T22:54:26+00:00</lastmod>
+   <changefreq>monthly</changefreq>
    <priority>0.6400</priority>
 </url>
 <url>
-   <loc>https://melles1991.github.io/MAGISK-OxyAdditional/</loc>
-   <lastmod>2020-09-26T11:42:33+00:00</lastmod>
-   <changefreq>daily</changefreq>
+   <loc>https://www.craft-rom.ml/file.xml</loc>
+   <lastmod>2021-01-21T23:32:55+00:00</lastmod>
+   <changefreq>monthly</changefreq>
    <priority>0.6400</priority>
 </url>
 <url>
-   <loc>https://melles1991.github.io/devices/wt88047/</loc>
-   <lastmod>2020-09-26T11:42:33+00:00</lastmod>
-   <changefreq>daily</changefreq>
+   <loc>https://www.craft-rom.ml/Craft-Rom-Kernel-Manager/</loc>
+   <lastmod>2021-01-21T22:54:26+00:00</lastmod>
+   <changefreq>monthly</changefreq>
+   <priority>0.6400</priority>
+</url>
+<url>
+   <loc>https://www.craft-rom.ml/MAGISK-OxyAdditional/</loc>
+   <lastmod>2021-01-21T22:54:26+00:00</lastmod>
+   <changefreq>monthly</changefreq>
+   <priority>0.6400</priority>
+</url>
+<url>
+   <loc>https://www.craft-rom.ml/devices/wt88047/</loc>
+   <lastmod>2021-01-21T22:54:26+00:00</lastmod>
+   <changefreq>monthly</changefreq>
    <priority>0.5120</priority>
 </url>
 <url>
-   <loc>https://melles1991.github.io/devices/onclite/</loc>
-   <lastmod>2020-09-26T11:42:33+00:00</lastmod>
-   <changefreq>daily</changefreq>
+   <loc>https://www.craft-rom.ml/devices/onclite/</loc>
+   <lastmod>2021-01-21T22:54:26+00:00</lastmod>
+   <changefreq>monthly</changefreq>
    <priority>0.5120</priority>
 </url>
 <url>
-   <loc>https://melles1991.github.io/devices/wt88047/install</loc>
-   <lastmod>2020-09-26T11:42:33+00:00</lastmod>
-   <changefreq>daily</changefreq>
+   <loc>https://www.craft-rom.ml/devices/wt88047/install</loc>
+   <lastmod>2021-01-21T22:54:26+00:00</lastmod>
+   <changefreq>monthly</changefreq>
    <priority>0.4096</priority>
 </url>
 <url>
-   <loc>https://melles1991.github.io/bugreport-howto</loc>
-   <lastmod>2020-09-26T11:42:33+00:00</lastmod>
-   <changefreq>daily</changefreq>
+   <loc>https://www.craft-rom.ml/bugreport-howto</loc>
+   <lastmod>2021-01-21T22:54:26+00:00</lastmod>
+   <changefreq>monthly</changefreq>
    <priority>0.4096</priority>
 </url>
 <url>
-   <loc>https://melles1991.github.io/devices/onclite/install</loc>
-   <lastmod>2020-09-26T11:42:33+00:00</lastmod>
-   <changefreq>daily</changefreq>
+   <loc>https://www.craft-rom.ml/devices/onclite/install</loc>
+   <lastmod>2021-01-21T22:54:26+00:00</lastmod>
+   <changefreq>monthly</changefreq>
    <priority>0.4096</priority>
 </url>
 <url>
-   <loc>https://melles1991.github.io/gapps.html</loc>
-   <lastmod>2020-09-26T11:42:33+00:00</lastmod>
-   <changefreq>daily</changefreq>
+   <loc>https://www.craft-rom.ml/gapps.html</loc>
+   <lastmod>2021-01-21T22:54:26+00:00</lastmod>
+   <changefreq>monthly</changefreq>
    <priority>0.3277</priority>
 </url>
 <url>
-   <loc>https://melles1991.github.io/logcat.html</loc>
-   <lastmod>2020-09-26T11:42:33+00:00</lastmod>
-   <changefreq>daily</changefreq>
+   <loc>https://www.craft-rom.ml/logcat.html</loc>
+   <lastmod>2021-01-21T22:54:26+00:00</lastmod>
+   <changefreq>monthly</changefreq>
    <priority>0.3277</priority>
 </url>
 <url>
-   <loc>https://melles1991.github.io/bugreport-howto.html</loc>
-   <lastmod>2020-09-26T11:42:33+00:00</lastmod>
-   <changefreq>daily</changefreq>
+   <loc>https://www.craft-rom.ml/bugreport-howto.html</loc>
+   <lastmod>2021-01-21T22:54:26+00:00</lastmod>
+   <changefreq>monthly</changefreq>
    <priority>0.2621</priority>
 </url>
 </urlset>
