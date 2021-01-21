@@ -4,7 +4,7 @@ name: CraftRom
 # Short bio or description (displayed in the header)
 description: Maintenance of various devices based on the custom Android operating system.
 
-repository: melles1991/melles1991.github.io 
+repository: melles1991/www 
 
 github: [metadata]
 #
@@ -30,7 +30,7 @@ google_analytics: UA-71613593-4
 
 # Your website URL (e.g. http://barryclark.github.io or http://www.barryclark.co)
 # Used for Sitemap.xml and your RSS feed
-url:  https://melles1991.github.io
+url:  https://craft-rom.ml
 
 # If you're hosting your site at a Project repository on GitHub pages
 # (http://yourusername.github.io/repository-name)
