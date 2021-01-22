@@ -17,10 +17,10 @@ In general, I do not have so many programs in the device's memory, but there are
 
 
 ###  File system
-|Version                   |Description                                            |
-|--------------------------|-------------------------------------------------------|
-|[Total Commander](https://play.google.com/store/apps/details?id=com.ghisler.android.TotalCommander)|The Android version of the file manager of the same name for Windows, with a set of similar advantages from its version for desktop operating systems.|
-|[Total Commander](https://play.google.com/store/apps/details?id=com.ghisler.android.TotalCommander)|The Android version of the file manager of the same name for Windows, with a set of similar advantages from its version for desktop operating systems.|
+Version                   |Description                                            
+--------------------------|-------------------------------------------------------
+[Total Commander](https://play.google.com/store/apps/details?id=com.ghisler.android.TotalCommander)|The Android version of the file manager of the same name for Windows, with a set of similar advantages from its version for desktop operating systems.
+[Total Commander](https://play.google.com/store/apps/details?id=com.ghisler.android.TotalCommander)|The Android version of the file manager of the same name for Windows, with a set of similar advantages from its version for desktop operating systems.
 {: .table }
 
 
