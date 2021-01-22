@@ -1,0 +1,18 @@
+{% if page.durl %}
+{% if page.badgeurl %}
+<div class="container bg-primary">
+    <div class="text-center">
+	      <a href="{{ page.durl }}">
+<img alt="SourceForge" src="{{ page.badgeurl }}">
+</a>
+	</div>	
+</div>
+{% else %}
+<div class="container bg-primary">
+    <div class="text-center">
+	      <a class="btn btn-primary" href="{{ page.durl }}">
+        {% include svg/download.svg %} Download</a>
+	</div>	
+</div>
+{% endif %}
+{% endif %}
