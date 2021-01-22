@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Top Android Apps I Use Every Day 
+title: Top Android apps I use every day 
 category: blog
-excerpt: Merry Christmas
+excerpt: Top Android apps
 author: Dmytro Galitsky (melles1991)
 ---
 
