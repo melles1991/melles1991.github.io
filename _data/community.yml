@@ -7,7 +7,7 @@
 
 - name: Support
   data:
-  - name: Redmi7 Mokee Telegram
+  - name: Telegram 
     text: Experimental builds, help in solving errors, etc.
     url: https://t.me/craft_rom
 
