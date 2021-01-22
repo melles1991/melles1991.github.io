@@ -7,7 +7,7 @@ author: Dmytro Galitsky (melles1991)
 ---
 
 
-![hero]({{site.baseurl}}/images/2020-12-24/MerryChristmas.png){: .blog_post_image_full }
+![hero](https://techburner.in/wp-content/uploads/2018/08/apps-mobile-smartphone-ss-1920-1000x500.jpg){: .blog_post_image_full }
 
 
 The main advantage of Android, in my opinion, is the variety of possibilities for both customization and smartphone control.  
