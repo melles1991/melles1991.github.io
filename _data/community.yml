@@ -1,9 +1,9 @@
 ---
 - name: Contribute
   data:
-  - name: Website
+  - name: GitHub
     text: Maintenance of various devices based on the custom Android operating system.
-    url: https://melles1991.github.io
+    url: https://github.com/CraftRom
 
 - name: Support
   data:
