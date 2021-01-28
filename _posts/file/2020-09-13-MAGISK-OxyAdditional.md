@@ -4,14 +4,14 @@ title: OxyAdditional
 category: file
 excerpt: MAGISK | SYSTEMLESS
 author: melles1991
-version: v1.5.1
+version: v1.6
 badgeurl: https://img.shields.io/sourceforge/dt/exodusos/MagiskModules/OxyAdditional?style=for-the-badge
 durl: https://sourceforge.net/projects/exodusos/files/MagiskModules/OxyAdditional/
 ---
 
 ![hero]({{site.baseurl}}/assets/img/module.png){: .blog_post_image_full }
 
-* **Date**: 2021-01-14;
+* **Date**: 2021-01-28;
 * **Version**: {{page.version}};
 * **Maintainer**: @mrshterben;
 
@@ -55,6 +55,13 @@ Magisk Module that will turn your Android phone into a OnePlus device by adding:
     OxyAdditional. If not, see <http://www.gnu.org/licenses/>.
 
 ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** *****
+#### V 1.6
+* Update to  vn_5.0.2.4.210115101029.341d95b vc_30024
+* New Shelf and UI
+* Improved HomeScreen
+* Enable Pin option by default
+* Toggleable cart/drag icon
+* General bug and fixes
 
 #### V 1.5.1
 * Added more Launcher in ReplaceList
