@@ -4,7 +4,7 @@ title: Happy New Year
 category: blog
 excerpt: Happy New Year
 author: Dmytro Galitsky (melles1991)
-image: {{site.baseurl}}/images/2020-12-31/new_year.jpg
+image: https://www.craft-rom.ml/images/2020-12-31/new_year.jpg
 ---
 
 ![hero]({{page.image}}){: .blog_post_image_full }
