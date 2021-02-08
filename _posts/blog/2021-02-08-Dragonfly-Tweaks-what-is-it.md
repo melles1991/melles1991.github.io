@@ -4,7 +4,7 @@ title: Dragonfly Tweaks what is it and why is it needed?
 category: blog
 excerpt: My personal experience with Dragonfly Tweaks.
 author: Dmytro Galitsky (melles1991)
-image: http://arprime.ru/uploads_articles/2017/12/programmy-dlya-optimizatsii-raboty-android.jpg
+image: https://xakep.ru/wp-content/uploads/2018/06/174665/speed-up-android-h.jpg
 ---
 
 
@@ -29,12 +29,12 @@ In the near future, I plan to supplement the review with examples of linear sett
 
 
 
-###№ Info
+#### Info
 
 
 Link                   |Website                   |Telegram
 --------------------------|--------------------------|--------------------------
-[Download Dragonfly Tweaks](https://sourceforge.net/projects/dft-builds/files/beta)|[Dragonfly Project](https://dragonfly-project.github.io)|[DfP | Openβeta](https://t.me/dfpbeta)
+[Download Dragonfly Tweaks](https://sourceforge.net/projects/dft-builds/files/beta)|[Dragonfly Project](https://dragonfly-project.github.io)|[DfP Openβeta](https://t.me/dfpbeta)
 {: .table }
 
 
