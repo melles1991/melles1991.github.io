@@ -9,6 +9,7 @@ layout: null
     <link>{{ site.url }}</link>
     {% for post in site.categories.blog %}
         <item>
+		    <image>{{ post.image | xml_escape }}</image>
             <title>{{ post.title | xml_escape }}</title>
             <description> {{ post.excerpt  | xml_escape }}</description>
             <pubDate>{{ post.date | date_to_xmlschema }}</pubDate>
