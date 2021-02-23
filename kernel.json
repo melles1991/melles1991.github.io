@@ -1,9 +1,9 @@
 {
     "builtAt": "Sun Mar 07, 2021 11:28:16",
-    "buildDate": "Sun Mar 08, 2021 11:28:16",
-    "linuxVersion": "4.9.258",
-    "downloadLink": "http://uditkarode.xyz/crimson/CrimsonKernel-20200113-adrenonls.zip",
-    "codeName": "onclite",
+    "buildDate": "Sut Feb 20, 2021 11:06:16",
+    "linuxVersion": "4.9.257",
+    "downloadLink": "https://sourceforge.net/projects/exodusos/files/Chidori%20Kernel/onclite/",
+    "codeName": "-chidori-perf",
     "cafTag": "8d7297a27f287fa66aeae4fda418a5db833f65bc"
 
 }
