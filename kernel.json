@@ -1,13 +1,10 @@
 {
   "kernel": {
-    "buildDate": "Crimson Minimal",
+    "builtAt": "Sep 16, 201",
     "linuxVersion": "4.9.257",
     "downloadLink": "http://uditkarode.xyz/crimson/CrimsonKernel-20200113-adrenonls.zip",
     "codeName": "onclite",
-    "buildDate": "2020-01-13",
+    "buildDate": "Sep 16, 2015 10:34:23 AM",
     "cafTag": "8d7297a27f287fa66aeae4fda418a5db833f65bc"
-  },
-  "support": {
-    "link": "https://t.me/crimsonviolet"
   }
 }
