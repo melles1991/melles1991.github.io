@@ -1,7 +1,7 @@
 {
   "kernel": {
     "builtAt": "03/12/2021 09 PM",
-    "linuxVersion": "4.9.257",
+    "linuxVersion": 4.9.257,
     "downloadLink": "http://uditkarode.xyz/crimson/CrimsonKernel-20200113-adrenonls.zip",
     "codeName": "onclite",
     "buildDate": "03/12/2021 09 PM",
