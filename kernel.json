@@ -1,7 +1,13 @@
 {
-  "builtAt": 50160,
-  "codeName": 57503,
-  "cafTag": "tcp",
-  "linuxVersion": "hmac-sha256",
-  "downloadLink": 52597,
+  "kernel": {
+    "buildDate": "Crimson Minimal",
+    "linuxVersion": "4.9.257",
+    "downloadLink": "http://uditkarode.xyz/crimson/CrimsonKernel-20200113-adrenonls.zip",
+    "codeName": "onclite",
+    "buildDate": "2020-01-13",
+    "cafTag": "8d7297a27f287fa66aeae4fda418a5db833f65bc"
+  },
+  "support": {
+    "link": "https://t.me/crimsonviolet"
+  }
 }
