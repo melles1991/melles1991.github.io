@@ -1,9 +1,9 @@
 ---
 sidebar: home_sidebar
-title: Info about onclite
+title: Info about angelican
 folder: info
 layout: deviceinfo
-permalink: /devices/onclite/
+permalink: /devices/angelican/
 device: angelican
 ---
 {% include templates/device_info.md %}
