@@ -9,8 +9,8 @@ download_boot: With the device powered off, hold <kbd>Volume Down</kbd> + <kbd>P
 gpu: PowerVR GE8320
 image: angelican.png
 install_method: fastboot_xiaomi
-name: Redmi 9C
-ram: 2 GB
+name: Redmi 9C NFC
+ram: 2/3 GB
 recovery_boot: With the device powered off, hold <kbd>Volume Up</kbd> + <kbd>Power</kbd>.
   Keep holding both buttons until the "Redmi" logo appears on the screen, then release.
 release: 2020-06
@@ -19,7 +19,7 @@ screen_ppi: 269
 screen_res: 1600x720
 screen_tech: IPS LCD
 soc: MediaTek Helio G35
-storage: 32 GB
+storage: 32/64 GB
 type: phone
 vendor: Xiaomi
 vendor_short: xiaomi
