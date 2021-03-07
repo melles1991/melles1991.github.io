@@ -1,9 +1,9 @@
 {
     "builtAt": "Thu Mar 4 22:02:16 2021",
     "latestDate": "Mar 3 22 2021",
-    "linuxVersion": "4.9.259",
+    "linuxVersion": "4.9.260",
     "downloadLink": "https://sourceforge.net/projects/exodusos/files/Chidori%20Kernel/onclite/",
     "codeName": "-chidori-perf",
-    "cafTag": "LA.UM.9.6.2.r1-03600-89xx.0",
-    "changelog": " • Upstream Linux 4.9.259\n • Minor fixes"
+    "cafTag": "LA.UM.9.6.2.r1-04100-89xx.0",
+    "changelog": " • Upstream Linux 4.9.260\n • Merge tag 'LA.UM.9.6.2.r1-04100-89xx.0' Kernel/Wlan\n •  Use freezable power efficient workqueue\n •  Reduce scan times and put to deep sleep\n •  Build kernel with -finline-hint-functions\n •  "
 }
