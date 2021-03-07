@@ -4,15 +4,14 @@ title: CraftRom Manager
 category: file
 excerpt: Android Application
 author: melles1991
-durl: https://github.com/CraftRom/CraftRom-Kernel-Manager/releases/download/R.1.7.20201029/com.craftrom.kernelmanager-vR.1.7.20201029-release.apk
+durl: https://t.me/ct_storage/346
 ---
 
 ![hero]({{site.baseurl}}/assets/img/module.png){: .blog_post_image_full }
 
-* **Version**: v0.3 beta;
+* **Version**: v1.5;
 * **Maintainer**: @mrshterben;
 
-[![](https://img.shields.io/badge/CraftRom%20Manager-ALPHA-blue)](https://github.com/CraftRom/CraftRom-Manager/releases)
 ![](https://img.shields.io/github/contributors/craftrom/CraftRom-Manager)
 [![Crowdin](https://badges.crowdin.net/craft-rom-km/localized.svg)](https://crowdin.com/project/craft-rom-km)
 ![](https://img.shields.io/github/license/craftrom/CraftRom-Manager)
