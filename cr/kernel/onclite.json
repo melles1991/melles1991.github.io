@@ -5,5 +5,5 @@
     "downloadLink": "https://sourceforge.net/projects/exodusos/files/Chidori%20Kernel/onclite/",
     "codeName": "-chidori-perf",
     "cafTag": "LA.UM.9.6.2.r1-04100-89xx.0",
-    "changelog": " • Upstream Linux 4.9.260\n • Merge tag 'LA.UM.9.6.2.r1-04100-89xx.0' Kernel/Wlan\n •  Use freezable power efficient workqueue\n •  Reduce scan times and put to deep sleep\n •  Build kernel with -finline-hint-functions\n •  Enable and set zram compression to lz4\n •  Relax CPU latency requirements to save power\n •  More upstream ZRam\n •  zram: extend zero pages to same element pages\n •  More others"
+    "changelog": " • Upstream Linux 4.9.260\n • Merge tag 'LA.UM.9.6.2.r1-04100-89xx.0' Kernel/Wlan\n • Reduce autosuspend delay to 50 ms In the current\n • Use freezable power efficient workqueue\n •  Reduce scan times and put to deep sleep\n •  Build kernel with -finline-hint-functions\n •  Enable and set zram compression to lz4\n •  Relax CPU latency requirements to save power\n •  Disable SAE features \n •   Let prima sleep.\n •  More others"
 }
