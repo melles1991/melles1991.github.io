@@ -1,9 +1,9 @@
 {
-    "builtAt": "Tue Mar 9 20:02:16 2021",
-    "latestDate": "Mar 8 20 2021",
+    "builtAt": "Wed Mar 10 19:18:51 2021",
+    "latestDate": "Mar 10 20 2021",
     "linuxVersion": "4.9.260",
-    "downloadLink": "https://sourceforge.net/projects/exodusos/files/Chidori%20Kernel/onclite/",
+    "downloadLink": "https://sourceforge.net/projects/exodusos/files/Chidori%20Kernel/",
     "codeName": "-chidori-perf",
     "cafTag": "LA.UM.9.6.2.r1-04100-89xx.0",
-    "changelog": " • Upstream Linux 4.9.260\n • Merge tag 'LA.UM.9.6.2.r1-04100-89xx.0' Kernel/Wlan\n • Reduce autosuspend delay to 50 ms In the current\n • Use freezable power efficient workqueue\n •  Reduce scan times and put to deep sleep\n •  Build kernel with -finline-hint-functions\n •  Enable and set zram compression to lz4\n •  Relax CPU latency requirements to save power\n •  Disable SAE features \n •   Let prima sleep.\n •  More others"
+    "changelog": " • Update regulatory wireless rules for Ukraine (UA), Kazakhstan (KZ), Pakistan (PK), Egypt (EG), Bangladesh (BD), US\n • powersuspend: New PM kernel driver for Android w/o early_suspend (Version v1.8)\n • arm64: vdso32: add CONFIG_THUMB2_COMPAT_VDSO\n • Allow overriding CC_ARM32 for GCC\n • Add RGBA16161616_F compressed format support\n • Add extrasize for UBWC buffer\n • Don't warn on debugfs failures when DEBUG_FS is disabled\n • More other's"
 }
