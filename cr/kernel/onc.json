@@ -1,9 +1,9 @@
 {
-    "builtAt": "Wed Mar 10 19:41:00 2021",
-    "latestDate": "Mar 10 18 2021",
-    "linuxVersion": "4.9.260",
+    "builtAt": "Sat Mar 13 17:00:19 2021",
+    "latestDate": "Mar 13 16 2021",
+    "linuxVersion": "4.9.261",
     "downloadLink": "https://sourceforge.net/projects/exodusos/files/Chidori%20Kernel/",
     "codeName": "-chidori-perf",
     "cafTag": "LA.UM.9.6.2.r1-04100-89xx.0",
-    "changelog": " • Update regulatory wireless rules for Ukraine (UA), Kazakhstan (KZ), Pakistan (PK), Egypt (EG), Bangladesh (BD), US\n • powersuspend: New PM kernel driver for Android w/o early_suspend (Version v1.8)\n • arm64: vdso32: add CONFIG_THUMB2_COMPAT_VDSO\n • Allow overriding CC_ARM32 for GCC\n • Add RGBA16161616_F compressed format support\n • Add extrasize for UBWC buffer\n • Don't warn on debugfs failures when DEBUG_FS is disabled\n • More other's"
+    "changelog": " • Upstream Linux 4.9.261\n • Fix uninitialized variable usage in drm_plane_helper_check_update()\n • Fix transposed panel_switch and panel_post_switch\n • Fix memory leaks when memory_dump_v2 isn't built \n • camera: Fix memory leak in cam_res_mgr_probe()\n • Add support for LLVM's Polly optimizer\n • input: touchscreen: Use the stock value to define the type\n • add NEON accelerated XOR implementation\n • More other's"
 }
