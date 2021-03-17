@@ -1,9 +1,9 @@
 {
-    "builtAt": "Sat Mar 13 17:00:19 2021",
-    "latestDate": "Mar 12 16 2021",
-    "linuxVersion": "4.9.261",
+    "builtAt": "Wed Mar 17 20:14:10 2021",
+    "latestDate": "Mar 17 20 2021",
+    "linuxVersion": "4.9.262",
     "downloadLink": "https://sourceforge.net/projects/exodusos/files/Chidori%20Kernel/",
     "codeName": "-chidori-perf",
     "cafTag": "LA.UM.9.6.2.r1-04100-89xx.0",
-    "changelog": " • Upstream Linux 4.9.261\n • Fix uninitialized variable usage in drm_plane_helper_check_update()\n • Fix transposed panel_switch and panel_post_switch\n • Fix memory leaks when memory_dump_v2 isn't built \n • camera: Fix memory leak in cam_res_mgr_probe()\n • Add support for LLVM's Polly optimizer\n • input: touchscreen: Use the stock value to define the type\n • add NEON accelerated XOR implementation\n • More other's"
+    "changelog": " • Upstream Linux 4.9.261\n • Add ARM64-specific support for flatmem\n • Block access to mounts for IsolatedService\n • Hide magisk mounts for IsolatedService\n • Make scheduling period more efficient\n • Start killing wakelocks after two minutes of idle (120s)\n • When tcp stack not buggy init window size to 64K otherwise lock to 32k\n • Use get_random_int() to fix entropy depleting\n • Fix Wi-Fi speed"
 }
