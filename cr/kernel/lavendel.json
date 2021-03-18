@@ -1,0 +1,9 @@
+{
+    "builtAt": "Thu 18 00:33:14 2021",
+    "latestDate": "Mar 18 20 2021",
+    "linuxVersion": "4.4.261",
+    "downloadLink": "https://sourceforge.net/projects/exodusos/files/Chidori%20Kernel/",
+    "codeName": "-chidori-test",
+    "cafTag": "null",
+    "changelog": " • Init TEST\n • Add ARM64-specific support for flatmem\n • Block access to mounts for IsolatedService\n • Hide magisk mounts for IsolatedService\n • Make scheduling period more efficient\n • Start killing wakelocks after two minutes of idle (120s)\n • When tcp stack not buggy init window size to 64K otherwise lock to 32k\n • Use get_random_int() to fix entropy depleting"
+}
