@@ -1,0 +1,29 @@
+﻿architecture: arm64
+battery: {removable: False, capacity: 4000, tech: 'Li-Po'}
+codename: lavender
+cpu: Kryo 260
+cpu_cores: '8'
+cpu_freq: 4 x 2.2 GHz + 4 x 1.8 GHz
+download_boot: With the device powered off, hold <kbd>Volume Down</kbd> + <kbd>Power</kbd>.
+  Keep holding both buttons until the word "FASTBOOT" appears on the screen, then release.
+gpu: Adreno 509
+image: lavender.png
+install_method: fastboot_xiaomi
+kernel: android_kernel_xiaomi_lavender
+name:  'Redmi Note 7'
+ram: 3/4/6 GB
+recovery_boot: With the device powered off, hold <kbd>Volume Up</kbd> + <kbd>Power</kbd>.
+  Keep holding both buttons until the "Redmi" logo appears on the screen, then release.
+release: 2019-01
+screen: 160 mm (6.3 in)
+screen_ppi: '409'
+screen_res: 1080x2340
+screen_tech: IPS LCD
+soc: Qualcomm SDM660 Snapdragon 660
+storage: 16/32 GB
+tree: android_device_xiaomi_onclite
+type: phone
+vendor: Xiaomi
+vendor_short: xiaomi
+
+tags: [lavender, redmi, xiaomi, mokee, lineage, note 7, redmi note 7, crDroid, Chidori kernel, chidori]
