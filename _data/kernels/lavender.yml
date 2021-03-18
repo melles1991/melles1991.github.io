@@ -1,0 +1,8 @@
+device: lavender
+kernels:
+  - name: Chidori Kernel
+    android: [10 , 11]  
+    linux: [4.4.x]
+    bage: true
+    bageurl: https://img.shields.io/sourceforge/dt/exodusos/Chidori%20Kernel/lavender?style=for-the-badge
+    url: https://sourceforge.net/projects/exodusos/files/Chidori%20Kernel/lavender/
