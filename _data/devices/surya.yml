@@ -1,0 +1,29 @@
+﻿architecture: arm64
+battery: {removable: False, capacity: 5160, tech: 'Li-Po'}
+codename: surya
+cpu: Kryo 470
+cpu_cores: '8'
+cpu_freq: 2 x 2.3 GHz + 6 x 1.8 GHz
+download_boot: With the device powered off, hold <kbd>Volume Down</kbd> + <kbd>Power</kbd>.
+  Keep holding both buttons until the word "FASTBOOT" appears on the screen, then release.
+gpu: Adreno 618
+image: surya.png
+install_method: fastboot_xiaomi
+kernel: android_kernel_xiaomi_surya
+name:  'Poco X3 NFC'
+ram: 6/8 GB
+recovery_boot: With the device powered off, hold <kbd>Volume Up</kbd> + <kbd>Power</kbd>.
+  Keep holding both buttons until the "Redmi" logo appears on the screen, then release.
+release: 2020-09
+screen: 107.4 mm (6.67 in)
+screen_ppi: '~395'
+screen_res: 1080 x 2400
+screen_tech: IPS LCD
+soc: Qualcomm SM7150-AC Snapdragon 732G
+storage: 64/128 GB
+tree: android_device_xiaomi_surya
+type: phone
+vendor: Poco
+vendor_short: poco
+
+tags: [surya, poco, xiaomi, mokee, lineage, x3, poco x3, crDroid, chidori kernel, chidori]
