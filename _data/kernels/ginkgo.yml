@@ -1,5 +1,5 @@
 
-device: onclite
+device: ginkgo
 kernels:
   - name: Chidori Kernel
     android: [11]  
