@@ -1,0 +1,31 @@
+architecture: arm64
+battery: {removable: False, capacity: 4000, tech: 'Li-Po'}
+codename: ginkgo
+cpu: Kryo 260
+cpu_cores: '8'
+cpu_freq: 4 x 2.0 GHz + 4 x 1.8 GHz
+download_boot: With the device powered off, hold <kbd>Volume Down</kbd> + <kbd>Power</kbd>.
+  Keep holding both buttons until the word "FASTBOOT" appears on the screen, then release.
+gpu: Adreno 610
+image: ginkgo.png
+install_method: fastboot_xiaomi
+kernel: android_kernel_xiaomi_ginkgo
+name: 'Redmi Note 8 / 8T'
+ram: 3/4/6 GB
+recovery_boot: With the device powered off, hold <kbd>Volume Up</kbd> + <kbd>Power</kbd>.
+  Keep holding both buttons until the "Redmi" logo appears on the screen, then release.
+release:
+- Note 8: 2019-08
+- Note 8T: 2019-11
+screen: 160 mm (6.3 in)
+screen_ppi: '409'
+screen_res: 1080x2340
+screen_tech: IPS LCD
+soc: Qualcomm SDM665 Snapdragon 665
+storage: 32/64/128 GB
+tree: android_device_xiaomi_ginkgo
+type: phone
+vendor: Xiaomi
+vendor_short: xiaomi
+
+tags: [ginkgo, redmi, xiaomi, mokee,redmi note, 8t, lineage, crDroid, Chidori kernel, chidori]
