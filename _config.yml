@@ -96,3 +96,11 @@ collections:
     
 plugins:
   - jekyll-redirect-from
+  
+  # Multiple languages
+gems:           ['jekyll-paginate', 'jekyll-multiple-languages']
+
+languages:          ['en', 'ru']
+
+# If not config, the first of languages will be the default
+language_default:   'en'
