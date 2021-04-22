@@ -34,7 +34,7 @@ Magisk Module that will turn your Android phone into a OnePlus device by adding:
 
 ### Credits
 - [Zackptg5](https://github.com/Zackptg5) for MMT-Ex (the base of this module);
-- [Andrea Muzzupappa](https://t.me/Drew_69) for OPLauncher
+- [MrSluffy](https://github.com/MrSluffy) and [GodLeaveMe](https://github.com/GodLeaveMe) for OPLauncher
 - OnePlus for providing all the stuff included here.
 
 ### License
