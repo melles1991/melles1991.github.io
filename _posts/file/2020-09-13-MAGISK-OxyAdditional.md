@@ -4,14 +4,14 @@ title: OxyAdditional
 category: file
 excerpt: MAGISK | SYSTEMLESS
 author: melles1991
-version: v1.7
+version: v2.1
 badgeurl: https://img.shields.io/sourceforge/dt/exodusos/MagiskModules/OxyAdditional?style=for-the-badge
 durl: https://sourceforge.net/projects/exodusos/files/MagiskModules/OxyAdditional/
 ---
 
 ![hero]({{site.baseurl}}/assets/img/module.png){: .blog_post_image_full }
 
-* **Date**: 2021-02-03;
+* **Date**: 2021-04-22;
 * **Version**: {{page.version}};
 * **Maintainer**: @mrshterben;
 
@@ -19,9 +19,9 @@ durl: https://sourceforge.net/projects/exodusos/files/MagiskModules/OxyAdditiona
 ![](https://img.shields.io/github/license/craftrom/MAGISK-OxyAdditional)
 
 Magisk Module that will turn your Android phone into a OnePlus device by adding:
-- Oxygen OS apps (Launcher, Weather);
-- Oxygen OS Widget;
-- Oxygen OS Font's and Noto Emoji 13.1;
+- Oxygen OS Launcher and Icons Pack;
+- Oxygen OS Widget and Weather;
+- Oxygen OS Clock
 
 ### Requirements
 - Android 10-11
@@ -55,6 +55,10 @@ Magisk Module that will turn your Android phone into a OnePlus device by adding:
     OxyAdditional. If not, see <http://www.gnu.org/licenses/>.
 
 ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** *****
+#### V 2.1 for Android 10
+* Update Launcher to v5.1
+* Minimal repack
+
 #### V 1.7 for Android 11
 * Update OPWeather to OOS11
 * Add OPGallery
