@@ -1,9 +1,0 @@
-{
-    "builtAt": "Wed Mar 17 20:14:10 2021",
-    "latestDate": "Mar 16 20 2021",
-    "linuxVersion": "4.9.262",
-    "downloadLink": "https://sourceforge.net/projects/exodusos/files/Chidori%20Kernel/",
-    "codeName": "-chidori-perf",
-    "cafTag": "LA.UM.9.6.2.r1-04100-89xx.0",
-    "changelog": " • Upstream Linux 4.9.262\n • Add ARM64-specific support for flatmem\n • Block access to mounts for IsolatedService\n • Hide magisk mounts for IsolatedService\n • Make scheduling period more efficient\n • Start killing wakelocks after two minutes of idle (120s)\n • When tcp stack not buggy init window size to 64K otherwise lock to 32k\n • Use get_random_int() to fix entropy depleting\n • Fix Wi-Fi speed"
-}
