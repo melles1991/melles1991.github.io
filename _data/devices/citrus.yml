@@ -14,7 +14,7 @@ name:  'Poco M3'
 ram: 4 GB
 recovery_boot: With the device powered off, hold <kbd>Volume Up</kbd> + <kbd>Power</kbd>.
   Keep holding both buttons until the "Redmi" logo appears on the screen, then release.
-release: 2020-09
+release: 2020-11
 screen: 107.4 mm (6.53 in)
 screen_ppi: '~395'
 screen_res: 1080 x 2340
