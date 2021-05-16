@@ -1,0 +1,24 @@
+device: citrus
+roms:
+  - name: MoKee OS 110
+    url: https://sourceforge.net/projects/exodusos/files/onclite/MoKee/
+    bage: true
+    bageurl: https://img.shields.io/sourceforge/dt/exodusos/onclite/MoKee?style=for-the-badge
+    type: [Experimental]
+    android: [11] 
+  - name: MoKee OS 100
+    url: https://download.mokeedev.com/onclite
+    type: [Nightly]
+    android: [10]   
+  - name: Lineage OS 17.1
+    url: https://sourceforge.net/projects/exodusos/files/lineage/onclite/unofficial/
+    type: [Unofficial]
+    bage: true
+    bageurl: https://img.shields.io/sourceforge/dt/exodusos/Llineage%20OS/onclite/unofficial?style=for-the-badge    
+    android: [10]
+  - name: crDroid
+    url: https://sourceforge.net/projects/exodusos/files/crDroid/onclite/
+    type: [Unofficial]
+    bage: true
+    bageurl: https://img.shields.io/sourceforge/dt/exodusos/crDroid/onclite?style=for-the-badge    
+    android: [10]
