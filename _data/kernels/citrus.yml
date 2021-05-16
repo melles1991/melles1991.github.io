@@ -1,7 +1,7 @@
 device: citrus
 kernels:
   - name: Chidori Kernel
-    android: [10 ]  
+    android: [10]  
     linux: [4.19.x]
     bage: true
     bageurl: https://img.shields.io/sourceforge/dt/exodusos/Chidori%20Kernel/citrus?style=for-the-badge
