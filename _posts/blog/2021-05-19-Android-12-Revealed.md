@@ -4,8 +4,8 @@ title: Android 12 Revealed: The Biggest Design Change In Years!
 category: blog
 excerpt: The first public beta version for installation has become available, smartphones from 11 manufacturers are supported
 author: Dmytro Galitsky (melles1991)
-image: https://www.craft-rom.ml/images/2021-02-19/android-12.png
-image1: https://www.craft-rom.ml/images/2021-02-19/android-12-1.png
+image: https://www.craft-rom.ml/images/2021-05-19/android-12.png
+image1: https://www.craft-rom.ml/images/2021-05-19/android-12-1.png
 ---
 
 ![hero]({{page.image}}){: .blog_post_image_full }
