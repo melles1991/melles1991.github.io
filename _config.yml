@@ -93,14 +93,18 @@ collections:
     permalink: /engineering/:path/
   tooltips:
     output: true
-    
+
+# Paginate
+paginate: 1
+paginate_path: "/pagination/page:num/"
+
 plugins:
   - jekyll-redirect-from
-  
-  # Multiple languages
-gems:           ['jekyll-paginate', 'jekyll-multiple-languages']
+  - jekyll-multiple-languages-plugin
+  - jekyll-paginate
 
-languages:          ['en', 'ru']
+# jekyll-multiple-languages-plugin settings:
+languages: ["ru", "en"]
 
 # If not config, the first of languages will be the default
 language_default:   'en'
