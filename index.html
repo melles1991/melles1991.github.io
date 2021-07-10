@@ -32,7 +32,7 @@ Modules for Magisk and other settings for Android.</p>
         {% for post in site.categories.blog limit:2 %}
 		<div class="card">
 		<div class="card-body">
-		<h3 class="card-title"><a class="fg-primary-dark" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h3>
+		<h3 class="card-title"><a  href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h3>
         <hr class="light">
 		<p>{% include svg/clock.svg %} {{ post.date | date: '%B %d, %Y' }}{% if post.author %} {% include svg/author.svg %} {{ post.author }}{% endif %}</p>
         <p>{{ post.excerpt }}</p>
@@ -50,7 +50,7 @@ Modules for Magisk and other settings for Android.</p>
       {% for post in site.categories.file limit:2 %}
 		<div class="card">
 		<div class="card-body">
-		<h3 class="card-title"><a class="fg-primary-dark" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h3>
+		<h3 class="card-title"><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h3>
         <hr class="light">
 		<p>{% include svg/clock.svg %} {{ post.date | date: '%B %d, %Y' }}{% if post.author %} {% include svg/author.svg %} {{ post.author }}{% endif %}</p>
         <p>{{ post.excerpt }}</p>
