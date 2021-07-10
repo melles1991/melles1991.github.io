@@ -27,11 +27,16 @@ Modules for Magisk and other settings for Android.</p>
       <div>
         <h2>Latest news</h2>
 
-        {% for post in site.categories.blog limit:1 %}
-        <h3><a class="fg-primary-dark" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h3>
-        <h6>{{ post.excerpt }}</h6>
-        <p>{% include svg/clock.svg %} {{ post.date | date: '%B %d, %Y' }}{% if post.author %} {% include svg/author.svg %} {{ post.author }}{% endif %}</p>
-        {% endfor %}
+        {% for post in site.categories.blog limit:2 %}
+		<div class="card">
+		<div class="card-body">
+		<h3 class="card-title"><a class="fg-primary-dark" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h3>
+        <hr class="light">
+		<p>{% include svg/clock.svg %} {{ post.date | date: '%B %d, %Y' }}{% if post.author %} {% include svg/author.svg %} {{ post.author }}{% endif %}</p>
+        <p>{{ post.excerpt }}</p>
+		</div>
+		</div>
+		{% endfor %}
       </div>
     </div>
   </div>
