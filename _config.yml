@@ -98,6 +98,7 @@ collections:
 paginate: 1
 paginate_path: "/pagination/page:num/"
 
+# Plugins
 plugins:
   - jekyll-redirect-from
   - jekyll-multiple-languages-plugin
@@ -105,6 +106,3 @@ plugins:
 
 # jekyll-multiple-languages-plugin settings:
 languages: ["ru", "en"]
-
-# If not config, the first of languages will be the default
-language_default:   'en'

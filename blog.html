@@ -18,10 +18,11 @@ title: Blog
   <div class="card">
 
     <div class="card-body">
-      <h6>{{ post.excerpt }}</h6>
       <h2 class="card-title"><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h2>
+	  <hr class="light">
       <p class="card-text">{% include svg/clock.svg %} {{ post.date | date: '%B %d, %Y' }}{% if post.author %}
-{% include svg/author.svg %} {{ post.author }}{% endif %}</p>
+{% include svg/author.svg %} {{ post.author }}{% endif %}</p> 
+      <p>{{ post.excerpt }}</p>
     </div>
 
     <div class="card-button">
