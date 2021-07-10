@@ -23,9 +23,11 @@ Modules for Magisk and other settings for Android.</p>
 
 <section class="blog bg-primary-lighter">
   <div class="container">
+  
+<div class="col-md-7">
     <div class="post text-lg-left">
       <div>
-        <h2>Latest news</h2>
+        <h2><i class="fa fa-newspaper-o fa-fw" aria-hidden="true"></i>Latest news</h2>
 
         {% for post in site.categories.blog limit:2 %}
 		<div class="card">
@@ -40,6 +42,23 @@ Modules for Magisk and other settings for Android.</p>
       </div>
     </div>
   </div>
+   </div>
+   
+   <div class="col-md-5">
+   <div>
+   <h2><i class="fa fa-download fa-fw" aria-hidden="true"></i> Downloads</h2>
+      {% for post in site.categories.file limit:2 %}
+		<div class="card">
+		<div class="card-body">
+		<h3 class="card-title"><a class="fg-primary-dark" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h3>
+        <hr class="light">
+		<p>{% include svg/clock.svg %} {{ post.date | date: '%B %d, %Y' }}{% if post.author %} {% include svg/author.svg %} {{ post.author }}{% endif %}</p>
+        <p>{{ post.excerpt }}</p>
+		</div>
+		</div>
+		{% endfor %}
+      </div>
+    </div>
 </section>
 
 <!--  <section class="tweaks">
