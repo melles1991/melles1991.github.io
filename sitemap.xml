@@ -1,135 +1,30 @@
+---
+layout: null
+---
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	  xmlns:xhtml="http://www.w3.org/1999/xhtml"
-      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd"
-      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">	  	  
-<!-- www.check-domains.com sitemap generator -->
-
-<url>
-   <loc>https://www.craft-rom.ml/</loc>
-   <lastmod>2021-01-21T22:54:26+00:00</lastmod>
-   <changefreq>monthly</changefreq>
-   <priority>1.0000</priority>
-</url>
-<url>
-   <loc>https://www.craft-rom.ml/feed.xml</loc>
-   <lastmod>2021-01-21T23:32:55+00:00</lastmod>
-   <changefreq>monthly</changefreq>
-   <priority>0.8000</priority>
-</url>
-<url>
-   <loc>https://www.craft-rom.ml/blog/</loc>
-   <lastmod>2021-01-21T22:54:26+00:00</lastmod>
-   <changefreq>monthly</changefreq>
-   <priority>0.8000</priority>
-</url>
-<url>
-   <loc>https://www.craft-rom.ml/file/</loc>
-   <lastmod>2021-01-21T22:54:26+00:00</lastmod>
-   <changefreq>monthly</changefreq>
-   <priority>0.8000</priority>
-</url>
-<url>
-   <loc>https://www.craft-rom.ml/devices/</loc>
-   <lastmod>2021-01-21T22:54:26+00:00</lastmod>
-   <changefreq>monthly</changefreq>
-   <priority>0.8000</priority>
-</url>
-<url>
-   <loc>https://www.craft-rom.ml/about/</loc>
-   <lastmod>2021-01-21T22:54:26+00:00</lastmod>
-   <changefreq>monthly</changefreq>
-   <priority>0.8000</priority>
-</url>
-<url>
-   <loc>https://www.craft-rom.ml/community/</loc>
-   <lastmod>2021-01-21T22:54:26+00:00</lastmod>
-   <changefreq>monthly</changefreq>
-   <priority>0.8000</priority>
-</url>
-<url>
-   <loc>https://www.craft-rom.ml/legal/</loc>
-   <lastmod>2021-01-21T22:54:26+00:00</lastmod>
-   <changefreq>monthly</changefreq>
-   <priority>0.8000</priority>
-</url>
-<url>
-   <loc>https://www.craft-rom.ml/Happy-New-Year/</loc>
-   <lastmod>2021-01-21T22:54:26+00:00</lastmod>
-   <changefreq>monthly</changefreq>
-   <priority>0.8000</priority>
-</url>
-<url>
-   <loc>https://www.craft-rom.ml/Merry-Christmas/</loc>
-   <lastmod>2021-01-21T22:54:26+00:00</lastmod>
-   <changefreq>monthly</changefreq>
-   <priority>0.6400</priority>
-</url>
-<url>
-   <loc>https://www.craft-rom.ml/file.xml</loc>
-   <lastmod>2021-01-21T23:32:55+00:00</lastmod>
-   <changefreq>monthly</changefreq>
-   <priority>0.6400</priority>
-</url>
-<url>
-   <loc>https://www.craft-rom.ml/Craft-Rom-Kernel-Manager/</loc>
-   <lastmod>2021-01-21T22:54:26+00:00</lastmod>
-   <changefreq>monthly</changefreq>
-   <priority>0.6400</priority>
-</url>
-<url>
-   <loc>https://www.craft-rom.ml/MAGISK-OxyAdditional/</loc>
-   <lastmod>2021-01-21T22:54:26+00:00</lastmod>
-   <changefreq>monthly</changefreq>
-   <priority>0.6400</priority>
-</url>
-<url>
-   <loc>https://www.craft-rom.ml/devices/wt88047/</loc>
-   <lastmod>2021-01-21T22:54:26+00:00</lastmod>
-   <changefreq>monthly</changefreq>
-   <priority>0.5120</priority>
-</url>
-<url>
-   <loc>https://www.craft-rom.ml/devices/onclite/</loc>
-   <lastmod>2021-01-21T22:54:26+00:00</lastmod>
-   <changefreq>monthly</changefreq>
-   <priority>0.5120</priority>
-</url>
-<url>
-   <loc>https://www.craft-rom.ml/devices/wt88047/install</loc>
-   <lastmod>2021-01-21T22:54:26+00:00</lastmod>
-   <changefreq>monthly</changefreq>
-   <priority>0.4096</priority>
-</url>
-<url>
-   <loc>https://www.craft-rom.ml/bugreport-howto</loc>
-   <lastmod>2021-01-21T22:54:26+00:00</lastmod>
-   <changefreq>monthly</changefreq>
-   <priority>0.4096</priority>
-</url>
-<url>
-   <loc>https://www.craft-rom.ml/devices/onclite/install</loc>
-   <lastmod>2021-01-21T22:54:26+00:00</lastmod>
-   <changefreq>monthly</changefreq>
-   <priority>0.4096</priority>
-</url>
-<url>
-   <loc>https://www.craft-rom.ml/gapps.html</loc>
-   <lastmod>2021-01-21T22:54:26+00:00</lastmod>
-   <changefreq>monthly</changefreq>
-   <priority>0.3277</priority>
-</url>
-<url>
-   <loc>https://www.craft-rom.ml/logcat.html</loc>
-   <lastmod>2021-01-21T22:54:26+00:00</lastmod>
-   <changefreq>monthly</changefreq>
-   <priority>0.3277</priority>
-</url>
-<url>
-   <loc>https://www.craft-rom.ml/bugreport-howto.html</loc>
-   <lastmod>2021-01-21T22:54:26+00:00</lastmod>
-   <changefreq>monthly</changefreq>
-   <priority>0.2621</priority>
-</url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+{% for node in site.pages %}
+    {% unless site.exclude_from_localization contains node.path %}
+        {% for lang in site.languages %}
+            {% if node.layout %}
+                <url>
+                    <loc>{% if lang == site.default_lang %}{{ node.url | absolute_url }}{% else %}{{ node.url | prepend: lang | absolute_url }}{% endif %}</loc>
+                    {% for lang in site.languages %}
+                    <xhtml:link rel="alternate" hreflang="{{ lang }}" href="{% if lang == site.default_lang %}{{ node.url | absolute_url }}{% else %}{{ node.url | prepend: lang | prepend: '/' | absolute_url }}{% endif %}"/>
+                    {% endfor %}
+                </url>
+            {% endif %}
+        {% endfor %}
+    {% endunless %}
+{% endfor %}
+{% for collection in site.collections %}
+    {% for node in site[collection.label] %}
+        <url>
+            <loc>{% if lang == site.default_lang %}{{ node.url | absolute_url }}{% else %}{{ node.url | prepend: lang | absolute_url }}{% endif %}</loc>
+            {% for lang in site.languages %}
+            <xhtml:link rel="alternate" hreflang="{{ lang }}" href="{% if lang == site.default_lang %}{{ node.url | absolute_url }}{% else %}{{ node.url | prepend: lang | prepend: '/' | absolute_url }}{% endif %}"/>
+            {% endfor %}
+        </url>
+    {% endfor %}
+{% endfor %}
 </urlset>
