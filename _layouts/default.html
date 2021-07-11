@@ -1,5 +1,6 @@
+{% assign __ = site.data.languages[site.lang] %}
 <!DOCTYPE html>
-<html lang="en">
+<html  lang="{{ site.lang}}">
   <head>
     {% include meta.html %}
 	
@@ -27,7 +28,7 @@
 
   </head>
 
-  <body id="page-top">
+  <body itemscope itemtype="http://schema.org/WebPage" lang="{{ page.lang | default: page.language | default: site.lang }}" id="page-top">
 
     {% include layout/navbar.html %}
 
