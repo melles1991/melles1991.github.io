@@ -4,12 +4,13 @@ title: CraftRom Manager
 category: file
 excerpt: Android Application
 author: melles1991
-durl: https://t.me/ct_storage/346
+version: v2.1
+durl: https://sourceforge.net/projects/exodusos/files/Craft%20Rom%20-%20Manager/
 ---
 
-![hero]({{site.baseurl}}/assets/img/module.png){: .blog_post_image_full }
+![hero]({{site.baseurl}}/images/file/craftrom-manager.png){: .blog_post_image_full }
 
-* **Version**: v1.5;
+* **Version**: {{page.version}};
 * **Maintainer**: @mrshterben;
 
 ![](https://img.shields.io/github/contributors/craftrom/CraftRom-Manager)
