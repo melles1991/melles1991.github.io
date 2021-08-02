@@ -1,5 +1,9 @@
 device: onclite
 roms:
+  - name: Pixel Experience
+    url: https://sourceforge.net/projects/exodusos/files/onclite/MoKee/
+    type: [Unofficial]
+    android: [11]
   - name: MoKee OS 110
     url: https://sourceforge.net/projects/exodusos/files/onclite/MoKee/
     bage: true
