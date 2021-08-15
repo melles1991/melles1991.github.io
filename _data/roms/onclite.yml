@@ -1,7 +1,9 @@
 device: onclite
 roms:
   - name: Pixel Experience
-    url: https://mega.nz/folder/9Uo1XIzT#7MMR8JgKPfyKJfYzL5TILQ
+    url: https://sourceforge.net/projects/exodusos/files/onclite/PixelExperience/
+    bage: true
+    bageurl: https://img.shields.io/sourceforge/dt/exodusos/onclite/PixelExperience?style=for-the-badge
     type: [Unofficial]
     android: [11]
   - name: MoKee OS 110
