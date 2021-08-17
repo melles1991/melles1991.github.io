@@ -4,6 +4,8 @@ name: CraftRom
 # Short bio or description (displayed in the header)
 description: Maintenance of various devices based on the custom Android operating system.
 
+keywords: rom, android, craftrom, craft, mokee, redmi, xiaomi, poco
+
 repository: melles1991/www 
 
 github: [metadata]
