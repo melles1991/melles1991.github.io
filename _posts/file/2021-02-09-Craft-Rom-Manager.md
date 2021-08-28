@@ -4,7 +4,7 @@ title: CraftRom Manager
 category: file
 excerpt: Android Application
 author: melles1991
-version: v2.1
+version: v5.1
 durl: https://sourceforge.net/projects/exodusos/files/Craft%20Rom%20-%20Manager/
 ---
 
