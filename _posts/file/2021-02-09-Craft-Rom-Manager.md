@@ -11,7 +11,7 @@ durl: https://sourceforge.net/projects/exodusos/files/Craft%20Rom%20-%20Manager/
 ![hero]({{site.baseurl}}/images/file/craftrom-manager.png){: .blog_post_image_full }
 
 * **Version**: {{page.version}};
-* **Maintainer**: @mrshterben;
+* **Maintainer**: {{page.author}};
 
 ![](https://img.shields.io/github/contributors/craftrom/CraftRom-Manager)
 [![Crowdin](https://badges.crowdin.net/craft-rom-km/localized.svg)](https://crowdin.com/project/craft-rom-km)
