@@ -4,7 +4,7 @@ title: CraftRom Manager
 category: file
 excerpt: Android Application
 author: melles1991
-version: v5.1
+version: v5.5.2
 durl: https://sourceforge.net/projects/exodusos/files/Craft%20Rom%20-%20Manager/
 ---
 
@@ -24,6 +24,8 @@ Welcome!  The application is distributed <strong>without ads</strong> and was cr
 * Chidori Kernel Update for Supported Devices
 * Updating OxyAdditionals for the current version of Android device
 * Craft Rom Site News
+* Safety NET checker 
+* Terminal
 
 ## Android Version Support
 
@@ -40,6 +42,10 @@ Welcome!  The application is distributed <strong>without ads</strong> and was cr
 #### John Wu
 
 * [libsu](https://github.com/topjohnwu/libsu)
+
+#### Scott Alexander-Bown
+
+*[SafetyNet attest() Helper](https://github.com/scottyab/safetynethelper)
 
 ## Translations
 Default string resources for CraftRom Kernel Manager are located here:
