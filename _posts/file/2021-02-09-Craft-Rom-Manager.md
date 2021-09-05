@@ -2,8 +2,8 @@
 layout: post
 title: CraftRom Manager
 category: file
-excerpt: Android Application
-author: melles1991
+excerpt: The official CraftRom community app with many features
+author: Dmytro Galitsky (melles1991)
 version: v5.5.2
 durl: https://sourceforge.net/projects/exodusos/files/Craft%20Rom%20-%20Manager/
 ---
