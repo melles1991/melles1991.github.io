@@ -45,7 +45,7 @@ Welcome!  The application is distributed <strong>without ads</strong> and was cr
 
 #### Scott Alexander-Bown
 
-*[SafetyNet attest() Helper](https://github.com/scottyab/safetynethelper)
+* [SafetyNet attest() Helper](https://github.com/scottyab/safetynethelper)
 
 ## Translations
 Default string resources for CraftRom Kernel Manager are located here:
