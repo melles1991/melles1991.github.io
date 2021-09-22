@@ -2,16 +2,16 @@
 layout: post
 title: CraftRom Manager
 category: file
-excerpt: Android Application
-author: melles1991
-version: v2.1
+excerpt: The official CraftRom community app with many features
+author: Dmytro Galitsky (melles1991)
+version: v5.5.2
 durl: https://sourceforge.net/projects/exodusos/files/Craft%20Rom%20-%20Manager/
 ---
 
 ![hero]({{site.baseurl}}/images/file/craftrom-manager.png){: .blog_post_image_full }
 
 * **Version**: {{page.version}};
-* **Maintainer**: @mrshterben;
+* **Maintainer**: {{page.author}};
 
 ![](https://img.shields.io/github/contributors/craftrom/CraftRom-Manager)
 [![Crowdin](https://badges.crowdin.net/craft-rom-km/localized.svg)](https://crowdin.com/project/craft-rom-km)
@@ -24,6 +24,8 @@ Welcome!  The application is distributed <strong>without ads</strong> and was cr
 * Chidori Kernel Update for Supported Devices
 * Updating OxyAdditionals for the current version of Android device
 * Craft Rom Site News
+* Safety NET checker 
+* Terminal
 
 ## Android Version Support
 
@@ -40,6 +42,10 @@ Welcome!  The application is distributed <strong>without ads</strong> and was cr
 #### John Wu
 
 * [libsu](https://github.com/topjohnwu/libsu)
+
+#### Scott Alexander-Bown
+
+* [SafetyNet attest() Helper](https://github.com/scottyab/safetynethelper)
 
 ## Translations
 Default string resources for CraftRom Kernel Manager are located here:
