@@ -253,7 +253,7 @@ hr.light {
 
 // Donate
 a.btn-donut:hover {
-    color: #EC407A;
+    color: #2196f3;
 	background-color: rgba(0,0,0,0.1);
     border-color: (0,0,0,0.1);
     text-decoration: none;
@@ -269,11 +269,8 @@ a.btn-donut {
     font-family: Google Sans Regular;
     text-decoration: none;
 }
-a:hover {
-    color: #2196f3;
-    text-decoration: none;
-}
-.btn {
+
+.donut {
     display: inline-block;
     font-weight: 400;
     text-align: center;
