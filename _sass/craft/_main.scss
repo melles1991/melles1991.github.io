@@ -250,3 +250,21 @@ a {
 hr.light {
     border-top: 1px solid #2196f3;	
 }
+
+// Donate
+        a.btn-donut {
+			color: #212121;
+			background-color: rgba(0,0,0,0.1);
+			padding: 0.25rem 0.5rem;
+			font-size: 0.875rem;
+			line-height: 1.5;
+			font-size: 18px;
+			border-radius: 50px;
+			font-family: Google Sans Regular;
+			text-decoration: none;
+		}
+
+		a.btn-donut:hover {
+			color: #EC407A;
+			text-decoration: none;
+		}
