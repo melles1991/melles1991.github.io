@@ -254,6 +254,8 @@ hr.light {
 // Donate
 a.btn-donut:hover {
     color: #EC407A;
+	background-color: rgba(0,0,0,0.1);
+    border-color: (0,0,0,0.1);
     text-decoration: none;
 }
 a.btn-donut {
