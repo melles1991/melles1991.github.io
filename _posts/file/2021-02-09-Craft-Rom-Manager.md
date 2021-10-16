@@ -16,6 +16,7 @@ durl: https://sourceforge.net/projects/exodusos/files/Craft%20Rom%20-%20Manager/
 ![](https://img.shields.io/sourceforge/dt/exodusos/Craft%20Rom%20-%20Manager)
 ![](https://img.shields.io/github/contributors/craftrom/CraftRom-Manager)
 [![Crowdin](https://badges.crowdin.net/craft-rom-km/localized.svg)](https://crowdin.com/project/craft-rom-km)
+![](https://img.shields.io/github/license/craftrom/CraftRom-Manager)
 
 # Introduction
 Welcome!  The application is distributed <strong>without ads</strong> and was created solely to simplify the interaction of the community with Craft Rom projects
