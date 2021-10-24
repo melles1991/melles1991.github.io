@@ -1,7 +1,7 @@
 device: surya
 kernels:
   - name: Chidori Kernel
-    android: [11]  
+    android: [11, 12]  
     linux: [4.14.x]
     bage: true
     bageurl: https://img.shields.io/sourceforge/dt/exodusos/Chidori%20Kernel/surya?style=for-the-badge
