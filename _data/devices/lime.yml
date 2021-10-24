@@ -1,29 +1,29 @@
 ﻿architecture: arm64
 battery: {removable: False, capacity: 6000, tech: 'Li-Po'}
-codename: citrus
+codename: lime
 cpu: Kryo 260
 cpu_cores: '8'
 cpu_freq: 4 x 1.8 GHz + 4 x 2.0 GHz
 download_boot: With the device powered off, hold <kbd>Volume Down</kbd> + <kbd>Power</kbd>.
   Keep holding both buttons until the word "FASTBOOT" appears on the screen, then release.
 gpu: Adreno 610
-image: citrus.png
+image: lime.png
 install_method: fastboot_xiaomi
-kernel: android_kernel_xiaomi_citrus
-name:  'Poco M3'
+kernel: android_kernel_xiaomi_lime
+name:  'Redmi Note 9t (Power)'
 ram: 4/6 GB
 recovery_boot: With the device powered off, hold <kbd>Volume Up</kbd> + <kbd>Power</kbd>.
-  Keep holding both buttons until the "Poco" logo appears on the screen, then release.
-release: 2020-11
+  Keep holding both buttons until the "Redmi" logo appears on the screen, then release.
+release: 2021-01
 screen: 104.7 mm (6.53 in)
 screen_ppi: '~395'
 screen_res: 1080 x 2340
 screen_tech: IPS LCD
 soc: Qualcomm SM6115 Snapdragon 662 (11 nm)
 storage: 64/128 GB
-tree: android_device_xiaomi_citrus
+tree: android_device_xiaomi_lime
 type: phone
-vendor: Poco
-vendor_short: poco
+vendor: Redmi
+vendor_short: lime
 
-tags: [citrus, poco, xiaomi, mokee, lineage, m3, poco m3, crDroid, chidori kernel, chidori]
+tags: [lime, pedmi, xiaomi, mokee, lineage, 9t, Redmi Note 9t, crDroid, chidori kernel, chidori]

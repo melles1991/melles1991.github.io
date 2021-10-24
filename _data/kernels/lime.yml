@@ -1,4 +1,4 @@
-device: citrus
+device: lime
 kernels:
   - name: Chidori Kernel
     android: [11]  

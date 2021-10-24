@@ -1,9 +1,9 @@
 ---
 sidebar: home_sidebar
-title: Info about angelican
+title: Info about lime
 folder: info
 layout: deviceinfo
-permalink: /devices/angelican/
-device: angelican
+permalink: /devices/lime/
+device: lime
 ---
 {% include templates/device_info.md %}
