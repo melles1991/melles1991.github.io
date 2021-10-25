@@ -4,5 +4,5 @@ kernels:
     android: [11]  
     linux: [4.19.x]
     bage: true
-    bageurl: https://img.shields.io/sourceforge/dt/exodusos/Chidori%20Kernel/juice?style=for-the-badge
+    bageurl: https://img.shields.io/sourceforge/dt/exodusos/Chidori%20Kernel/citrus?style=for-the-badge
     url: https://sourceforge.net/projects/exodusos/files/Chidori%20Kernel/juice/
