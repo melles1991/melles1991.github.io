@@ -2,7 +2,9 @@
 layout: default
 title: Download
 ---
-<style>body {background-color: #fafafa;}</style>
+<style>body {background-color: #fafafa;}
+icons {margin: 0 2px 0 8px;}
+icons-start {margin: 0 2px 0 0;}</style>
 
 <div class="jumbotron">
   <div class="container">
@@ -20,8 +22,8 @@ title: Download
     <div class="card-body">
       <h2 class="card-title"><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h2>
 	  <hr class="light">
-      <p class="card-text"><span class="mdi mdi-calendar-range"></span> {{ post.date | date: '%B %d, %Y' }}{% if post.author %}
-<span class="mdi mdi-account"></span> {{ post.author }}{% endif %}</p> 
+      <p class="card-text"><span class="icons-start mdi mdi-calendar-range"></span> {{ post.date | date: '%B %d, %Y' }}{% if post.author %}
+<span class="icons mdi mdi-account"></span> {{ post.author }}{% endif %}</p> 
       <p>{{ post.excerpt }}</p>
     </div>
 
