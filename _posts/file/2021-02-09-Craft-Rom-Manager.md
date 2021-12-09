@@ -4,7 +4,7 @@ title: CraftRom Manager
 category: file
 excerpt: The official CraftRom community app with many features
 author: Dmytro Galitsky (melles1991)
-version: v6.7.1
+version: v7.2
 durl: https://sourceforge.net/projects/exodusos/files/Craft%20Rom%20-%20Manager/
 ---
 
@@ -21,10 +21,12 @@ durl: https://sourceforge.net/projects/exodusos/files/Craft%20Rom%20-%20Manager/
 # Introduction
 Welcome!  The application is distributed <strong>without ads</strong> and was created solely to simplify the interaction of the community with Craft Rom projects
 
-## Features
-* Chidori Kernel Update for Supported Devices
+## Features 
 * Craft Rom Site News
-* Safety NET checker 
+* Jitter
+* Safety NET checker
+* Resource monitoring overlay
+
 
 ## Android Version Support
 
