@@ -29,10 +29,15 @@
 	  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8755738219300967"
      crossorigin="anonymous"></script>
 
+
   </head>
 
   <body itemscope itemtype="http://schema.org/WebPage" lang="{{ page.lang | default: page.language | default: site.lang }}" id="page-top">
-
+	 <script src="{{ site.baseurl }}/assets/js/snowstorm.js"></script>
+	 <script src="{{ site.baseurl }}/assets/js/snowstorm.min.js"></script>
+	 <script type="text/javascript">
+		snowStorm.useTwinkleEffect = true;	// let the snow flicker in and out of view
+</script>
     {% include layout/navbar.html %}
 
     <div id="main" role="main">
