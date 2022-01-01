@@ -1,7 +1,7 @@
 device: onclite
 kernels:
   - name: Chidori Kernel
-    android: [10 , 11]  
+    android: [10 , 11 , 12 ]  
     linux: [4.9.x]
     bage: true
     bageurl: https://img.shields.io/sourceforge/dt/exodusos/Chidori%20Kernel/onclite?style=for-the-badge
