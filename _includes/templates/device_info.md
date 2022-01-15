@@ -11,6 +11,7 @@
 
 - [Installation]({{ "devices/" | append: device.codename | append: "/install" | relative_url }})
 - [How to submit a bug report]({{ site.baseurl }}/bugreport-howto)
+- [Fixing SafetyNet]({{ site.baseurl }}/safety-net-fix)
 {% assign versions_count = device.versions|size -%}
 {%- if versions_count > 1 -%}
 - [Upgrade to a higher version of Android (e.g. Android 9 -> Android 10)]({{ "devices/" | append: device.codename | append: "/upgrade" | relative_url }})
