@@ -11,7 +11,7 @@ tags:
 
 ## Fixing SafetyNet [Magisk Canary]
 
-1. Go to magisk settings
+1.A Go to magisk settings
   * Turn on Zygisk
   * Enable "Activate DenyList"
   * Go to "Setting DenyList"
@@ -23,4 +23,7 @@ tags:
      com.google.android.gms
      and
      com.google.android.gms.unstable
-  * Now we reboot our device.
+
+2. Download and install the Universal SafetyNet Fix module and install it in magisk
+  * You can download it from [GitHub](https://github.com/kdrag0n/safetynet-fix/releases).
+  * Next, just install it in magisk and reboot your device.
