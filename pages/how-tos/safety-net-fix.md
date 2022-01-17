@@ -7,7 +7,7 @@ tags:
  - how-to
 ---
 
-{% include alerts/note.html content="TRecently, SafetyNet on Magisk v23+ has been broken for many users. This does not happen to everyone, which is why this page was created." %}
+{% include alerts/note.html content="Recently, SafetyNet on Magisk v23+ has been broken for many users. This does not happen to everyone, which is why this page was created." %}
 
 ## Fixing SafetyNet [Magisk Canary]
 
