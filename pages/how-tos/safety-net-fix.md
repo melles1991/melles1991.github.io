@@ -11,7 +11,7 @@ tags:
 
 ## Fixing SafetyNet [Magisk Canary]
 
-1.A Go to magisk settings
+1. Go to magisk settings
   * Turn on Zygisk
   * Enable "Activate DenyList"
   * Go to "Setting DenyList"
