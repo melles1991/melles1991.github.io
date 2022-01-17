@@ -7,9 +7,12 @@
 
 - name: Support
   data:
-  - name: Telegram 
-    text: Experimental builds, help in solving errors, etc.
+  - name: Telegram group
+    text: For a discussion of devices, features, or just a general conversation about Android, check out our telegram.
     url: https://t.me/craft_rom
+  - name: Telegram news channel
+    text: Update ROMs, kernels and other news.
+    url: https://t.me/ct_host  
 
 #- name: Contact
 #  data:

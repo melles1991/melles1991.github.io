@@ -1,21 +1,26 @@
 @charset "UTF-8";
 .btn {
-    position: relative;
-    padding: 12px 30px;
-    margin: 0.3125rem 1px;
-    font-size: .75rem;
-    font-weight: 400;
-    line-height: 1.42857;
-    text-decoration: none;
-    text-transform: uppercase;
-    letter-spacing: 0;
-    cursor: pointer;
-    background-color: transparent;
-    border: 0;
-    border-radius: 0.2rem;
-    outline: 0;
-    transition: box-shadow 0.2s cubic-bezier(0.4, 0, 1, 1), background-color 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-    will-change: box-shadow, transform;
+  display: inline-block;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  user-select: none;
+  position: relative;
+  padding: 12px 30px;
+  margin: .3125rem 1px;
+  font-size: .75rem;
+  font-weight: 400;
+  line-height: 1.42857;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0;
+  cursor: pointer;
+  background-color: transparent;
+  border: 0;
+  border-radius: 45px;
+  outline: 0;
+  transition: box-shadow 0.2s cubic-bezier(0.4, 0, 1, 1), background-color 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: box-shadow, transform;
 
   &:hover, &:focus {
     text-decoration: none;

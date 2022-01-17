@@ -1,6 +1,6 @@
 ---
 sidebar: home_sidebar
-title: Fixing SafetyNet
+title: How to fixing SafetyNet
 folder: how-tos
 permalink: safety-net-fix.html
 tags:
@@ -27,10 +27,9 @@ Notable examples would be Netflix, which is hidden in the Play Store, and Androi
   * Finding Google Pay and Google Play Services
   * At "Google Pay" turn on all the toggle switches
   * At "Google Play Services" include:
-     com.google.android.gms
-     and
-     com.google.android.gms.unstable
-
+      ** com.google.android.gms
+      ** com.google.android.gms.unstable
+	  
 2. Download and install the Universal SafetyNet Fix module and install it in magisk
   * You can download it from [GitHub](https://github.com/kdrag0n/safetynet-fix/releases).
   * Next, just install it in magisk and reboot your device.
