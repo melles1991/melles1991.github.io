@@ -26,7 +26,7 @@ If you don't have it installed, please do that before continuing." %}
 
 {% include alerts/note.html content="This method requires that your device is [rooted](https://github.com/topjohnwu/Magisk/releases/download/v20.4/Magisk-v20.4.zip)." %}
 
-1. Open the Terminal app (you can enable the built-in terminal app in **Developer options**).
+1. Install and open some Terminal app, we recomend that: [https://play.google.com/store/apps/details?id=yarolegovich.materialterminal](https://play.google.com/store/apps/details?id=yarolegovich.materialterminal)
 2. Type `su` and confirm root access - you may have to turn on root access for apps in **Developer options**.
 3. Type `logcat -d -f /sdcard/logcat.txt`. This will save the log to `/sdcard/logcat.txt`.
 
