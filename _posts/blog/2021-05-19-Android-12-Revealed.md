@@ -18,7 +18,7 @@ Google emphasizes that Android 12 has become "the biggest design change in recen
 Quick Settings have been redesigned, including the addition of the Google Pay icon and smart home controls.
 
 We paid special attention to safety. The system now has a Privacy Dashboard - a panel where you can see what permissions applications received, and when it happened.
-![hero1](https://www.craft-rom.ml/images/2021-05-19/android-12-1.png){: .blog_post_image_full }
+![hero1]({{site.url}}/images/2021-05-19/android-12-1.png){: .blog_post_image_full }
 
 Also Android 12 will turn on the backlight in the right corner if a camera or microphone is in use. Granted permissions can be easily canceled through quick settings without leaving the current screen.
 

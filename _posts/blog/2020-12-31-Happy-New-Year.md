@@ -19,7 +19,7 @@ Last year I did a lot of work with MoKee for Redmi 7 / Y3
 
   ![GitHub ]({{site.baseurl}}/images/2020-12-31/git_stat.png "GitHub"){: .blog_post_image_full }
   
-You can find a complete list of firmwares and kernels released in 2020 [HERE](https://melles1991.github.io/devices/onclite/).
+You can find a complete list of firmwares and kernels released in 2020 [HERE]({{site.url}}/devices/onclite/).
 
 For the convenience of interaction with you, a telegram channel has been created [MoKee | Redmi Y3/7 | onc(lite)](https://t.me/craft_rom).
 
