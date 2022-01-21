@@ -4,10 +4,10 @@ title: Welcome Android 12 to Redmi 7
 category: blog
 excerpt: Instructions for installing Android 12 on Redmi 7\Y3
 author: Dmytro Galitsky (melles1991)
-image: {{site.url}}/images/2021-08-16/android-12.jpg
+image: /images/2021-08-16/android-12.jpg
 ---
 
-![hero]({{page.image}}){: .blog_post_image_full }
+![hero]({{site.url}}/{{page.image}}){: .blog_post_image_full }
 
 
 If you are impatient to try out the latest version of Android 12 and you are ready for possible difficulties - this article is for you.
