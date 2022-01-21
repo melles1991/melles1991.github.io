@@ -4,10 +4,10 @@ title: Happy New Year
 category: blog
 excerpt: Happy New Year
 author: Dmytro Galitsky (melles1991)
-image: {{site.url}}/images/2020-12-31/new_year.jpg
+image: /images/2020-12-31/new_year.jpg
 ---
 
-![hero]({{page.image}}){: .blog_post_image_full }
+![hero]({{site.url}}/{{page.image}}){: .blog_post_image_full }
 
 # Happy New Year!  
 **Hi guys! This year was full of not pleasant surprises. 

@@ -4,10 +4,10 @@ title: Android 12 Revealed. The Biggest Design Change In Years!
 category: blog
 excerpt: The first public beta version for installation has become available, smartphones from 11 manufacturers are supported
 author: Dmytro Galitsky (melles1991)
-image:{{site.url}}/images/2021-05-19/android-12.png
+image: /images/2021-05-19/android-12.png
 ---
 
-![hero]({{page.image}}){: .blog_post_image_full }
+![hero]({{site.url}}/{{page.image}}){: .blog_post_image_full }
 
 Google held a big presentation of the new Android 12 operating system today at the Google I / O conference.
 
