@@ -4,7 +4,7 @@ title: Merry Christmas
 category: blog
 excerpt: Merry Christmas
 author: Dmytro Galitsky (melles1991)
-image: https://www.craft-rom.ml/images/2020-12-24/MerryChristmas.png
+image: {{site.url}}/images/2020-12-24/MerryChristmas.png
 ---
 
 ![hero]({{page.image}}){: .blog_post_image_full }

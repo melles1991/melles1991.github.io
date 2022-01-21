@@ -8,7 +8,7 @@ version: v7.2
 durl: https://sourceforge.net/projects/exodusos/files/Craft%20Rom%20-%20Manager/
 ---
 
-![hero]({{site.baseurl}}/images/file/craftrom-manager.png){: .blog_post_image_full }
+![hero]({{site.url}}/images/file/craftrom-manager.png){: .blog_post_image_full }
 
 * **Version**: {{page.version}};
 * **Maintainer**: {{page.author}};

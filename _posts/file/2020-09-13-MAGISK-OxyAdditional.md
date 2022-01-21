@@ -9,7 +9,7 @@ badgeurl: https://img.shields.io/sourceforge/dt/exodusos/MagiskModules/OxyAdditi
 durl: https://sourceforge.net/projects/exodusos/files/MagiskModules/OxyAdditional/
 ---
 
-![hero]({{site.baseurl}}/assets/img/module.png){: .blog_post_image_full }
+![hero]({{site.url}}/assets/img/module.png){: .blog_post_image_full }
 
 * **Date**: 2021-04-22;
 * **Version**: {{page.version}};
