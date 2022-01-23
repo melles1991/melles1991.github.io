@@ -28,7 +28,7 @@ Notable examples would be Netflix, which is hidden in the Play Store, and Androi
   * At "Google Pay" turn on all the toggle switches
   * At "Google Play Services" include:
 > com.google.android.gms
- ----
+>
 > com.google.android.gms.unstable
 	  
 2. Download and install the Universal SafetyNet Fix module and install it in magisk
