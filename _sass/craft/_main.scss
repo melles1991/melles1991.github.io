@@ -540,3 +540,48 @@ img.btc-style {
 .icons {margin: 0 2px 0 8px;}
 .icons-start {margin: 0 2px 0 0;}
 
+blockquote {
+    padding: 10px 20px;
+    margin: 0 0 20px;
+    font-size: 17.5px;
+    border-left: 5px solid #eee
+}
+blockquote ol:last-child, blockquote p:last-child, blockquote ul:last-child {
+    margin-bottom: 0
+}
+blockquote .small, blockquote footer, blockquote small {
+    display: block;
+    font-size: 80%;
+    line-height: 1.42857;
+    color: #777
+}
+blockquote .small:before, blockquote footer:before, blockquote small:before {
+    content: "\2014 \00A0"
+}
+.blockquote-reverse, blockquote.pull-right {
+    padding-right: 15px;
+    padding-left: 0;
+    text-align: right;
+    border-right: 5px solid #eee;
+    border-left: 0
+}
+.blockquote-reverse .small:before, .blockquote-reverse footer:before, .blockquote-reverse small:before, blockquote.pull-right .small:before, blockquote.pull-right footer:before, blockquote.pull-right small:before {
+    content: ""
+}
+.blockquote-reverse .small:after, .blockquote-reverse footer:after, .blockquote-reverse small:after, blockquote.pull-right .small:after, blockquote.pull-right footer:after, blockquote.pull-right small:after {
+    content: "\00A0 \2014"
+}
+.blog-entry blockquote p, .md-page blockquote p {
+    font-size: 16px;
+    font-style: normal;
+    color: #222
+}
+.blog.article .content blockquote {
+    font-size: 19px
+}
+@media print {
+	blockquote, pre {
+		border: 1px solid #999;
+		page-break-inside: avoid
+    }
+}
