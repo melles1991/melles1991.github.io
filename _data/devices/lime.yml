@@ -15,10 +15,7 @@ ram: 4/6 GB
 recovery_boot: With the device powered off, hold <kbd>Volume Up</kbd> + <kbd>Power</kbd>.
   Keep holding both buttons until the "Redmi" logo appears on the screen, then release.
 release: 2021-01
-screen: 104.7 mm (6.53 in)
-screen_ppi: '~395'
-screen_res: 1080 x 2340
-screen_tech: IPS LCD
+screen: {size: '104.7 mm (6.53 in)', density: 395, resolution: '1080 x 2340', technology: 'IPS LCD'}
 soc: Qualcomm SM6115 Snapdragon 662 (11 nm)
 storage: 64/128 GB
 tree: android_device_xiaomi_lime
