@@ -33,12 +33,12 @@
     </tr>
 
     <tr>
-    {% if device.carrier %}
+    {%- if device.carrier %}
     <tr>
-      <th scope="col"">Carrier</td>
+      <th scope="col">Carrier</td>
       <td>{{ device.carrier }}</td>
     </tr>
-    {% endif %}
+    {%- endif %}
     </tr>
 
     <tr>
@@ -55,7 +55,7 @@
     <tr>
         <th scope="row">CPU</td>
         <td>
-            {% case device.cpu_cores %}
+            {%- case device.cpu_cores %}
                 {% when '1' %}
                     Single-core
                 {% when '2' %}
@@ -68,7 +68,7 @@
                     Octa-core
                 {% else %}
                     {{ device.cpu_cores }}x
-            {% endcase %} {{ device.cpu }}<br>{{ device.cpu_freq }}
+            {%- endcase %} {{ device.cpu }}<br>{{ device.cpu_freq }}
         </td>
     </tr>
     <tr>
@@ -87,42 +87,42 @@
         <td>{{ device.gpu }}</td>
     </tr>
     <tr>
-        <th scope="row">Storage</td>
+        <th scope="row">Storage</th>
         <td>{{ device.storage }}</td>
     </tr>
-        {% if device.screen != 'None' %}
+    {%- if device.screen != 'None' %}
     <tr>
-        <th scope="row">Screen</td>
+        <th scope="row">Screen</th>
         <td>
-        {%- if device.screen.first %}
-              {%- for screen in device.screen %}
-                {{ screen.first[0] }}: {{ screen.first[1] }}<br/>
-                {{ device.screen_res }} ({{ device.screen_ppi }} PPI)<br>
-                {{ device.screen_tech }}
-                {%- unless forloop.last %}
-                <br/>
-                {%- endunless %}
-              {%- endfor %}
+            {%- if device.screen.first.size == 1 %}
+              {%- comment %}The size of "first" will be 1 when there is a list of models{% endcomment -%}
+              {%- for model in device.screen %}
+                {%- assign modelname = model.first[0] %}
+                {%- assign screen_data = model.first[1] %}
+                {%- include snippets/screen.html %}
+                {%- unless forloop.last -%}
+                <br/><br/>
+                {%- endunless -%}
+              {% endfor -%}
             {%- else %}
-                {{ device.screen }}<br/>
-                {{ device.screen_res }} ({{ device.screen_ppi }} PPI)<br>
-                {{ device.screen_tech }}
+                {%- assign screen_data = device.screen %}
+                {%- include snippets/screen.html %}
             {%- endif %}
         </td>
     </tr>
-    {% endif %}
+    {%- endif %}
         {%- if device.battery != 'None' %}
     <tr>
         <th scope="row">Battery</td>
         <td>
-            {% if device.battery.first.size == 1 -%}
+            {%- if device.battery.first.size == 1 -%}
             {%- comment %}The size of "first" will be 1 when there is a list of models{% endcomment -%}
                 {% for model in device.battery -%}
                     {%- assign modelname = model.first[0] %}
                     {%- assign battery_data = model.first[1] %}
                     {% include snippets/battery.html %}
                     {%- unless forloop.last -%}
-                    <br/>
+                    <br/><br/>
                     {%- endunless %}
                 {% endfor -%}
             {%- else %}
@@ -132,6 +132,21 @@
         </td>
     </tr>
     {%- endif %}
-    <!-- lineage info -->
+    <!-- craftrom info -->
+{%- if device.maintainers != empty %}
+    <tr>
+        <th scope="row" colspan="2">CraftRom info</th>
+    </tr>
+    <tr>
+        <th scope="row">Maintainer{% if device.maintainers.size > 1 %}s{% endif %}</th>
+        <td>
+            <ul>
+                {%- for el in device.maintainers %}
+                    <li>{{ el }}</li>
+                {%- endfor %}
+            </ul>
+        </td>
+    </tr>
+{%- endif %}
     </tbody>
 </table>

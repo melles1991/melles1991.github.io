@@ -10,14 +10,15 @@ gpu: Adreno 610
 image: lime.png
 install_method: fastboot_xiaomi
 kernel: android_kernel_xiaomi_lime
-name:  'Redmi Note 9t (Power)'
+maintainers: [melles1991, RE800T, ShelbyHell]
+name:  'Redmi 9T'
 ram: 4/6 GB
 recovery_boot: With the device powered off, hold <kbd>Volume Up</kbd> + <kbd>Power</kbd>.
   Keep holding both buttons until the "Redmi" logo appears on the screen, then release.
 release: 2021-01
 screen: {size: '104.7 mm (6.53 in)', density: 395, resolution: '1080 x 2340', technology: 'IPS LCD'}
 soc: Qualcomm SM6115 Snapdragon 662 (11 nm)
-storage: 64/128 GB
+storage: 64/128 GB UFS 2.2
 tree: android_device_xiaomi_lime
 type: phone
 vendor: Xiaomi
