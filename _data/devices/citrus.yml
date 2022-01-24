@@ -10,6 +10,7 @@ gpu: Adreno 610
 image: citrus.png
 install_method: fastboot_xiaomi
 kernel: android_kernel_xiaomi_citrus
+maintainers: [melles1991, melles1991]
 name:  'Poco M3'
 ram: 4/6 GB
 recovery_boot: With the device powered off, hold <kbd>Volume Up</kbd> + <kbd>Power</kbd>.
