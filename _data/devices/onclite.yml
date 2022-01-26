@@ -9,6 +9,7 @@ download_boot: With the device powered off, hold <kbd>Volume Down</kbd> + <kbd>P
 gpu: Adreno 506
 image: onclite.png
 install_method: fastboot_xiaomi
+is_ab_device: false
 kernel: android_kernel_xiaomi_onclite
 maintainers: [melles1991]
 name: Redmi 7
@@ -21,6 +22,7 @@ soc: Qualcomm MSM8953 Snapdragon 632
 storage: 16/32/64 GB eMMC 5.1
 tree: android_device_xiaomi_onclite
 type: phone
+uses_twrp: true
 vendor: Xiaomi
 vendor_short: xiaomi
 

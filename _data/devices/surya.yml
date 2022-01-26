@@ -9,6 +9,7 @@ download_boot: With the device powered off, hold <kbd>Volume Down</kbd> + <kbd>P
 gpu: Adreno 618
 image: surya.png
 install_method: fastboot_xiaomi
+is_ab_device: true
 kernel: android_kernel_xiaomi_surya
 maintainers: [melles1991, Igoryan94]
 name:  'Poco X3 NFC'
@@ -21,6 +22,7 @@ soc: Qualcomm SM7150-AC Snapdragon 732G
 storage: 64/128 GB UFS 2.1
 tree: android_device_xiaomi_surya
 type: phone
+uses_twrp: true
 vendor: Poco
 vendor_short: poco
 

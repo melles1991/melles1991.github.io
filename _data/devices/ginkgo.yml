@@ -9,6 +9,7 @@ download_boot: With the device powered off, hold <kbd>Volume Down</kbd> + <kbd>P
 gpu: Adreno 610
 image: ginkgo.png
 install_method: fastboot_xiaomi
+is_ab_device: true
 kernel: android_kernel_xiaomi_ginkgo
 maintainers: []
 name: 'Redmi Note 8 / 8T'
@@ -23,6 +24,7 @@ soc: Qualcomm SDM665 Snapdragon 665
 storage: 32/64/128 GB
 tree: android_device_xiaomi_ginkgo
 type: phone
+uses_twrp: true
 vendor: Xiaomi
 vendor_short: xiaomi
 
