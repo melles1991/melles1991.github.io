@@ -6,21 +6,18 @@ codename: sample
 cpu: Krait 400
 cpu_cores: '4'
 cpu_freq: 2.5 GHz
-custom_unlock_cmd: 'fastboot oem let-me-free'
 download_boot: With the device powered off, hold <kbd>Volume Down</kbd> + <kbd>Home</kbd> + <kbd>Power</kbd>.
 gpu: Adreno 330
 image: sample.png
 install_method: heimdall
 kernel: android_kernel_lge_msm8974
+maintainers: [you, another person, a third person]
 name: Galaxy Note Sample
 ram: 2 GB
 recovery_boot: With the device powered off, hold <kbd>Volume Up</kbd> + <kbd>Home</kbd> + <kbd>Power</kbd>.
   When the blue text appears, release the buttons.
 release: 2014-04-11
-screen: 130 mm (5.1 in)
-screen_ppi: 432
-screen_res: 1920x1080
-screen_tech: Full HD Super AMOLED
+screen: {size: '130 mm (5.1 in)', density: 432, resolution: '1920x1080', technology: 'Full HD Super AMOLED'}
 soc: Qualcomm MSM8974AC Snapdragon 801
 storage: 16/32 GB
 tree: android_device_lge_sample
