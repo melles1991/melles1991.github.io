@@ -29,6 +29,40 @@ definitions:
     - capacity
     - removable
     type: object
+  camera_data:
+    description: The format for the camera property
+    properties:
+      info:
+        description: The camera info (in MP)
+        pattern: ^(\d+(\.\d{1,2})? MP( \(.*\))?( or )?)+$
+        type: string
+      flash:
+        enum:
+        - Dual LED
+        - Dual LED (dual tone)
+        - LED
+        - None
+        type: string
+    required:
+    - info
+    - flash
+  dimension_data:
+    description: The format required for device dimensions
+    properties:
+      width:
+        description: Device width
+        "$ref": "#/definitions/dimension_string"
+      height:
+        description: Device height
+        "$ref": "#/definitions/dimension_string"
+      depth:
+        description: Device depth
+        "$ref": "#/definitions/dimension_string"
+    required:
+    - width
+    - height
+    - depth
+    type: object
   dimension_string:
     pattern: ^\d+(\.\d+)? mm \(\d+(\.\d+)? in\)$
     type: string
@@ -44,6 +78,46 @@ definitions:
     type:
     - integer
     - string
+  screen_data:
+    description: The format required for screen information
+    properties:
+      size:
+        description: The size of the screen
+        "$ref": "#/definitions/dimension_string"
+      density:
+        description: Screen density
+        minimum: 100
+        maximum: 999
+        type: integer
+      resolution:
+        description: Screen resolution
+        pattern: ^\d+x\d+$
+        type: string
+      technology:
+        description: Screen technology
+        type: string
+    required:
+    - size
+    - density
+    - resolution
+    - technology
+    type: object
+  sdcard_data:
+    description: The format required for the sdcard property
+    properties:
+      sizeMax:
+        description: Maximum size for a sdcard
+        pattern: '^(\d+ (GB|TB)( \([^)]*\)( or )?)?)+$'
+        type: string
+      slot:
+        description: where the sdcard is inserted
+        enum:
+        - dedicated
+        - hybrid
+        - sim
+    required:
+    - sizeMax
+    type: object
   valid_architectures:
     enum:
     - arm
@@ -51,7 +125,101 @@ definitions:
     - x86
     - x86_64
     type: string
- properties:
+  valid_branches:
+    description: Valid branches a device can be on
+    enum:
+    - 13.0
+    - 14.1
+    - 15.1
+    - 16.0
+    - 17.1
+    - 18.1
+    type: number
+  valid_dimension:
+    oneOf:
+    - "$ref": "#/definitions/dimension_string"
+    - description: Array of maps of model numbers dimension
+      examples:
+      - SM-9000A: 254 mm (10 in)
+      - SM-9000B:  127 mm (5 in)
+      items:
+        additionalProperties:
+          "$ref": "#/definitions/dimension_string"
+        description: Map of model number to dimension
+        type: object
+      type: array
+  valid_networks:
+    description: All valid networks a device can support
+    enum:
+    - 2G GSM
+    - 2G CDMA
+    - 3G UMTS
+    - 3G CDMA2000
+    - 4G LTE
+    - 5G
+    type: string
+  valid_peripherals:
+    description: All valid peripherals a device can have
+    items:
+      enum:
+      - A-GPS
+      - Accelerometer
+      - Audio Coprocessor
+      - Barometer
+      - Color spectrum sensor
+      - Compass
+      - DP over USB-C
+      - Depth Sensor
+      - Dot Projector
+      - Dual SIM
+      - Dual front speakers
+      - Dual side NFC
+      - Dual-frequency GNSS
+      - Essential Accessories
+      - FM radio
+      - Fingerprint reader
+      - BeiDou
+      - Galileo
+      - GLONASS
+      - GPS
+      - NAVIC
+      - SBAS
+      - QZSS
+      - Gesture sensor
+      - Gyroscope
+      - HDMI
+      - Hall effect sensor
+      - Hardware keyboard
+      - Heart rate sensor
+      - Hygrometer
+      - IR blaster
+      - IR camera
+      - Iceview Cases
+      - Infrared sensor
+      - Light sensor
+      - MHL
+      - MHL 2.0
+      - MHL HDMI
+      - Mobility DisplayPort (MyDP)
+      - Motion Coprocessor
+      - Moto Mods
+      - NFC
+      - Pedometer
+      - Proximity sensor
+      - Qi wireless charging
+      - Qi reverse wireless charging
+      - Radar
+      - RGB ambient light
+      - SNS integration
+      - Sensor hub
+      - Thermometer
+      - Ultrasound proximity sensor
+      - USB OTG
+      - Wi-Fi Display
+      type: string
+    type: array
+    uniqueItems: True
+properties:
   architecture:
     "$id": "/properties/architecture"
     description: The CPU architecture of the device.
@@ -76,6 +244,65 @@ definitions:
       type: array
     - enum:
       - None
+  before_install:
+    "$id": "/properties/before_install"
+    minLength: 3
+    type: string
+  before_lineage_install:
+    "$id": "/properties/before_lineage_install"
+    minLength: 3
+    type: string
+  before_recovery_install:
+    "$id": "/properties/before_recovery_install"
+    minLength: 3
+    type: string
+  bluetooth:
+    "$id": "/properties/bluetooth"
+    properties:
+      profiles:
+        items:
+          description: Bluetooth profile
+          enum:
+          - A2DP
+          - A2DP + aptX
+          - A2DP + aptX HD
+          type: string
+        minItems: 1
+        type: array
+      spec:
+        description: Bluetooth specification
+        enum:
+        - None
+        - '1.0'
+        - '1.0B'
+        - '1.1'
+        - '1.2'
+        - '2.0'
+        - '2.0 + EDR'
+        - '2.1'
+        - '2.1 + EDR'
+        - '3.0'
+        - '3.0 + HS'
+        - '4.0'
+        - '4.0 + LE'
+        - '4.1'
+        - '4.2'
+        - '5'
+        - '5.1'
+        - '5.2'
+        type: string
+    required:
+    - spec
+    type: object
+  cameras:
+    "$id": "/properties/cameras"
+    items:
+      "$ref": "#/definitions/camera_data"
+      type: object
+    type: array
+  carrier:
+    "$carrier": "/properties/carrier"
+    type: string
   codename:
     "$id": "/properties/codename"
     minLength: 1
@@ -95,8 +322,10 @@ definitions:
     - Cortex-A73 & Cortex-A53
     - Cortex-A9
     - Denver
+    - Denver 2 & Cortex-A57
     - Exynos M1 & Cortex-A53
     - Exynos M3 & Cortex-A55
+    - Exynos M4 & Cortex-A75 & Cortex-A55
     - Intel Atom
     - Krait
     - Krait 200
@@ -104,15 +333,25 @@ definitions:
     - Krait 400
     - Krait 450
     - Kryo
+    - Kryo 240
     - Kryo 250
     - Kryo 260
     - Kryo 280
     - Kryo 360
     - Kryo 385
     - Kryo 460
+    - Kryo 465
+    - Kryo 468
     - Kryo 470
+    - Kryo 475
     - Kryo 485
+    - Kryo 490
     - Kryo 495
+    - Kryo 560
+    - Kryo 570
+    - Kryo 585
+    - Kryo 670
+    - Kryo 680
   cpu_cores:
     "$id": "/properties/cpu_cores"
     minLength: 1
@@ -124,6 +363,9 @@ definitions:
     "$id": "/properties/cpu_freq"
     minLength: 3
     type: string
+  current_branch:
+    "$id": "/properties/current_branch"
+    "$ref": "#/definitions/valid_branches"
   custom_recovery_codename:
     "$id": "/properties/custom_recovery_codename"
     type: string
@@ -135,9 +377,22 @@ definitions:
     "$id": "/properties/custom_unlock_cmd"
     minLength: 10
     type: string
-  depth:
-    "$id": "/properties/depth"
-    "$ref": "#/definitions/valid_dimension"
+  dimensions:
+    "$id": "/properties/dimensions"
+    oneOf:
+    - "$ref": "#/definitions/dimension_data"
+    - description: Array of maps of model numbers to device dimensions
+      examples:
+      - SM-9000A: {width: '127 mm (5 in)', height: '127 mm (5 in)', depth: '127 mm (5 in)'}
+      - SM-9000B: {width: '127 mm (5 in)', height: '127 mm (5 in)', depth: '127 mm (5 in)'}
+      items:
+        additionalProperties:
+          "$ref": "#/definitions/dimension_data"
+        description: Map of model number to device dimensions
+        type: object
+      type: array
+    - enum:
+      - None
   download_boot:
     "$id": "/properties/download_boot"
     type: string
@@ -149,8 +404,11 @@ definitions:
     enum:
     - ARM Mali-400 MP
     - ARM Mali-400 MP4
+    - ARM Mali-G71 MP2
     - ARM Mali-G72 MP12
     - ARM Mali-G72 MP18
+    - ARM Mali-G72 MP3
+    - ARM Mali-G76 MP12
     - ARM Mali-T604
     - ARM Mali-T628 MP6
     - ARM Mali-T720 MP2
@@ -163,6 +421,7 @@ definitions:
     - Adreno 302
     - Adreno 305
     - Adreno 306
+    - Adreno 308
     - Adreno 320
     - Adreno 330
     - Adreno 405
@@ -170,6 +429,7 @@ definitions:
     - Adreno 418
     - Adreno 420
     - Adreno 430
+    - Adreno 504
     - Adreno 505
     - Adreno 506
     - Adreno 508
@@ -184,12 +444,19 @@ definitions:
     - Adreno 615
     - Adreno 616
     - Adreno 618
+    - Adreno 619
     - Adreno 620
     - Adreno 630
     - Adreno 640
+    - Adreno 650
+    - Adreno 660
+    - Adreno 675
     - Adreno 680
+    - Adreno 685
+    - Adreno 690
     - GK20A (Kepler)
     - GM20B (Maxwell)
+    - GP10B (Pascal)
     - NVIDIA Kepler DX1 192-core
     - NVIDIA Maxwell 256-core
     - PowerVR G6430
@@ -200,9 +467,6 @@ definitions:
   has_recovery_partition:
     "$id": "/properties/has_recovery_partition"
     type: boolean
-  height:
-    "$id": "/properties/height"
-    "$ref": "#/definitions/valid_dimension"
   image:
     "$id": "/properties/image"
     pattern: ^\w*\.(png|jpg)$
@@ -210,9 +474,11 @@ definitions:
   install_method:
     "$id": "/properties/install_method"
     enum:
+    - apx
     - dd
     - edl_custom
     - fastboot_custom
+    - fastboot_fairphone
     - fastboot_generic
     - fastboot_htc
     - fastboot_huawei
@@ -220,6 +486,7 @@ definitions:
     - fastboot_lg
     - fastboot_motorola
     - fastboot_nexus
+    - fastboot_nokia
     - fastboot_oppo
     - fastboot_sony
     - fastboot_realme
@@ -236,7 +503,7 @@ definitions:
     type: boolean
   kernel:
     "$id": "/properties/kernel"
-    pattern: ^android_kernel(_\w*){2}(-?[\d\.]*)?(-common)?$
+    pattern: ^android_kernel(_\w*){2}(-?[\d\.]*)?(-common)?(.*)?$
     type: string
   maintainers:
     "$id": "/properties/maintainers"
@@ -292,10 +559,23 @@ definitions:
     type: array
   screen:
     "$id": "/properties/screen"
-    anyOf:
-    - "$ref": "#/definitions/valid_dimension"
+    oneOf:
+    - "$ref": "#/definitions/screen_data"
+    - description: Array of maps of model numbers to screen data
+      examples:
+      - SM-9000A: {size: '127 mm (5 in)', density: '400', resolution: '1024x768', technology: 'LCD'}
+      - SM-9000B: {size: '254 mm (10 in)', density: '800', resolution: '2048x1024', technology: 'AMOLED'}
+      items:
+        additionalProperties:
+          "$ref": "#/definitions/screen_data"
+        description: Map of model number to screen_data
+        type: object
+      type: array
     - enum:
       - None
+  sdcard:
+    "$id": "/properties/sdcard"
+    "$ref": "#/definitions/sdcard_data"
   tree:
     "$id": "/properties/tree"
     pattern: ^android_device_(.*)$
@@ -303,20 +583,21 @@ definitions:
   type:
     "$id": "/properties/type"
     enum:
+    - Devkit
     - Handheld game console
     - Set top box
-    - phablet
     - phone
     - phone (slider)
     - tablet
   uses_twrp:
     "$id": "/properties/uses_twrp"
-    type: boolean
+    enum:
+    - true
   vendor:
     "$id": "/properties/vendor"
     enum:
     - ARK
-    - Asus
+    - ASUS
     - BQ
     - Essential
     - Fairphone
@@ -329,6 +610,7 @@ definitions:
     - Lenovo
     - Motorola
     - Nextbit
+    - Nokia
     - Nubia
     - Nvidia
     - OPPO
@@ -336,6 +618,7 @@ definitions:
     - Razer
     - Realme
     - Samsung
+    - SHIFT
     - Sony
     - Wileyfox
     - Wingtech
@@ -362,6 +645,7 @@ definitions:
     - moto
     - motorola
     - nextbit
+    - nokia
     - nubia
     - nvidia
     - oneplus
@@ -369,6 +653,7 @@ definitions:
     - razer
     - realme
     - samsung
+    - shift
     - sony
     - wileyfox
     - wingtech
@@ -384,9 +669,6 @@ definitions:
       "$ref": "#/definitions/valid_branches"
     minItems: 1
     type: array
-  width:
-    "$id": "/properties/width"
-    "$ref": "#/definitions/valid_dimension"
 required:
 - architecture
 - battery
@@ -396,6 +678,7 @@ required:
 - cpu_cores
 - cpu_freq
 - current_branch
+- dimensions
 - gpu
 - image
 - install_method
