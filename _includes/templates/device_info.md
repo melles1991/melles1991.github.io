@@ -40,3 +40,7 @@
 ## Kernel list
 
 {% include device_kernel_list.html %}
+
+## Comments
+
+{% include disqus.html %}
