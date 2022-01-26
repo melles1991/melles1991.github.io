@@ -7,9 +7,19 @@ search: exclude
 ---
 
 <script type="text/javascript">
+$(window).on('load', function()
+{
+  hideTablesIfNeeded();
+});
+
 function toggleDiscontinued()
 {
-  $('.discontinued').toggle();
+  $('.discontinued').toggleClass("hidden");
+  hideTablesIfNeeded();
+}
+
+function hideTablesIfNeeded()
+{
   $("table.device").each(function () {
     vendor = $(this).attr("vendor");
     if ($(this).find("tbody > tr:visible").length == 0 && $(this).is(":visible")) {
@@ -24,11 +34,12 @@ function toggleDiscontinued()
 <div class="jumbotron">
   <div class="container">
      <h1>{{ page.title }}</h1>
-     <p>Rows with a lower opacity are no longer officially supported and the pages exist for reference only.<br/>
-  You can hide them by unchecking the following checkbox:<br/><br/></p>
+     <p>Devices with a lower opacity are no longer officially supported and the pages exist for reference only.</p>
   </div>
 </div>
 <div class="container page">
+
+You can show them by checking the following checkbox:<br/><br/>
 
 {% assign devices = "" | split: " " %}
 {% for device in site.data.devices %}
@@ -40,7 +51,7 @@ function toggleDiscontinued()
 
 <div class="form-check form-check-inline">
   <label class="form-check-label">
-    <input class="form-check-input" type="checkbox" onclick="toggleDiscontinued()" checked="checked">Show discontinued devices<span class="form-check-sign">
+    <input class="form-check-input" type="checkbox" onclick="toggleDiscontinued()">Show discontinued devices<span class="form-check-sign">
         <span class="check"></span>
     </span>
   </label>
@@ -65,6 +76,8 @@ Select a vendor to jump to:<br/>
 
 <h2 class="h2" id="{{ device.vendor | slugify }}" vendor="{{ device.vendor | slugify }}">{{ device.vendor}}</h2>
 
+<a href="#devices" class="top" data-vendor="{{ vendorId }}"><i class="material-icons">arrow_drop_up</i>Top</a>
+
 <table class="table device" vendor="{{ device.vendor | slugify }}">
   <thead>
   <tr>
@@ -78,7 +91,7 @@ Select a vendor to jump to:<br/>
 {% if testValue != "0" or device.vendor == "OnePlus" %}{% assign deviceName = device.vendor | append: ' ' | append: device.name %}
 {% else %}{% assign deviceName = device.name %}{% endif %}
 {% assign url = "devices/" | append: device.codename | relative_url %}
-{%- if device.maintainers == empty %}{% assign class="discontinued" %}
+{%- if device.maintainers == empty %}{% assign class="discontinued hidden" %}
 {%- else %}
 {%- assign class="" %}
 {%- endif %}

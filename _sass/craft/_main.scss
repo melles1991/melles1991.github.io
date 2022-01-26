@@ -198,7 +198,7 @@ pre {
 }
 
 tr.discontinued {
-  opacity: 0.8;
+  opacity: 0.5;
 }
 
 tr.discontinued a {
@@ -253,6 +253,14 @@ a {
 .vendor-container div {
   padding: .5rem;
   -webkit-column-break-inside: avoid; /* Fix for additional unwanted margin on chrome */
+}
+
+tr.hidden {
+  display: none;
+}
+.top {
+  font-size: 0.9rem;
+  vertical-align: middle;
 }
 
 @media (max-width: 991px) {
