@@ -89,7 +89,6 @@ There are no recovery installation instructions for this discontinued device.
 {%- else %}
 8. Once you have installed everything successfully, click the back arrow in the top left of the screen, then "Reboot system now".
 {%- endif %}
-{%- endif %}
 9. _(Optional)_: Root your device by installing [Magisk](https://github.com/topjohnwu/Magisk/releases/download/v20.4/Magisk-v20.4.zip).
 
 
@@ -104,9 +103,9 @@ There are no recovery installation instructions for this discontinued device.
 {%- endcapture -%}
 
 {% if device.maintainers != empty %}
-1. Download the [Custom Kernel]({{ site.url }}/devices/{{ device.codename }}/#kernels) that you would like to install.
+1. Download the [Custom Kernel]({{ site.url }}/devices/{{ device.codename }}/#kernel-list) that you would like to install.
 {% else %}
-1. Download the [Custom Kernel]({{ site.url }}/devices/{{ device.codename }}/#kernels) that you would like to install.
+1. Download the [Custom Kernel]({{ site.url }}/devices/{{ device.codename }}/#kernel-list) that you would like to install.
 {% endif %}
 2. If you are not in recovery, reboot into recovery:
     * {{ device.recovery_boot }}
