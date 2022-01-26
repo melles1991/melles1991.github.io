@@ -24,7 +24,8 @@ function toggleDiscontinued()
 <div class="jumbotron">
   <div class="container">
      <h1>{{ page.title }}</h1>
-     <p>Rows with a lower opacity are no longer officially supported and the pages exist for reference only.</p>
+     <p>Rows with a lower opacity are no longer officially supported and the pages exist for reference only.<br/>
+  You can hide them by unchecking the following checkbox:<br/><br/></p>
   </div>
 </div>
 <div class="container page">
@@ -36,6 +37,14 @@ function toggleDiscontinued()
 
 {% assign sorted = devices | sort_natural: 'name' | sort_natural: 'vendor' %}
 {% assign lastVendor = "" %}
+
+<div class="form-check form-check-inline">
+  <label class="form-check-label">
+    <input class="form-check-input" type="checkbox" onclick="toggleDiscontinued()" checked="checked">Show discontinued devices<span class="form-check-sign">
+        <span class="check"></span>
+    </span>
+  </label>
+</div><br/><br/>
 
 Select a vendor to jump to:<br/>
 
@@ -54,7 +63,7 @@ Select a vendor to jump to:<br/>
 {% if device.vendor != lastVendor %}
 {% assign lastVendor = device.vendor %}
 
-<h2 class="h3" id="{{ device.vendor | slugify }}" vendor="{{ device.vendor | slugify }}">{{ device.vendor}}</h2>
+<h2 class="h2" id="{{ device.vendor | slugify }}" vendor="{{ device.vendor | slugify }}">{{ device.vendor}}</h2>
 
 <table class="table device" vendor="{{ device.vendor | slugify }}">
   <thead>
