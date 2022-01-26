@@ -73,14 +73,15 @@ $danger:        $red !default;
 $light:         $gray-100 !default;
 $dark:          $gray-800 !default;
 
-//Lineage Colors
-$craft-primary: #167C80 !default;
+//Carft Colors
+$craft-primary: #2196f3 !default;
 $craft-warning: #F4AC45 !default;
 $craft-danger:  #D0422D !default;
 $craft-success: #38853B !default;
 $craft-info:    #00B1E5 !default;
-$craft-light:   #47A3A3 !default;
+$craft-light:   #161616 !default;
 $craft-dark:    #18636B !default;
+$craft-dot:     #38853b !default;
 
 $theme-colors: () !default;
 $theme-colors: map-merge((
