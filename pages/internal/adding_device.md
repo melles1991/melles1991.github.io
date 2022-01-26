@@ -13,7 +13,7 @@ tags:
 ### Prepare the required files
 
 There are a few files which need to be there to have a device on the wiki.
-In order to get them, navigate to `$LINEAGE_SRC/lineage/wiki/` and run:
+In order to get them, navigate to `melles1991/melles1991.github.io/` and run:
 
 ```
 ./scripts/generate_device.sh your_device
@@ -23,7 +23,7 @@ Obviously replace `your_device` with the codename of your device
 
 ### Populating the YAML
 
-The sample template has been copied to `$LINEAGE_SRC/lineage/wiki/_data/devices/your_device.yml`.
+The sample template has been copied to `melles1991/melles1991.github.io/_data/devices/your_device.yml`.
 Update the values to match your device. An explanation of some of the options is below:
 
 {% assign definitions = site.data.schema.definitions %}

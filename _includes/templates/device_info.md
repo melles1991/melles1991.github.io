@@ -10,6 +10,7 @@
 ## Guides
 
 - [Installation]({{ "devices/" | append: device.codename | append: "/install" | relative_url }})
+- [For developers]({{ site.baseurl }}/developer_information.html)
 - [How to submit a bug report]({{ site.baseurl }}/bugreport-howto)
 - [How to fixing SafetyNet]({{ site.baseurl }}/safety-net-fix)
 {% assign versions_count = device.versions|size -%}
