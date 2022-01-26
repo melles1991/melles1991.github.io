@@ -33,6 +33,10 @@
 {% endif %}
 {% endif %}
 
+## Find help online
+
+You can find assistance on our [telegram group](https://t.me/craft_rom), or in [comments](#comments).
+
 ## Rom list
 
 {% include device_rom_list.html %}
