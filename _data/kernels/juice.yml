@@ -1,4 +1,4 @@
-device: lime
+device: juice
 kernels:
   - name: Chidori Kernel
     android: [11, 12]  

@@ -1,9 +1,9 @@
 ---
 sidebar: home_sidebar
-title: Info about citrus
+title: Info about juice
 folder: info
 layout: deviceinfo
-permalink: /devices/citrus/
-device: citrus
+permalink: /devices/juice/
+device: juice
 ---
 {% include templates/device_info.md %}

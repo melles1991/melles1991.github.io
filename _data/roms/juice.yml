@@ -1,4 +1,4 @@
-device: citrus
+device: juice
 roms:
   - name: Pixel Experience Plus
     url: https://sourceforge.net/projects/exodusos/files/juice/PixelExperience+/
