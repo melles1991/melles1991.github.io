@@ -18,7 +18,7 @@
 - [Upgrade to a higher version of Android (e.g. Android 9 -> Android 10)]({{ "devices/" | append: device.codename | append: "/upgrade" | relative_url }})
 {%- endif -%}
 
-{% if device.note_show and device.note_show == true %}
+{% if device.note_title and device.note_title != "" %}
 {% include templates/device_info_note.md %}
 {% endif %}
 
@@ -29,7 +29,7 @@
 * **Recovery**: {{ device.recovery_boot }}
 {% endif %}
 {% if device.download_boot %}
-* **Download**: {{ device.download_boot }}
+* **Bootloader/Fastboot/Download**: {{ device.download_boot }}
 {% endif %}
 {% endif %}
 
