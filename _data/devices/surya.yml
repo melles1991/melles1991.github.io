@@ -12,7 +12,7 @@ install_method: fastboot_xiaomi
 is_ab_device: true
 kernel: android_kernel_xiaomi_surya
 maintainers: [melles1991, Igoryan94]
-name:  'X3 NFC'
+name:  'Poco X3 NFC'
 ram: 6/8 GB
 recovery_boot: With the device powered off, hold <kbd>Volume Up</kbd> + <kbd>Power</kbd>.
   Keep holding both buttons until the "Poco" logo appears on the screen, then release.
