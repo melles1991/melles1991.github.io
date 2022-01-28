@@ -1,8 +1,8 @@
 ---
 sidebar: home_sidebar
-title: Install custom Android OS on lime
+title: Install LineageOS on juice
 folder: install
-permalink: /devices/lime/install
-device: lime
+permalink: /devices/juice/install
+device: juice
 ---
 {% include templates/device_install.md %}
