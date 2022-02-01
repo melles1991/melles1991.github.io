@@ -1,6 +1,4 @@
 {% assign device = site.data.devices[page.device] %}
-{% assign rom = site.data.roms[page.device] %}
-{% if rom.device == device.codename %}
 <table class="table device">
   <thead>
   <tr>
@@ -14,6 +12,3 @@
             {% include snippets/roms.html %}
         {%- endfor %}
 </table>
-{% else %}
-{% include alerts/warning_not_found_rom.html %}
-{% endif %}

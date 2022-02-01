@@ -1,6 +1,4 @@
 {% assign device = site.data.devices[page.device] %}
-{% assign kernel = site.data.kernels[page.device] %}
-{% if kernel.device == device.codename %}
 <table class="table device">
   <thead>
   <tr>
@@ -14,6 +12,3 @@
             {% include snippets/kernels.html %}
         {%- endfor %}
 </table>
-{% else %}
-{% include alerts/warning_not_found_kernel.html %}
-{% endif %}
