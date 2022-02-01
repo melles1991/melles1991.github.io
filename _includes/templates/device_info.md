@@ -47,7 +47,7 @@ You can find assistance on our [telegram group](https://t.me/craft_rom), or in [
 
 {% if kernel.device == device.codename %}
 ## Kernel list
-{% include alerts/important_type_descriptions.md %}
+{% include alerts/important_type_descriptions.html %}
 {% include device_kernel_list.html %}
 {% endif %}
 ## Comments
