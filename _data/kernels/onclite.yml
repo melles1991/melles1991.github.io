@@ -4,5 +4,5 @@ kernels:
     android: [10 , 11 , 12 ]  
     linux: [4.9.x]
     bage: true
-    bageurl: https://img.shields.io/sourceforge/dt/exodusos/Chidori%20Kernel/onclite?style=for-the-badge
-    url: https://sourceforge.net/projects/exodusos/files/Chidori%20Kernel/onclite/
+    bageurl: https://img.shields.io/sourceforge/dt/exodusos/Chidori_Kernel/onclite?style=for-the-badge
+    url: https://sourceforge.net/projects/exodusos/files/Chidori_Kernel/onclite/
