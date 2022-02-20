@@ -11,9 +11,11 @@
           </div>
           <div class="col-md">
             <div class="footer-icons">
-              {% include footer-icons.html %}
+              {% include footer-icons.html %}<br><br>
+			  <p class="text-md-right text-muted">
+			{% if page.last_updated %}Page last updated: {{page.last_updated}}<br/>{% endif %} Site last generated: {{ site.time | date: "%b %-d, %Y" }}</p>
             </div>
-          </div>
+			</div>
         </div>
       </div>
 </footer>
