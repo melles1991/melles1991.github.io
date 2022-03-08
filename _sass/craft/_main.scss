@@ -538,6 +538,10 @@ a.btn-donut {
   .modal-sm {
     max-width: 300px;
   }
+  
+  .sector-file {
+    display: block;
+}
 
 }
 
@@ -546,6 +550,11 @@ a.btn-donut {
   .modal-xl {
     max-width: 800px;
   }
+  
+  .sector-file {
+    display: block;
+}
+
 }
 
 @media (min-width: 1200px) {
