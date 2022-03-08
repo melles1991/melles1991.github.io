@@ -616,3 +616,19 @@ blockquote .small:before, blockquote footer:before, blockquote small:before {
 		page-break-inside: avoid
     }
 }
+
+.card-body .image {
+    position: relative;
+    padding-top: 55.71%;
+    border-radius: 4px;
+    overflow: hidden;
+}
+.card-body .image>img {
+    width: 100%;
+    height: 100%;
+    filter: blur(3px);
+    transition: all .2s ease-in-out;
+}
+.card-body .image>img.loaded {
+    filter: none;
+}

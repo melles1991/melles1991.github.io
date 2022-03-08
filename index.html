@@ -32,7 +32,10 @@ Modules for Magisk and other settings for Android.</p>
         {% for post in site.categories.blog limit:2 %}
 		<div class="card">
 		<div class="card-body">
-		<h3 class="card-title"><a  href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h3>
+		<h3 class="card-title">
+		<div class="image">
+		<img src="{{ site.url }}/{{ post.image }}" data-src="{{ site.url }}/{{ post.image }}" alt="{{ post.title }}" class="lazy entered loaded" data-ll-status="loaded"></div>
+		<a  href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h3>
         <hr class="light">
 		<p class="card-text"><strong><span class="icons-start mdi mdi-calendar-range"></span> {{ post.date | date: '%B %d, %Y' }}{% if post.author %} <span class="icons mdi mdi-account"></span> {{ post.author }}{% endif %}</strong></p>
         <p>{{ post.excerpt }}</p>
