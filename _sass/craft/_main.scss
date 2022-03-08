@@ -626,7 +626,12 @@ blockquote .small:before, blockquote footer:before, blockquote small:before {
     }
 }
 
+.sector-news {
+    display: block;
+    align-items: flex-start;
+}
 .card-body .image {
+    align-self: flex-start;
     position: relative;
     border-radius: 4px;
     overflow: hidden;
