@@ -7,9 +7,10 @@ author: melles1991
 version: v2.1
 badgeurl: https://img.shields.io/sourceforge/dt/exodusos/MagiskModules/OxyAdditional?style=for-the-badge
 durl: https://sourceforge.net/projects/exodusos/files/MagiskModules/OxyAdditional/
+image: assets/img/module.png
 ---
 
-![hero]({{site.url}}/assets/img/module.png){: .blog_post_image_full }
+![hero]({{site.url}}/{{page.image}}){: .blog_post_image_full }
 
 * **Date**: 2021-04-22;
 * **Version**: {{page.version}};

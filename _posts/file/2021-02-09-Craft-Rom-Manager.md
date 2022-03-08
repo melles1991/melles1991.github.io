@@ -6,9 +6,10 @@ excerpt: The official CraftRom community app with many features
 author: Dmytro Galitsky (melles1991)
 version: v7.2
 durl: https://sourceforge.net/projects/exodusos/files/Craft%20Rom%20-%20Manager/
+image: images/file/craftrom-manager.png
 ---
 
-![hero]({{site.url}}/images/file/craftrom-manager.png){: .blog_post_image_full }
+![hero]({{site.url}}/{{page.image}}){: .blog_post_image_full }
 
 * **Version**: {{page.version}};
 * **Maintainer**: {{page.author}};
