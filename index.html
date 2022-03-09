@@ -51,14 +51,11 @@ Modules for Magisk and other settings for Android.</p>
    <div>
    <h2><span class="icons-start mdi mdi-36px mdi-file-download-outline"></span> Downloads</h2>
       {% for post in site.categories.file limit:2 %}
-		<div class="card sector-file">
-		<div class="image">
-		<img src="{{ site.url }}/{{ post.image }}" data-src="{{ site.url }}/{{ post.image }}" alt="{{ post.title }}"></div>
+		<div class="card">
 		<div class="card-body">
 		<h3 class="card-title"><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h3>
         <hr class="light">
 		<p class="card-text"><strong><span class="icons-start mdi mdi-calendar-range"></span> {{ post.date | date: '%B %d, %Y' }}{% if post.author %} <span class="icons mdi mdi-account"></span> {{ post.author }}{% endif %}</strong></p>
-        <p>{{ post.excerpt }}</p>
 		</div>
 		</div>
 		{% endfor %}
