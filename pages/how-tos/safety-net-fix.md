@@ -2,7 +2,8 @@
 sidebar: home_sidebar
 title: How to fixing SafetyNet
 folder: how-tos
-permalink: safety-net-fix.html
+redirect_from: safety-net-fix.html
+permalink: /how-to/safety-net-fix
 tags:
  - how-to
 ---

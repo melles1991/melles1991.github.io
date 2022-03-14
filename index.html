@@ -9,8 +9,7 @@ scrolljs: true
       <div class="col-lg-5 text-center text-lg-left pb-10">
 
         <h1>{{ site.name }}</h1>
-        <p>Maintenance of various devices based on the custom Android operating system.</br>
-Modules for Magisk and other settings for Android.</p>
+        <p>You can find a variety of information, instructions and more here on our website.</p>
       <a class="btn btn-primary" href="{{ site.baseurl }}/community/">
         <span class="icons-start mdi mdi-18px mdi-account-group"></span> Community</a>
         <a class="btn btn-link text-white" href="{{ site.baseurl }}/blog">Blog</a>
@@ -50,7 +49,7 @@ Modules for Magisk and other settings for Android.</p>
    <div class="post text-lg-left">
    <div>
    <h2><span class="icons-start mdi mdi-36px mdi-file-download-outline"></span> Downloads</h2>
-      {% for post in site.categories.file limit:2 %}
+      {% for post in site.categories.file limit:3 %}
 		<div class="card">
 		<div class="card-body">
 		<h3 class="card-title"><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h3>
@@ -89,7 +88,7 @@ Modules for Magisk and other settings for Android.</p>
 
     </div>
   </div>
-</section>  -->
+</section> 
 
 <section class="security bg-dark">
   <div class="container">
@@ -143,7 +142,7 @@ Modules for Magisk and other settings for Android.</p>
   </div>
 </section>
 
-<!-- <section class="tools bg-dark section-background-image parallax">
+<section class="tools bg-dark section-background-image parallax">
   <div class="container">
     <div class="row justify-content-between align-items-center">
 
@@ -170,6 +169,59 @@ Modules for Magisk and other settings for Android.</p>
     </div>
   </div>
 </section> -->
+
+<section class="blog bg-dark">
+  <div class="container">
+    <div class="row">
+
+    <div class="col-sm-6">
+      <h3 class="font-weight-bold">For users</h3>
+      <hr>
+      <h4 class="font-weight-normal">Get CraftRom!</h4>
+      <ul>
+        <li>You can check if your device is on our <a href="{{ site.baseurl }}/devices/">list of devices</a>.</li>
+      </ul>
+      <h4 class="font-weight-normal">Frequently Asked Questions</h4>
+      <p>Have questions? See our <a href="{{ site.baseurl }}/faq.html">FAQ</a>.</p>
+      <h4 class="font-weight-normal">Report bugs!</h4>
+      <ul>
+        <li>To grab information needed for a bug report, you can then <a href="{{ site.baseurl }}/how-to/logcat">capture a log</a>.</li>
+        <li>Then, learn where to report your bug by reading our <a href="{{ site.baseurl }}/how-to/bugreport">how-to on reporting bugs</a>.</li>
+      </ul>
+    </div>
+
+    <div class="col-sm-6">
+      <h3 class="font-weight-bold">For everyone</h3>
+      <hr>
+      <h4 class="font-weight-normal">Contribute to the site!</h4>
+      <p>This site is powered by <a href="https://jekyllrb.com/">Jekyll</a>.</p>
+      <ul>
+        <li>You can look at the source <a href="https://github.com/melles1991/melles1991.github.io">on GitHub</a>.</li>
+      </ul>
+      <h4 class="font-weight-normal">How-tos!</h4>
+      <p>We even have a nice <a href="{{ site.baseurl }}/how-to/">list of how-tos</a>, for inquisitive souls.</p>
+    </div>
+
+    <div class="col-sm-12">
+      <!-- <h3 class="font-weight-bold">For developers</h3>
+      <hr>
+      <h4 class="font-weight-normal">Contribute</h4>
+      <ul>
+        <li>To contribute, you’ll need to be able to produce builds for your device. Pick your device from our <a href="{{ site.baseurl }}/devices/">list of supported devices</a> to get started.</li>
+        <li>Once you’re successfully running your own build, you can begin to make your changes. All the apps included in LineageOS can be found in <code>packages/apps</code>, and core parts of the system can be found in <code>frameworks/base.</code></li>
+        <li>Once you’ve finished making your change, simply follow our guide on <a href="{{ site.baseurl }}/how-to/submitting-patches">submitting to Gerrit</a>.</li>
+      </ul>
+      <h4 class="font-weight-normal">Submit your port!</h4>
+      <ul>
+        <li>If you unofficially maintain a device, and think it’s good enough to go live, follow our instructions on <a href="{{ site.baseurl }}/submitting_device.html">submitting a port</a>. One of our developer relations staff will reach out to you, and we’ll work to get the ball rolling on official builds for your device.</li>
+      </ul> -->
+      <h3 class="font-weight-bold mt-5">Full contents</h3>
+      <hr>
+      <p>You can view all current pages <a href="{{ site.baseurl }}/pages.html">here</a>.</p>
+    </div>
+  </div>
+  </div>
+</section>
 
 <section class="download bg-primary" style="margin-bottom: -3rem;">
   <div class="container">
