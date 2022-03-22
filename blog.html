@@ -15,19 +15,18 @@ title: Blog
 
 <div class="container post">
   {% for post in site.categories.blog %}
-  <div class="card">
-
-    <div class="card-body">
-      <h2 class="card-title"><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h2>
-	  <hr class="light">
-      <p class="card-text">{% include svg/clock.svg %} {{ post.date | date: '%B %d, %Y' }}{% if post.author %}
-{% include svg/author.svg %} {{ post.author }}{% endif %}</p> 
-      <p>{{ post.excerpt }}</p>
+  <div class="articles">
+    <div class="articles-image">
+	<a href="{{ site.baseurl }}{{ post.url }}"><img src="{{site.url}}{{post.image}}" data-src="{{site.url}}{{post.image}}" alt="{{ post.title }}"></a></div>
+    <div class="articles-body">
+      <div class="articles-title"><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></div>
+      <div class="shortly"><span>{{ post.excerpt }}</span></div>
+	  <div class="date"><span>{% include svg/clock.svg %} {{ post.date | date: '%B %d, %Y' }}</span></div>
+	  {% if post.author %}<div class="author"><span>{% include svg/author.svg %} {{ post.author }}</span></div>{% endif %}
+	  <div class="button"><a href="{{ site.baseurl }}{{ post.url }}">Read More</a></div>
     </div>
 
-    <div class="card-button">
-      <a href="{{ site.baseurl }}{{ post.url }}" class="btn btn-link text-primary">Read More</a>
-    </div>
+
 
   </div>
   {% endfor %}
