@@ -2,15 +2,16 @@
 layout: post
 title: Top Android apps I use every day 
 category: blog
+filters: articles
 excerpt: My list of programs that I have been using for several years.
 author: Dmytro Galitsky (melles1991)
-image: https://techburner.in/wp-content/uploads/2018/08/apps-mobile-smartphone-ss-1920-1000x500.jpg
+image: /images/2021-01-22/apps-mobile.jpg
 ---
 
 
 
 
-![hero]({{page.image}}){: .blog_post_image_full }
+![hero]({{site.url}}/{{page.image}}){: .blog_post_image_full }
 
 
 

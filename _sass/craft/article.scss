@@ -154,3 +154,33 @@
         margin-left: 20px
     }
 }
+
+.filter {
+    margin-top: 20px;
+	padding-bottom: 10px;
+    display: flex;
+    align-items: center
+}
+
+.filter>.menu {
+    font-family: Jost,sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 23px;
+    color: #2f3132;
+    display: flex
+}
+
+.filter>.menu>a {
+    color: inherit;
+    transition: all .2s ease-in-out
+}
+
+.filter>.menu>a:not(:first-child) {
+    margin-left: 30px
+}
+
+.filter>.menu>a.selected,#hub-feed>.filter>.menu>a:hover {
+    color: #00b8fc
+}

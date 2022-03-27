@@ -2,6 +2,7 @@
 layout: post
 title: Android 12 Revealed. The Biggest Design Change In Years!
 category: blog
+filters: articles
 excerpt: The first public beta version for installation has become available, smartphones from 11 manufacturers are supported
 author: Dmytro Galitsky (melles1991)
 image: /images/2021-05-19/android-12.png

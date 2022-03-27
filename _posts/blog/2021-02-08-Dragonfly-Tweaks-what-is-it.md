@@ -2,15 +2,16 @@
 layout: post
 title: Dragonfly Tweaks what is it and why is it needed? 
 category: blog
+filters: articles
 excerpt: My personal experience with Dragonfly Tweaks.
 author: Dmytro Galitsky (melles1991)
-image: https://xakep.ru/wp-content/uploads/2018/06/174665/speed-up-android-h.jpg
+image: /images/2021-02-08/speed-up-android-h.jpg
 ---
 
 
 
 
-![hero]({{page.image}}){: .blog_post_image_full }
+![hero]({{site.url}}/{{page.image}}){: .blog_post_image_full }
 
 
 

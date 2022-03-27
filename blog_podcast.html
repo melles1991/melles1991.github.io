@@ -1,6 +1,7 @@
 ---
 layout: default
-title: Blog
+title: Podcast
+permalink: /podcast/
 ---
 <style>body {background-color: #fafafa;}</style>
 
@@ -14,7 +15,8 @@ title: Blog
 </div>
 <div class="container post">
 <div class="filter"><div class="menu"><a href="{{ site.baseurl }}/blog">All</a> <a href="{{ site.baseurl }}/news">News</a> <a href="{{ site.baseurl }}/articles">Articles</a> <a href="{{ site.baseurl }}/podcast">Podcast</a></div></div>
-  {% for post in site.categories.blog %}
+  {% for post in site.categories.blog %} 
+    {% if post.filters contains "podcast" %}
   <div class="articles">
     <div class="articles-image">
 	<a href="{{ site.baseurl }}{{ post.url }}"><img src="{{site.url}}{{post.image}}" data-src="{{site.url}}{{post.image}}" alt="{{ post.title }}"></a></div>
@@ -29,5 +31,6 @@ title: Blog
 
 
   </div>
+  {% endif %}
   {% endfor %}
 </div>
