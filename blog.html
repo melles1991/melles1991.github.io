@@ -21,8 +21,8 @@ title: Blog
     <div class="articles-body">
       <div class="articles-title"><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></div>
       <div class="shortly"><span>{{ post.excerpt }}</span></div>
-	  <div class="date"><span>{% include svg/clock.svg %} {{ post.date | date: '%B %d, %Y' }}</span></div>
-	  {% if post.author %}<div class="author"><span>{% include svg/author.svg %} {{ post.author }}</span></div>{% endif %}
+	  <div class="date"><i class="material-icons">date_range</i> <span>{{ post.date | date: '%B %d, %Y' }}</span></div>
+	  {% if post.author %}<div class="author"><i class="material-icons">person</i> <span>{{ post.author }}</span></div>{% endif %}
 	  <div class="button"><a href="{{ site.baseurl }}{{ post.url }}">Read More</a></div>
     </div>
 

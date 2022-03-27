@@ -3,22 +3,25 @@
 .articles {
     border-top: 1px solid rgba(47,49,50,.1);
     padding: 25px 0;
+    font-family: Segoe UI,sans-serif;
     position: relative;
-    display: flex;
+    display: flex
+  }
+  
+.articles>.articles-image {
+    flex: 0 0 auto
+	}
 
-  .articles-image {
-    flex: 0 0 auto;
-	
-	a img {
+.articles>.articles-image>a img {
     object-fit: cover;
     width: 240px;
     height: 150px;
     border-radius: 4px;
-    transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out
 	}
-  }
 
-  .articles-body {
+
+.articles>.articles-body {
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
@@ -28,30 +31,26 @@
     flex: 1 1 auto;
     display: flex;
     flex-flow: row wrap;
-    justify-content: flex-start;
-	
-   .articles-title {
-    font-size: 1.3625rem;
-    font-family: "Roboto Slab", "Times New Roman", serif;
-    margin-top: 0 !important;
-    margin-bottom: 4px !important;
+    justify-content: flex-start
+}
+
+.articles>.articles-body>.articles-title {
+    font-style: normal;
     font-weight: 600;
+    font-size: 18px;
     line-height: 24px;
     color: #2f3132;
-    width: 100%;
+    width: 100%
+}
 
-    a {
-      transition: all .2s ease-in-out;
-      color: $black-color;
-      text-decoration: none;
+.articles>.articles-body>.articles-title a {
+    color: inherit;
+    transition: all .2s ease-in-out
+}
 
-      &:hover {
-        color: $brand-primary !important;
-      }
-
-    }
-
-  }
+.articles>.articles-body>.articles-title a:hover {
+    color: #449eef
+}
 
   .shortly {
     font-family: Segoe UI,sans-serif;
@@ -64,87 +63,94 @@
     line-height: 21px;
   }
   
-  .date {
+  .articles>.articles-body>.shortly {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 21px;
+    color: #555;
+    width: 100%;
+    margin-top: 10px
+}
+
+.articles>.articles-body>.date {
+    margin-top: 20px
+}
+
+.articles>.articles-body>.button,.articles>.articles-body>.author {
     margin-top: 20px;
-	}
-  .author, .button {
-    margin-top: 20px;
-    margin-left: 30px;
-	}
-  .button a {
-    transition: all .2s ease-in-out;
-	color: $black-color;
-    text-decoration: none;
-	
-	   &:hover {
-        color: $brand-primary !important;
-      }
-	}	
-	
-  }
+    margin-left: 30px
+}
+
+.articles>.articles-body>.author i,.articles>.articles-body>.date i {
+    font-size: 20px;
+	vertical-align: middle
+}
+
+.articles>.articles-body>.button a {
+    display: flex;
+    grid-column-gap: 8px;
+    transition: all .2s ease-in-out
+}
+
+.articles>.articles-body>.button a:hover {
+    color: #449eef
+}
 
   h6 {
     margin-bottom: 0;
   }
 
+@media screen and (max-width:999px) {
+    .articles>.articles-image>a img {
+        width: 170px;
+        height: 106px
+    }
 }
 
-@media (max-width: 767px) {
-  
-  .articles {
-    flex-direction: column;
-	
-	
-   .articles-image {
-     a img {
-	 width: 100%;
-     height: auto;
-	 }
-	 }
+@media screen and (max-width:767px) {
+    .articles {
+        flex-direction: column
+    }
 
-	.articles-body {
-	margin-top: 10px;
-    margin-left: 0;
-	
-	.articles-title{
-	order: 2;
-    margin-top: 10px;}
-	
-	.shortly{
-	 display: none;
-	}
-	
-	.date{
-	order: 1;
-    margin-top: 0;
-    margin-left: 0;}
-	
-	.author{
-	order: 3;
-    margin-top: 10px;
-    margin-left: 0;
-	}
-	
-	.button{
-	order: 4;
-    margin-top: 10px;
-    margin-left: 20px;
-	}
-  }
-  } 
-  }
-  
-    @media (min-width: 999px) {
-  
-  .articles {
-	
-   .articles-image {
-     a img {
-    width: 170px;
-    height: 106px;
-	 }
-	 }
-  
-	}
-  
-  }
+    .articles>.articles-image {
+        width: 100%
+    }
+
+    .articles>.articles-image>a img {
+        width: 100%;
+        height: auto
+    }
+
+    .articles>.articles-body {
+        margin-top: 10px;
+        margin-left: 0
+    }
+
+    .articles>.articles-body>.articles-title {
+        order: 2;
+        margin-top: 10px
+    }
+
+    .articles>.articles-body>.shortly {
+        display: none
+    }
+
+    .articles>.articles-body>.date {
+        order: 1;
+        margin-top: 0;
+        margin-left: 0
+    }
+
+    .articles>.articles-body>.author {
+        order: 3;
+        margin-top: 10px;
+        margin-left: 0
+    }
+
+    .articles>.articles-body>.button {
+        order: 4;
+        margin-top: 10px;
+        margin-left: 20px
+    }
+}
