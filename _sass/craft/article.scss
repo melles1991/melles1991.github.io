@@ -157,7 +157,8 @@
 
 .sticky-submenu {
     height: 40px;
-    background-color: #2f3132
+    background-color: #2f3132;
+	margin-top: -2rem
 }
 
 .sticky-submenu #sub-menu {
@@ -165,8 +166,11 @@
     font-size: 16px;
     line-height: 23px;
     color: #c3c6c8;
-    max-width: 1400px;
-    margin: 0 auto;
+    max-width: 1140px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
     display: flex;
     height: 100%
 }
