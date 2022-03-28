@@ -13,8 +13,8 @@ permalink: /articles/
     <a class="btn btn-primary" href="{{ site.baseurl }}/feed.xml">{% include svg/rss_feed.svg %} RSS Feed</a>
   </div>
 </div>
+{% include layout/sub-menu.html %}
 <div class="container post">
-<div class="filter"><div class="menu"><a href="{{ site.baseurl }}/blog">All</a> <a href="{{ site.baseurl }}/news">News</a> <a href="{{ site.baseurl }}/articles">Articles</a> <a href="{{ site.baseurl }}/podcast">Podcast</a></div></div>
   {% for post in site.categories.blog %} 
   {% if post.filters contains "articles" %}
   <div class="articles">
