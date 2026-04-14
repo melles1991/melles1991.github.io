@@ -1,5 +1,0 @@
-User-agent: *
-Host: www.craft-rom.ml
-Sitemap: https://www.craft-rom.ml/sitemap.xml
-Disallow: /?*s=
-

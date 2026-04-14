@@ -1,0 +1,257 @@
+/* =========================
+   404 PAGE STYLES (WARM DARK THEME)
+========================= */
+
+/* --- Container --- */
+.error-page-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 80vh;
+    padding: 15px;
+    position: relative;
+    z-index: 1;
+}
+
+/* --- Main Card --- */
+.empty-state-wow.error-state {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 40px 30px;
+    
+    /* Dark background matching the screenshots */
+    background: radial-gradient(circle at top center, #1e222b, #11141a);
+    
+    /* Subtle border */
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    
+    /* Shadows */
+    box-shadow: 
+        0 20px 50px rgba(0,0,0,0.8),
+        inset 0 1px 0 rgba(255, 255, 255, 0.05);
+    
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    
+    animation: fadeInUp 0.6s ease-out;
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(15px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* --- Icon (Warm Glow) --- */
+.empty-icon-glow {
+    width: 64px;
+    height: 64px;
+    margin: 0 auto 16px;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    /* Warm/Gold Tint */
+    background: rgba(255, 180, 100, 0.03); 
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 50%;
+    color: #e0e0e0;
+    
+    /* Warm Glow Shadow */
+    box-shadow: 0 0 25px rgba(255, 160, 80, 0.05); 
+}
+
+.empty-icon-glow svg {
+    width: 28px;
+    height: 28px;
+    opacity: 0.8;
+}
+
+/* --- Floating Animation --- */
+.floating {
+    animation: floatingIcon 4s ease-in-out infinite;
+}
+
+@keyframes floatingIcon {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-6px); }
+    100% { transform: translateY(0px); }
+}
+
+/* --- 404 Error Code --- */
+.error-code-wrapper {
+    margin-bottom: 5px;
+}
+
+.error-code-text {
+    font-family: 'Lexend', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: rgba(255, 255, 255, 0.08); /* Subtle watermark style */
+    letter-spacing: 2px;
+}
+
+/* --- Typography --- */
+.error-title {
+    font-family: 'Lexend', sans-serif;
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    line-height: 1.4;
+}
+
+.error-description {
+    font-size: 0.9rem;
+    color: #8890a0; /* Muted gray-blue */
+    margin-bottom: 30px;
+    line-height: 1.6;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* --- Fun Fact Box (Darker Inner Container) --- */
+.wow-tip-large {
+    background: #0b0d12; /* Very dark inner box */
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: var(--control-radius);
+    padding: 16px 20px;
+    margin-bottom: 30px;
+    text-align: left;
+    position: relative;
+    min-height: 100px; /* Prevent jumping when text changes */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Gold Accent Line */
+.wow-tip-large::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 0; bottom: 0;
+    width: 3px;
+    background: #c89b3c; /* WoW Gold */
+    border-radius: 3px 0 0 3px;
+    opacity: 1;
+}
+
+.fun-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+}
+
+.tip-icon { font-size: 1rem; line-height: 1; }
+
+.tip-label {
+    font-weight: 700;
+    color: #c89b3c;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 1.2px;
+}
+
+/* --- Text Animation Styles --- */
+.fun-text {
+    font-style: italic;
+    color: #ccc;
+    margin: 0;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    
+    /* Animation Properties */
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.fun-text.fade-out {
+    opacity: 0;
+    transform: translateY(5px);
+}
+
+.easter-egg {
+    color: #ff8000 !important; /* Legendary Orange */
+    font-weight: bold;
+    text-shadow: 0 0 8px rgba(255, 128, 0, 0.3);
+}
+
+/* --- Action Buttons --- */
+.action-buttons {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    width: 100%;
+}
+
+.btn-primary, .back-history-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 24px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    border-radius: var(--control-radius);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-decoration: none;
+    line-height: 1;
+    white-space: nowrap;
+    min-width: 160px;
+}
+
+/* Gold Button (Matches site tags) */
+.btn-primary {
+    background: #c89b3c;
+    color: #1a1510;
+    border: 1px solid #c89b3c;
+    box-shadow: 0 4px 15px rgba(200, 155, 60, 0.15);
+}
+
+.btn-primary:hover {
+    background: #e6b345;
+    color: #000;
+    transform: translateY(-1px);
+    box-shadow: 0 6px 20px rgba(200, 155, 60, 0.3);
+}
+
+/* Secondary Button (Ghost) */
+.back-history-btn {
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    color: #b0b0b0;
+}
+
+.back-history-btn:hover {
+    border-color: #fff;
+    color: #fff;
+    background: rgba(255, 255, 255, 0.05);
+    transform: translateY(-1px);
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 500px) {
+    .empty-state-wow.error-state {
+        padding: 30px 20px;
+    }
+
+    .action-buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .btn-primary, .back-history-btn {
+        width: 100%;
+        padding: 14px;
+    }
+}

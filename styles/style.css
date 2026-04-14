@@ -1,0 +1,1636 @@
+@import "./base/variables.css";
+@import "./donate.css";
+@import "./guild.css";
+@import "./news.css";
+@import "./mods.css";
+@import "./404.css";
+
+/* =========================================
+    1. MOBILE & ACCESSIBILITY ENHANCEMENTS
+   ========================================= */
+
+/* iOS / Android tap highlight */
+* {
+    -webkit-tap-highlight-color: rgba(255,255,255,0.15);
+}
+
+/* Мінімальний touch target */
+button,
+a,
+.btn-social,
+.dropdown-toggle {
+    min-height: 44px;
+    min-width: 44px;
+}
+
+/* Натуральний клік */
+button:active,
+a:active {
+    filter: brightness(0.92);
+}
+
+/* Менше руху — якщо користувач просить */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation: none !important;
+        transition: none !important;
+        transform: none !important;
+    }
+}
+
+/* Вимикаємо hover на тач-пристроях */
+@media (hover: none) {
+    .card:hover,
+    .news-card:hover,
+    .btn-social:hover,
+    .character:hover {
+        transform: none;
+        box-shadow: none;
+    }
+}
+
+/* iOS input zoom fix */
+input,
+textarea,
+select {
+    font-size: 16px;
+}
+
+/* =========================================
+   2. GLOBAL VARIABLES & SETTINGS
+   ========================================= */
+:root {
+    --orange-light: #ffb26a;
+    --orange-main:  #ff9b55;
+    --orange-dark:  #ff7a2f;
+
+    --nav-bg-start: rgba(20,14,10,.85);
+    --nav-bg-end:   rgba(20,14,10,.65);
+
+    --transition-fast:   all .25s ease;
+    --transition-medium: all .35s ease;
+
+    --z-dropdown: 1000;
+    --z-navbar:   9999;
+}
+
+/* =========================================
+   3. RESET & BASE
+   ========================================= */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-family: "Nunito Sans", sans-serif;
+    font-size: 100%;
+    line-height: 1.5;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    overscroll-behavior-y: contain;
+}
+
+body {
+    font-family: "Nunito Sans", sans-serif;
+    background: radial-gradient(circle at top, #2a2118, var(--bg));
+    color: var(--text);
+    min-height: 100vh;
+    touch-action: manipulation;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    overflow-x: clip;
+}
+
+img,
+svg,
+video,
+canvas {
+    max-width: 100%;
+    display: block;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+    color: inherit;
+}
+
+a {
+    text-underline-offset: 0.14em;
+}
+
+:target {
+    scroll-margin-top: 90px;
+}
+
+/* Focus accessibility */
+:focus-visible {
+    outline: 2px solid var(--orange-main);
+    outline-offset: 2px;
+}
+
+/* =========================================
+   4. LAYOUT
+   ========================================= */
+.layout {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    padding: 30px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    flex: 1;
+    padding-bottom: calc(80px + env(safe-area-inset-bottom));
+}
+
+/* Grids */
+.ui-blocks,
+#characters {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+.area.section .news-grid{
+    margin-bottom: 50px;
+}
+
+/* =========================================
+   5. TYPOGRAPHY
+   ========================================= */
+h1, h2, h3, #navigation-links {
+    font-family: 'Lexend Variable', sans-serif;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+h1, h2, h3 {
+    color: #ebf7ff; 
+    background: linear-gradient(to bottom, #f5fbff 0%, #bfe6ff 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    position: relative;
+    padding-top: 0.2em;
+    font-family: 'Lexend', sans-serif;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+}
+
+h1 {
+    font-size: 26px;
+    font-weight: 800;
+    padding-bottom: 5px;
+    letter-spacing: 1.5px;
+    margin-bottom: 15px;
+}
+
+h2 {
+    font-size: 24px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid rgba(191, 230, 255, 0.1);
+    margin-bottom: 12px;
+}
+
+h3 {
+    font-size: 21px;
+    font-weight: 700;
+    padding-bottom: 10px;
+    opacity: 0.9;
+}
+
+/* =========================================
+   6. NAVIGATION
+   ========================================= */
+.top-nav {
+    position: sticky;
+    top: 0;
+    height: 64px;
+    z-index: var(--z-navbar);
+    background: linear-gradient(to bottom, var(--nav-bg-start), var(--nav-bg-end));
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255,255,255,.06);
+}
+
+.nav-container {
+    max-width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-left {
+    display: flex;
+    gap: 26px;
+    align-items: center;
+}
+
+/* Стилі посилань меню */
+.nav-left > a,
+.dropdown-toggle {
+    color: #e6e1db;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+    position: relative;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px 4px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: color 0.25s ease;
+}
+
+.nav-left > a:hover,
+.dropdown-toggle:hover {
+    color: var(--orange-light);
+}
+
+/* Анімація підкреслення */
+.nav-left > a::after,
+.dropdown-toggle::after {
+    content: "";
+    position: absolute;
+    left: 0; bottom: -6px;
+    width: 100%; height: 2px;
+    background: linear-gradient(90deg, var(--orange-main), var(--orange-dark));
+    opacity: 0;
+    transform: scaleX(0.6);
+    transition: var(--transition-fast);
+}
+
+.nav-left > a:hover::after,
+.dropdown-toggle:hover::after {
+    opacity: 1;
+    transform: scaleX(1);
+}
+
+/* =========================================
+   COMPONENT: DROPDOWN MENU
+   ========================================= */
+
+/* --- Container & Trigger --- */
+.nav-dropdown {
+    position: relative;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.arrow {
+    font-size: 0.75em; /* Використовуємо em для масштабування */
+    margin-left: 6px;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1); /* Плавніша крива Безьє */
+    will-change: transform;
+}
+
+/* Rotate arrow on hover */
+.nav-dropdown:hover .arrow,
+.nav-dropdown:focus-within .arrow {
+    transform: rotate(180deg);
+}
+
+/* --- Dropdown Panel --- */
+.dropdown-menu {
+    /* 1. Positioning */
+    position: absolute;
+    top: calc(100% + 8px); /* Трохи більше повітря */
+    right: 0;              /* Вирівнювання по правому краю */
+    left: auto;
+    z-index: var(--z-dropdown, 1000);
+
+    /* 2. Box Model */
+    min-width: 260px;
+    padding: 12px;
+    
+    /* 3. Visual Styling (Glassmorphism & Depth) */
+    background: rgba(25, 20, 15, 0.95); /* Глибокий темний фон */
+    backdrop-filter: blur(16px);        /* Сильне розмиття фону */
+    -webkit-backdrop-filter: blur(16px);
+    
+    border-radius: var(--control-radius);
+    border: 1px solid rgba(255, 190, 120, 0.08); /* Тонкий акцент */
+    
+    /* Складна тінь для глибини */
+    box-shadow: 
+        0 10px 40px -10px rgba(0, 0, 0, 0.8),
+        0 0 0 1px rgba(255, 255, 255, 0.03) inset;
+
+    /* 4. Initial State (Hidden) */
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translateY(-8px) scale(0.96);
+    transform-origin: top right;
+    
+    /* 5. Transitions */
+    transition: 
+        opacity 0.2s ease,
+        transform 0.25s cubic-bezier(0.2, 0.8, 0.2, 1), /* Ефект пружини */
+        visibility 0.2s;
+        
+    will-change: opacity, transform;
+}
+
+/* --- Interaction Bridge (UX Fix) --- */
+/* Створює невидиму зону, щоб курсор не "губив" меню при переході */
+.dropdown-menu::before {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    width: 100%;
+    height: 20px; /* Зона перекриття */
+    pointer-events: auto;
+}
+
+/* --- Active State --- */
+.nav-dropdown:hover .dropdown-menu,
+.nav-dropdown:focus-within .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateY(0) scale(1);
+    
+    /* Затримка зникнення розмиття, якщо потрібно */
+    transition-duration: 0.3s; 
+}
+
+/* --- Dropdown Items (Optional Polish) --- */
+.dropdown-menu a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 14px;
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 500;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+}
+
+.dropdown-menu a:hover {
+    background: rgba(255, 155, 85, 0.08);
+    color: #fff;
+    transform: translateX(4px);
+}
+
+/* Іконки всередині меню */
+.dropdown-menu .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    opacity: 0.8;
+}
+
+/* Елементи Dropdown */
+.dropdown-menu a {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 12px 14px;
+    border-radius: 12px;
+    color: #e8e1da;
+    text-decoration: none;
+    font-size: 14.5px;
+    font-weight: 500;
+    margin-top: 4px; 
+    transition: var(--transition-fast);
+}
+
+.dropdown-menu a:first-child { margin-top: 0; }
+
+.dropdown-menu a:hover {
+    background: linear-gradient(90deg, rgba(255,155,85,.22), rgba(255,155,85,.05));
+    color: #ffcc9a;
+    transform: translateX(4px);
+}
+
+/* Індикатор (світіння) зліва при наведенні */
+.dropdown-menu a::before {
+    content: "";
+    position: absolute;
+    left: 0; top: 50%;
+    width: 3px; height: 0;
+    background: linear-gradient(to bottom, var(--orange-light), var(--orange-dark));
+    border-radius: 4px;
+    transform: translateY(-50%);
+    transition: height .25s ease;
+    opacity: .9;
+}
+
+.dropdown-menu a:hover::before { height: 70%; }
+
+.dropdown-menu .icon {
+    width: 22px;
+    text-align: center;
+    font-size: 16px;
+    opacity: .85;
+}
+
+/* =========================================
+   7. SECTIONS & HERO AREAS
+   ========================================= */
+.section-header { margin-bottom: 46px; }
+.section-header h1 { font-size: 44px; font-weight: 600; color: #fff; }
+
+.section-tag {
+    display: inline-block;
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 12px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--orange-main);
+    background: rgba(255, 140, 60, 0.15);
+    margin-bottom: 16px;
+}
+
+.area.section {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    padding: 80px 20px;
+}
+
+.area.section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+}
+
+.area-content {
+    position: relative;
+    z-index: 1;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* =========================================
+   8. COMPONENTS: CARDS
+   ========================================= */
+.card,
+.news-card,
+#characters .character {
+    border-radius: 16px;
+    transition: var(--transition-medium);
+}
+
+/* --- Generic Card --- */
+.card {
+    background: var(--panel);
+    padding: 24px;
+    margin-bottom: 1rem;
+}
+
+.card h3,
+.characters-container h3 {
+    margin-top: 0;
+    color: var(--accent);
+}
+
+.card.featured {
+    animation: subtleGlow 4s ease-in-out infinite;
+}
+
+/* --- Character Card --- */
+#characters .character {
+    background: var(--panel-soft);
+    padding: 16px;
+    border-radius: 12px;
+    display: flex;
+    text-decoration: none;
+    color: inherit;
+    align-items: flex-start;
+    gap: 16px;
+    min-height: 100px;
+    cursor: pointer;
+    overflow: visible;
+}
+
+#characters .character:hover {
+    background: rgba(200, 155, 60, 0.08);
+    box-shadow: inset 0 0 0 1px rgba(200, 155, 60, 0.35);
+    transform: translateY(-4px);
+}
+
+.char-avatar {
+    width: 60px; height: 60px;
+    border-radius: 8px;
+    object-fit: cover;
+    background: #1a1510;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    flex-shrink: 0;
+}
+
+.char-details {
+    display: flex; flex-direction: column; gap: 6px; flex: 1;
+}
+
+.char-info strong { font-size: 17px; color: #fff; }
+.stats { font-size: 12px; color: var(--muted); }
+.guild { font-size: 12px; color: var(--accent); margin-top: 2px; }
+
+.scores { display: flex; gap: 10px; margin-top: 4px; flex-wrap: wrap; }
+.home-rio-scores {
+    gap: 8px;
+    margin-top: 6px;
+}
+
+.home-rio-scores .member-chip {
+    min-height: 30px;
+    min-width: 50px;
+    padding: 0 10px;
+}
+
+.home-rio-scores .member-chip .chip-value {
+    font-size: 0.72rem;
+}
+
+.score-tag {
+    font-size: 11px; font-weight: bold;
+    text-transform: uppercase;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 2px 6px;
+    border-radius: 4px;
+    letter-spacing: 0.5px;
+}
+
+/* --- News Card --- */
+.news-card {
+    position: relative;
+    display: block;
+    padding: 28px;
+    text-align: left;
+    background: var(--panel);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.55);
+    text-decoration: none;
+    color: #fff;
+}
+
+.news-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background: linear-gradient(120deg, rgba(255,155,85,0.25), transparent 60%);
+    opacity: 0;
+    transition: opacity 0.35s ease;
+}
+
+.news-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 35px 80px rgba(0,0,0,0.75);
+}
+
+.news-card:hover::after { opacity: 1; }
+
+.news-date { font-size: 12px; color: var(--orange-main); margin-bottom: 12px; }
+.news-card h3 { font-size: 20px; margin-bottom: 12px; line-height: 1.3; }
+.news-card p { font-size: 14px; line-height: 1.6; color: #d0d0d0; margin-bottom: 22px; }
+
+.read-more {
+    font-size: 14px; font-weight: 500;
+    color: var(--orange-main);
+    display: inline-flex; align-items: center; gap: 6px;
+}
+
+/* =========================================
+   9. BUTTONS & INTERACTIVE ELEMENTS
+   ========================================= */
+.socials-card {
+    display: flex; flex-wrap: wrap; align-items: center;
+    justify-content: space-between; gap: 20px;
+}
+
+.welcome-text {
+    font-weight: 500; color: var(--text);
+    letter-spacing: 0.3px; margin-bottom: 0.8rem;
+}
+
+.socials-links { display: flex; gap: 10px; flex-wrap: wrap; }
+
+/* Базові стилі для кнопок */
+.btn-social,
+.donate a,
+.btn-primary-hero {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    border-radius: var(--control-radius);
+    transition: var(--transition-fast);
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* Соціальні кнопки */
+.btn-social {
+    gap: 8px;
+    padding: 8px 18px;
+    background: var(--panel-soft);
+    color: var(--text);
+    font-size: 14px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.btn-social:hover {
+    transform: translateY(-2px);
+    background: var(--accent);
+    box-shadow: 0 0 10px rgba(200, 155, 60, 0.4), 0 0 20px rgba(200, 155, 60, 0.2);
+}
+
+/* Кольори брендів */
+.btn-social.tw:hover { background: #9146ff; border-color: #a970ff; box-shadow: 0 0 20px rgba(145, 70, 255, 0.4); }
+.btn-social.dc:hover { background: #5865F2; border-color: #7983f5; box-shadow: 0 0 20px rgba(88, 101, 242, 0.4); }
+.btn-social.yt:hover { background: #ff0000; border-color: #ff4444; box-shadow: 0 0 20px rgba(255, 0, 0, 0.4); }
+.btn-social.tt:hover { background: #010101; border-color: #69C9D0; box-shadow: 2px 2px 0 #EE1D52, -2px -2px 0 #69C9D0; }
+
+/* Кнопка донату */
+.donate { border: 1px solid rgba(200,155,60,0.3); }
+.donate a {
+    margin-top: 10px;
+    padding: 10px 18px;
+    background: var(--accent);
+    color: #000;
+    font-weight: bold;
+}
+.donate a:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 20px rgba(200, 155, 60, 0.5);
+}
+
+/* Hero Button (Основна дія) */
+.news-actions { text-align: center; }
+.btn-primary-hero {
+    background: var(--primary);
+    color: #fff;
+    font-size: 1rem;
+    gap: .5rem;
+    padding: .875rem 1.75rem;
+}
+.btn-primary-hero:hover {
+    background: var(--primary-dark);
+    box-shadow: 0 8px 20px #e285524d;
+    transform: translateY(-2px);
+}
+
+/* =========================================
+   10. ANIMATIONS
+   ========================================= */
+.bounce-icon { animation: bounce 1.8s infinite; }
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50%      { transform: translateY(8px); }
+}
+
+@keyframes subtleGlow {
+    0%, 100% { box-shadow: 0 0 10px rgba(200,155,60,0.15); }
+    50%      { box-shadow: 0 0 20px rgba(200,155,60,0.35); }
+}
+
+/* =========================================
+   11. FOOTER
+   ========================================= */
+footer {
+    margin-top: 40px;
+    font-size: 13px;
+    color: var(--muted);
+}
+
+/* =========================================
+   UX ENHANCEMENTS (GLOBAL & MOBILE)
+   ========================================= */
+
+/* 1. Button Haptic Feedback (Вібрація/Відгук) */
+/* Додаємо ефект натискання для всіх кнопок */
+.btn-social:active,
+.donate a:active,
+.btn-primary-hero:active,
+.dropdown-toggle:active,
+button:active,
+a.button:active {
+    transform: scale(0.96); /* Легке зменшення при кліку */
+    transition: transform 0.1s ease-out; /* Миттєва реакція */
+}
+
+/* 2. Inertial Scrolling (Інерційний скрол) */
+/* Для таблиць, блоків коду та горизонтальних списків */
+.table-responsive,
+pre,
+code,
+.scroll-container {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch; /* Магія iOS для плавності */
+    overscroll-behavior-x: contain; /* Запобігає скролу сторінки */
+}
+
+/* =========================================
+   MOBILE MENU & NAVIGATION (Full Bundle)
+   ========================================= */
+    /* --- 2. HAMBURGER BUTTON (Анімація хрестика) --- */
+    .hamburger {
+        display: none;
+        position: relative;
+        z-index: 10001; /* Найвищий шар, щоб бути поверх меню */
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 15px;
+        -webkit-tap-highlight-color: transparent;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .menu-button {
+        position: relative;
+        width: 30px;
+        height: 4px;
+        background-color: #e6e1db;
+        border-radius: 2px;
+        transition: all 400ms cubic-bezier(0.23, 1, 0.32, 1);
+    }
+
+    .menu-button::before,
+    .menu-button::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        width: 30px;
+        height: 4px;
+        background-color: #e6e1db;
+        border-radius: 2px;
+        transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1), 
+                    margin 400ms cubic-bezier(0.23, 1, 0.32, 1);
+    }
+
+    .menu-button::before { margin-top: -8px; }
+    .menu-button::after  { margin-top: 8px; }
+
+    /* Стан .is-active (Хрестик) */
+    .hamburger.is-active .menu-button { background-color: transparent; }
+    .hamburger.is-active .menu-button::before { margin-top: 0; transform: rotate(45deg); }
+    .hamburger.is-active .menu-button::after  { margin-top: 0; transform: rotate(-45deg); }
+
+
+    /* --- 3. MOBILE OVERLAY (Твій код) --- */
+    .mobile-menu {
+        position: fixed;
+        top: 0; left: 0;
+        width: 100%; height: 100vh;
+        
+        /* Стиль фону */
+        background: rgba(20, 14, 10, 0.95);
+        backdrop-filter: blur(15px);
+        -webkit-backdrop-filter: blur(15px);
+        
+        z-index: 10000; /* Менше кнопки (10001), більше контенту */
+        padding-top: 80px;
+        
+        /* Анімація появи */
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-20px);
+        transition: all 0.3s cubic-bezier(0.4, 0.0, 0.2, 1);
+    }
+
+    .mobile-menu.is-open {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+
+    /* --- 4. CONTENT & LINKS --- */
+    .mobile-menu-inner {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        height: 100%;
+        overflow-y: auto;
+        padding-bottom: 40px;
+        /* Safe Area знизу */
+        padding-bottom: calc(40px + env(safe-area-inset-bottom));
+    }
+
+    .mobile-link {
+        font-family: 'Lexend Variable', sans-serif;
+        font-size: 20px;
+        font-weight: 600;
+        color: #e6e1db;
+        text-decoration: none;
+        padding: 12px 24px;
+        width: 100%;
+        text-align: center;
+        transition: color 0.2s ease;
+    }
+
+    .mobile-link:active {
+        color: var(--orange-main);
+        transform: scale(0.96);
+    }
+
+    .mobile-link .icon {
+        margin-right: 8px;
+        opacity: 0.8;
+    }
+
+    .mobile-divider {
+        font-size: 12px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        color: var(--orange-dark);
+        opacity: 0.6;
+        margin-top: 10px;
+        margin-bottom: 5px;
+        width: 80%;
+        text-align: center;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        line-height: 0.1em;
+    }
+
+
+/* --- Empty State (Compact & Optimized) --- */
+.empty-state-wow {
+    text-align: center;
+    padding: 40px 20px; /* Зменшено з 60px */
+    background: rgba(20, 25, 35, 0.4); /* Більш прозорий фон */
+    border: 1px dashed rgba(191, 230, 255, 0.2); /* Тонший та елегантніший бордер */
+    border-radius: 12px;
+    margin: 30px 0; /* Менший відступ зверху/знизу */
+    position: relative;
+    overflow: hidden;
+}
+
+.empty-icon-glow {
+    width: 56px; /* Зменшено з 80px */
+    height: 56px;
+    margin: 0 auto 16px;
+    background: rgba(191, 230, 255, 0.03);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(191, 230, 255, 0.15);
+    box-shadow: 0 0 20px rgba(191, 230, 255, 0.08); /* Легше, менш агресивне світіння */
+    color: var(--frost-end);
+}
+
+.scroll-icon {
+    width: 28px; /* Зменшено з 40px */
+    height: 28px;
+    opacity: 0.9;
+}
+
+.empty-state-wow h2 {
+    font-size: 1.35rem; /* Зменшено з 1.8rem */
+    font-weight: 700;
+    margin-bottom: 8px;
+    background: var(--gradient-frost);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: 0.5px;
+}
+
+.empty-state-wow p {
+    color: var(--text-secondary);
+    max-width: 420px; /* Звузив ширину тексту для кращого сприйняття */
+    margin: 0 auto 20px;
+    font-size: 0.95rem; /* Зменшено з 1.1rem */
+    line-height: 1.5;
+}
+
+.wow-tip {
+    display: inline-block;
+    font-size: 0.8rem; /* Зменшено з 0.9rem */
+    color: var(--text-muted);
+    background: rgba(0, 0, 0, 0.25);
+    padding: 6px 14px; /* Компактніші відступи */
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.wow-tip a {
+    color: var(--accent-gold);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.2s ease;
+}
+
+.wow-tip a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+/* Subtitle Compact */
+.section-subtitle {
+    color: var(--text-muted);
+    margin: 4px 0 0 0;
+    font-size: 0.9rem; /* Зменшено з 1.1rem */
+    font-weight: 400;
+    letter-spacing: 0.5px;
+}
+
+/* Mobile Adjustments (Super Compact) */
+@media (max-width: 480px) {
+    .empty-state-wow { padding: 30px 15px; }
+    .empty-icon-glow { width: 48px; height: 48px; margin-bottom: 12px; }
+    .scroll-icon { width: 24px; height: 24px; }
+    .empty-state-wow h2 { font-size: 1.2rem; }
+    .empty-state-wow p { font-size: 0.9rem; margin-bottom: 16px; }
+}
+
+/* =========================================
+   RESPONSIVE MEDIA QUERIES (COMPACT FONTS)
+   ========================================= */
+
+/* Large Screens (max-width: 1200px) */
+@media (max-width: 1200px) {
+    main { padding: 25px 15px; }
+    h1 { font-size: 26px; }
+}
+
+/* Laptops (max-width: 1024px) */
+@media (max-width: 1024px) {
+    .nav-container { padding: 0 15px; }
+    .nav-left { gap: 15px; }
+    .dropdown-menu a { font-size: 14px; }
+}
+
+/* Tablets Landscape (max-width: 992px) */
+@media (max-width: 992px) {
+    h1 { font-size: 24px; }
+    .section-header h1 { font-size: 32px; } /* Зменшено з 36px */
+    .area.section { padding: 50px 16px; }
+    
+    /* Characters Grid */
+    #characters { 
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+        gap: 14px; 
+    }
+    #characters .character { 
+        min-height: 110px; 
+        padding: 14px; 
+        gap: 12px; 
+    }
+    .char-avatar { width: 55px; height: 55px; }
+}
+
+/* Tablets Portrait & Mobile (max-width: 768px) */
+@media (max-width: 768px) {
+    /* -- 1. Safe Area & Layout -- */
+    body {
+        padding-bottom: env(safe-area-inset-bottom); 
+        padding-left: env(safe-area-inset-left);
+        padding-right: env(safe-area-inset-right);
+    }
+
+    .top-nav { 
+        height: 56px; 
+        padding-top: env(safe-area-inset-top);
+        height: calc(56px + env(safe-area-inset-top));
+    }
+
+    main { padding: 20px 15px; }
+    
+    /* -- 2. Navigation -- */
+    .hamburger { display: flex; }
+    .mobile-menu { display: block; }
+    .nav-left { display: none; }
+    .nav-container { justify-content: flex-end; }
+    .nav-container nav { gap: 15px; }
+
+    /* -- 3. Grids to 1 Column -- */
+    .ui-blocks, #characters, .news-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    /* -- 4. Typography Compact (Зменшені шрифти) -- */
+    h1 { font-size: 22px; }
+    .section-header h1 { font-size: 26px; margin-bottom: 5px; }
+    .section-subtitle { font-size: 14px; margin-top: 0; }
+    
+    p, li { font-size: 15px; line-height: 1.5; } /* Компактний текст */
+
+    /* -- 5. Full Bleed Images -- */
+    .article-body img, .news-card img, .full-width-mobile {
+        width: calc(100% + 30px);
+        margin-left: -15px;
+        border-radius: 0;
+        display: block;
+    }
+
+    /* -- 6. Hero News Card -- */
+    .featured-article {
+        grid-template-columns: 1fr;
+        grid-template-rows: 180px auto; /* Менша картинка */
+        height: auto;
+    }
+    .featured-image {
+        height: 180px;
+        border-right: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+    .featured-content { padding: 1.25rem; }
+    .featured-content h2 { font-size: 1.3rem; line-height: 1.3; } /* Компактний заголовок */
+    .featured-content p { font-size: 0.95rem; line-height: 1.5; -webkit-line-clamp: 3; } /* Менше тексту */
+
+    /* -- 7. Article Page -- */
+    .article-header { padding: 1.25rem; }
+    .article-body { padding: 1.25rem; font-size: 16px; } /* Трохи менший шрифт статті */
+    .article-footer { padding: 1.25rem; }
+    .article-header h1 { font-size: 1.6rem; line-height: 1.2; } /* Компактний H1 */
+    .article-description { font-size: 1.05rem; line-height: 1.5; }
+
+    /* -- 8. Components -- */
+    .socials-card { 
+        flex-direction: column; 
+        align-items: center; 
+        text-align: center; 
+    }
+    .socials-links { justify-content: center; }
+    
+    .card, .news-card { padding: 16px; } /* Менші відступи в картках */
+    
+    #characters .character { 
+        flex-direction: row; 
+        align-items: center; 
+        padding: 12px;
+    }
+    .char-info strong { font-size: 16px; }
+    .char-info span { font-size: 13px; }
+}
+
+/* Small Mobile (max-width: 480px) */
+@media (max-width: 480px) {
+    /* -- Compact Fonts for Small Screens -- */
+    .section-header h1 { font-size: 24px; }
+    .section-tag { font-size: 0.75rem; }
+    
+    .nav-container nav { gap: 10px; }
+    .nav-container nav a { font-size: 13px; }
+    
+    /* -- Article Compact -- */
+    .article-header h1 { font-size: 1.4rem; }
+    .article-description { font-size: 1rem; }
+    .article-body { font-size: 15px; line-height: 1.6; }
+    .article-body h2 { font-size: 1.3rem; margin-top: 1.5rem; }
+    .article-body h3 { font-size: 1.15rem; }
+
+    /* -- Characters Stacked -- */
+    #characters .character { 
+        flex-direction: column; 
+        align-items: center; 
+        text-align: center; 
+        min-height: auto; 
+        padding: 12px; 
+        gap: 8px; 
+    }
+    .char-avatar { width: 48px; height: 48px; }
+    .char-info strong { font-size: 15px; }
+    
+    /* -- Touch Targets -- */
+    .btn-social { width: 100%; justify-content: center; padding: 10px; }
+    .socials-links { width: 100%; flex-direction: column; gap: 10px; }
+    
+    .scores { justify-content: center; }
+    .home-rio-scores { justify-content: flex-start; }
+    .home-rio-scores .member-chip { min-height: 28px; padding: 0 9px; }
+    .news-card { padding: 15px; }
+    .card-title { font-size: 1.1rem; }
+}
+
+/* =========================================
+   GUIDE / ARTICLE POLISH
+   ========================================= */
+
+body.nav-open {
+    overflow: hidden;
+    touch-action: none;
+}
+
+.nav-brand {
+    text-decoration: none;
+    font-weight: 800;
+    font-size: 1.05rem;
+    color: #fff;
+    text-transform: uppercase;
+    margin-right: auto;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    letter-spacing: 0.08em;
+}
+
+.nav-brand-mark {
+    width: 10px;
+    height: 10px;
+    border-radius: 999px;
+    background: linear-gradient(135deg, var(--orange-light), var(--orange-dark));
+    box-shadow: 0 0 0 5px rgba(255, 155, 85, 0.12);
+    flex: 0 0 auto;
+}
+
+.nav-brand-text {
+    white-space: nowrap;
+}
+
+.top-nav .dropdown-toggle {
+    cursor: pointer;
+}
+
+.article-body,
+.article-header,
+.article-footer {
+    overflow-wrap: anywhere;
+}
+
+@media (max-width: 768px) {
+    .nav-brand {
+        font-size: 0.95rem;
+        gap: 8px;
+    }
+
+    .nav-brand-mark {
+        width: 8px;
+        height: 8px;
+        box-shadow: 0 0 0 4px rgba(255, 155, 85, 0.12);
+    }
+
+    .mobile-menu-inner {
+        align-items: stretch;
+        gap: 14px;
+        padding-inline: 16px;
+    }
+
+    .mobile-link {
+        border: 1px solid rgba(255,255,255,0.06);
+        border-radius: 14px;
+        background: rgba(255,255,255,0.03);
+    }
+}
+
+/* =========================================
+   GLOBAL TYPOGRAPHY CALIBRATION
+   Desktop + Mobile
+   ========================================= */
+
+@media (min-width: 1025px) {
+    html {
+        font-size: 16px;
+    }
+
+    body {
+        font-size: 1rem;
+        line-height: 1.65;
+    }
+
+    p,
+    li,
+    .card p,
+    .news-card p,
+    .section-subtitle,
+    .guild-meta,
+    .mod-summary,
+    .credits-info,
+    .empty-state,
+    .error-description,
+    .fun-text {
+        font-size: 1rem;
+        line-height: 1.7;
+    }
+
+    h1 {
+        font-size: clamp(1.95rem, 1.78rem + 0.55vw, 2.3rem);
+        line-height: 1.14;
+    }
+
+    h2 {
+        font-size: clamp(1.55rem, 1.42rem + 0.42vw, 1.85rem);
+        line-height: 1.2;
+    }
+
+    h3 {
+        font-size: clamp(1.26rem, 1.18rem + 0.28vw, 1.45rem);
+        line-height: 1.24;
+    }
+
+    .top-nav {
+        height: 68px;
+    }
+
+    .nav-brand {
+        font-size: 1rem;
+        letter-spacing: 0.08em;
+    }
+
+    .nav-left > a,
+    .dropdown-toggle,
+    .dropdown-menu a,
+    .nav-container nav a {
+        font-size: 0.96rem;
+    }
+
+    .section-header h1 {
+        font-size: clamp(2.2rem, 1.95rem + 0.95vw, 2.85rem);
+        line-height: 1.08;
+        margin-bottom: 0.55rem;
+    }
+
+    .section-subtitle {
+        font-size: 1.02rem;
+        line-height: 1.65;
+    }
+
+    .card-title,
+    .news-card h3,
+    .visual-news-card .card-title,
+    .mod-name {
+        font-size: 1.16rem;
+        line-height: 1.34;
+    }
+
+    .featured-content h2 {
+        font-size: clamp(1.8rem, 1.65rem + 0.42vw, 2.05rem);
+        line-height: 1.16;
+    }
+
+    .featured-content p,
+    .visual-news-card .card-desc,
+    .news-card p,
+    .mod-summary,
+    .stats,
+    .guild {
+        font-size: 0.97rem;
+        line-height: 1.65;
+    }
+
+    .news-date,
+    .visual-news-card .news-date,
+    .category-badge,
+    .card-badge,
+    .section-tag {
+        font-size: 0.78rem;
+    }
+
+    .char-info strong {
+        font-size: 1.02rem;
+        line-height: 1.3;
+    }
+
+    .char-info span,
+    .guild-meta,
+    .stat-item,
+    .version-badge,
+    .mod-tag,
+    .tooltip-header,
+    .tooltip-tag {
+        font-size: 0.82rem;
+    }
+
+    .guild-name {
+        font-size: clamp(2rem, 1.8rem + 0.85vw, 2.45rem);
+        line-height: 1.06;
+    }
+
+    .modern-header .section-title,
+    .section-title {
+        font-size: 1.35rem;
+        line-height: 1.2;
+    }
+
+    .article-header h1 {
+        font-size: clamp(2.15rem, 1.92rem + 0.95vw, 2.8rem);
+        line-height: 1.08;
+        letter-spacing: 0.02em;
+    }
+
+    .article-description {
+        font-size: 1.08rem;
+        line-height: 1.72;
+    }
+
+    .article-body {
+        font-size: 1.01rem;
+        line-height: 1.76;
+    }
+
+    .article-body h2 {
+        font-size: clamp(1.58rem, 1.45rem + 0.45vw, 1.9rem);
+        line-height: 1.18;
+    }
+
+    .article-body h3 {
+        font-size: clamp(1.24rem, 1.16rem + 0.26vw, 1.4rem);
+        line-height: 1.24;
+    }
+
+    .article-body h4 {
+        font-size: 1.06rem;
+        line-height: 1.32;
+    }
+
+    .article-body table {
+        font-size: 0.95rem;
+    }
+
+    .article-body td,
+    .article-body th {
+        font-size: 0.95rem;
+        line-height: 1.5;
+    }
+
+    .article-body th {
+        font-size: 0.84rem;
+        letter-spacing: 0.03em;
+    }
+
+    .donate-header h1 {
+        font-size: clamp(2.2rem, 2rem + 0.9vw, 2.8rem);
+        line-height: 1.08;
+    }
+
+    .donate-header p,
+    .credits-info,
+    .empty-state {
+        font-size: 1rem;
+        line-height: 1.7;
+    }
+
+    .donate-subtitle {
+        font-size: 1.38rem;
+        line-height: 1.2;
+    }
+
+    .featured-badge,
+    .method-features span,
+    .toggle-alternatives,
+    .btn-mod-download,
+    .btn-primary,
+    .btn-discord,
+    .read-more,
+    .share-btn,
+    .back-btn {
+        font-size: 0.95rem;
+    }
+
+    .error-code-text {
+        font-size: 1.7rem;
+    }
+
+    .error-title {
+        font-size: 1.4rem;
+        line-height: 1.25;
+    }
+
+    .error-description,
+    .fun-text,
+    .btn-primary,
+    .back-history-btn {
+        font-size: 0.96rem;
+    }
+}
+
+@media (max-width: 768px) {
+    html {
+        font-size: 15px;
+    }
+
+    body {
+        font-size: 1rem;
+        line-height: 1.58;
+    }
+
+    p,
+    li,
+    .card p,
+    .news-card p,
+    .section-subtitle,
+    .guild-meta,
+    .mod-summary,
+    .credits-info,
+    .empty-state,
+    .error-description,
+    .fun-text {
+        font-size: 0.98rem;
+        line-height: 1.62;
+    }
+
+    h1 {
+        font-size: clamp(1.48rem, 1.32rem + 0.8vw, 1.72rem);
+        line-height: 1.16;
+    }
+
+    h2 {
+        font-size: clamp(1.24rem, 1.16rem + 0.45vw, 1.42rem);
+        line-height: 1.22;
+    }
+
+    h3 {
+        font-size: clamp(1.08rem, 1.02rem + 0.3vw, 1.18rem);
+        line-height: 1.25;
+    }
+
+    .nav-brand {
+        font-size: 0.92rem;
+        letter-spacing: 0.06em;
+    }
+
+    .section-header h1 {
+        font-size: clamp(1.68rem, 1.52rem + 0.7vw, 2rem);
+        line-height: 1.1;
+    }
+
+    .section-subtitle {
+        font-size: 0.95rem;
+        line-height: 1.58;
+    }
+
+    .featured-content h2,
+    .news-card h3,
+    .visual-news-card .card-title,
+    .card-title,
+    .mod-name {
+        font-size: 1.08rem;
+        line-height: 1.32;
+    }
+
+    .featured-content p,
+    .visual-news-card .card-desc,
+    .news-card p,
+    .mod-summary,
+    .stats,
+    .guild {
+        font-size: 0.94rem;
+        line-height: 1.58;
+    }
+
+    .news-date,
+    .visual-news-card .news-date,
+    .category-badge,
+    .card-badge,
+    .section-tag,
+    .version-badge,
+    .mod-tag,
+    .tooltip-header,
+    .tooltip-tag,
+    .stat-item {
+        font-size: 0.76rem;
+    }
+
+    .char-info strong {
+        font-size: 0.98rem;
+    }
+
+    .char-info span,
+    .guild-meta {
+        font-size: 0.82rem;
+    }
+
+    .guild-name {
+        font-size: 1.62rem;
+        line-height: 1.08;
+    }
+
+    .modern-header .section-title,
+    .section-title,
+    .donate-subtitle {
+        font-size: 1.18rem;
+        line-height: 1.22;
+    }
+
+    .article-header h1 {
+        font-size: clamp(1.48rem, 1.36rem + 0.65vw, 1.8rem);
+        line-height: 1.12;
+    }
+
+    .article-description {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+
+    .article-body {
+        font-size: 0.98rem;
+        line-height: 1.68;
+    }
+
+    .article-body h2 {
+        font-size: 1.28rem;
+        line-height: 1.18;
+    }
+
+    .article-body h3 {
+        font-size: 1.1rem;
+        line-height: 1.23;
+    }
+
+    .article-body h4 {
+        font-size: 1rem;
+    }
+
+    .article-body td,
+    .article-body th {
+        line-height: 1.42;
+    }
+
+    .donate-header h1 {
+        font-size: 1.86rem;
+        line-height: 1.1;
+    }
+
+    .donate-header p,
+    .credits-info,
+    .empty-state,
+    .error-description,
+    .fun-text {
+        font-size: 0.95rem;
+        line-height: 1.62;
+    }
+
+    .featured-badge,
+    .method-features span,
+    .toggle-alternatives,
+    .btn-mod-download,
+    .btn-primary,
+    .btn-discord,
+    .read-more,
+    .share-btn,
+    .back-btn,
+    .back-history-btn {
+        font-size: 0.92rem;
+    }
+
+    .error-code-text {
+        font-size: 1.35rem;
+    }
+
+    .error-title {
+        font-size: 1.16rem;
+        line-height: 1.28;
+    }
+}
+
+@media (max-width: 480px) {
+    html {
+        font-size: 14.5px;
+    }
+
+    .section-header h1 {
+        font-size: clamp(1.52rem, 1.38rem + 0.7vw, 1.78rem);
+    }
+
+    .featured-content h2,
+    .news-card h3,
+    .visual-news-card .card-title,
+    .card-title,
+    .mod-name {
+        font-size: 1.02rem;
+    }
+
+    .article-header h1 {
+        font-size: 1.38rem;
+    }
+
+    .article-body {
+        font-size: 0.96rem;
+    }
+
+    .article-body h2 {
+        font-size: 1.22rem;
+    }
+
+    .article-body h3,
+    .modern-header .section-title,
+    .section-title,
+    .donate-subtitle {
+        font-size: 1.06rem;
+    }
+
+    .guild-name {
+        font-size: 1.44rem;
+    }
+
+    .donate-header h1 {
+        font-size: 1.68rem;
+    }
+}

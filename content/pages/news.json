@@ -1,0 +1,5 @@
+{
+  "title": "Новини та Події — Sebas — Gaming Profile",
+  "description": "Останні новини сервера, оновлення World of Warcraft 3.3.5a та події спільноти.",
+  "bodyHtml": "<div class=\"area-content\">\n<div class=\"section-header\">\n<span class=\"section-tag\">Оновлення та події</span>\n</div>\n<div class=\"empty-state-wow\">\n<div class=\"empty-icon-glow\">\n<svg class=\"scroll-icon\" viewbox=\"0 0 24 24\">\n<path d=\"M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20M8,12V14H16V12H8M8,16V18H13V16H8Z\" fill=\"currentColor\"></path>\n</svg>\n</div>\n<h2>Свиток порожній...</h2>\n<p>\n            Наші гінці ще не повернулися з Нордсколу, а гобліни-друкарі вимагають подвійну плату за чорнила. \n            Зазирайте пізніше, герою!\n        </p>\n<div class=\"empty-action\">\n<span class=\"wow-tip\">Поки чекаєте, перегляньте <a href=\"/guides/\">Гайди</a>.</span>\n</div>\n</div>\n</div>"
+}

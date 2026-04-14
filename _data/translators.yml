@@ -1,9 +1,0 @@
-managers:
-    - name: 
-      nick: 
-global_proofreaders:
-    - name: 
-      nick: 
-languages:
-    - name: 
-      proofreaders: ['', '']

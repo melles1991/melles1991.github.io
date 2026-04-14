@@ -1,8 +1,0 @@
-@charset "UTF-8";
-
-// Sizing shortcuts
-
-@mixin size($width, $height: $width) {
-  width: $width;
-  height: $height;
-}
