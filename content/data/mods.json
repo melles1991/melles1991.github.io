@@ -1,0 +1,167 @@
+[
+  {
+    "id": 911525,
+    "name": "Max Camera Distance ( Auto Combat Zoom)",
+    "summary": "Automatically extends camera distance beyond UI limits for better raid awareness. Features Smart Zoom for Combat & Mounts with smooth transitions. Safe for The War Within (12.x) raids and compatible with MoP Classic & Anniversary TBC.",
+    "downloads": 456691,
+    "updated_at": "2026-04-12T14:39:19.017Z",
+    "link": "https://www.curseforge.com/wow/addons/max-camera-distance",
+    "logo": "https://media.forgecdn.net/avatars/thumbnails/1665/847/256/256/639060492329175207.png",
+    "categories": [
+      "Bags & Inventory",
+      "Miscellaneous",
+      "Audio & Video",
+      "PvP"
+    ],
+    "game_versions": [
+      "12.0.5",
+      "12.0.1",
+      "12.0.0",
+      "11.2.5",
+      "11.2.0",
+      "11.0.2",
+      "11.0.0",
+      "10.2.7",
+      "5.5.3",
+      "5.5.2",
+      "5.5.1",
+      "4.4.2",
+      "4.4.0",
+      "3.4.3",
+      "2.5.5",
+      "2.5.4",
+      "1.15.8",
+      "1.15.2"
+    ],
+    "version": "v8.2.1"
+  },
+  {
+    "id": 1458193,
+    "name": "Chatify (Chat Enhancer)",
+    "summary": "A lightweight and modular chat enhancement addon. Features include chat history, URL copying, spam filtering, visual customization, and sound alerts.",
+    "downloads": 14515,
+    "updated_at": "2026-04-12T18:37:58.6Z",
+    "link": "https://www.curseforge.com/wow/addons/chatify-chat-enhancer",
+    "logo": "https://media.forgecdn.net/avatars/thumbnails/1669/900/256/256/639062343636465468.png",
+    "categories": [
+      "Chat & Communication",
+      "Miscellaneous",
+      "HUDs"
+    ],
+    "game_versions": [
+      "12.0.1",
+      "12.0.0",
+      "11.2.7",
+      "5.5.2",
+      "3.4.5",
+      "2.5.5",
+      "1.15.8"
+    ],
+    "version": "v1.1.1"
+  },
+  {
+    "id": 852433,
+    "name": "DBM Voice Pack (Ukrainian Female)",
+    "summary": "This modification is an addition to DBM that adds Ukrainian dubbing to events.",
+    "downloads": 14673,
+    "updated_at": "2025-04-10T18:36:37.1Z",
+    "link": "https://www.curseforge.com/wow/addons/dbm-voice-pack-ukrainian-female",
+    "logo": "https://media.forgecdn.net/avatars/thumbnails/806/845/256/256/638175218140299754.png",
+    "categories": [
+      "Boss Encounters",
+      "Audio & Video",
+      "Artwork",
+      "Plugins"
+    ],
+    "game_versions": [
+      "11.0.2",
+      "11.0.0",
+      "10.2.7",
+      "10.1.5",
+      "10.0.7",
+      "4.4.0",
+      "3.4.3",
+      "3.4.2",
+      "2.5.4",
+      "1.15.3",
+      "1.14.4"
+    ],
+    "version": "v1.5.1"
+  },
+  {
+    "id": 889139,
+    "name": "DBM Countdown Pack (Ukrainian)",
+    "summary": "This addon adds sound effects of a countdown timer for DBM.",
+    "downloads": 5309,
+    "updated_at": "2023-09-10T06:00:53.857Z",
+    "link": "https://www.curseforge.com/wow/addons/deadly-boss-mods-dbm-ukrainian-countdown-pack",
+    "logo": "https://media.forgecdn.net/avatars/thumbnails/849/488/256/256/638250468272545947.jpeg",
+    "categories": [
+      "Audio & Video",
+      "Plugins",
+      "Boss Encounters"
+    ],
+    "game_versions": [
+      "10.1.7",
+      "3.4.2",
+      "1.14.4"
+    ],
+    "version": "release-v3"
+  },
+  {
+    "id": 1076978,
+    "name": "Quick AutoLoot Enabler",
+    "summary": "Automates loot collection in World of Warcraft. It enables auto-loot with minimal setup, ensuring easy activation and compatibility with the latest game versions. Install, configure, and enjoy automatic loot collection with an intuitive interface.",
+    "downloads": 2201,
+    "updated_at": "2025-06-12T17:28:41.107Z",
+    "link": "https://www.curseforge.com/wow/addons/quicklootenabler",
+    "logo": "https://media.forgecdn.net/avatars/thumbnails/1052/780/256/256/638583080114749769.jpg",
+    "categories": [
+      "Bags & Inventory",
+      "Miscellaneous",
+      "Tooltip"
+    ],
+    "game_versions": [
+      "11.1.5",
+      "4.4.2",
+      "4.4.1",
+      "3.4.0"
+    ],
+    "version": "v4.3"
+  },
+  {
+    "id": 890116,
+    "name": "AddonTranslator (Ukrainian)",
+    "summary": "AddonTranslator is a Ukrainian localization modification for some Addons.",
+    "downloads": 3806,
+    "updated_at": "2023-09-07T20:17:54.41Z",
+    "link": "https://www.curseforge.com/wow/addons/addontranslator-ukrainian",
+    "logo": "https://media.forgecdn.net/avatars/thumbnails/850/644/256/256/638252260809236370.jpeg",
+    "categories": [
+      "Tooltip",
+      "Miscellaneous"
+    ],
+    "game_versions": [
+      "10.1.7",
+      "10.1.5"
+    ],
+    "version": "release-1.5.2"
+  },
+  {
+    "id": 1180208,
+    "name": "Mythic Affix Helper",
+    "summary": "MythicAffixHelper is a World of Warcraft addon that enhances your Mythic+ dungeon experience. It adds warning icons, tooltips, and animated affix icons to highlight critical effects, providing a more intuitive and efficient gameplay experience.",
+    "downloads": 335,
+    "updated_at": "2025-01-15T15:55:17.05Z",
+    "link": "https://www.curseforge.com/wow/addons/mythic-affix-helper",
+    "logo": "https://media.forgecdn.net/avatars/thumbnails/1157/481/256/256/638725525966939062.png",
+    "categories": [
+      "Tooltip",
+      "Miscellaneous"
+    ],
+    "game_versions": [
+      "11.0.7"
+    ],
+    "version": "release-v1.0"
+  }
+]

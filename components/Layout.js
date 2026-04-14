@@ -2,12 +2,12 @@ import Head from 'next/head';
 import Script from 'next/script';
 import Sidebar from './Sidebar';
 import siteMeta from '../content/site-meta.json';
-import { withBasePath } from '../lib/base-path';
+import { toAbsoluteUrl, withBasePath } from '../lib/base-path';
 
-export default function Layout({ title, description, image, children, extraScripts = [] }) {
+export default function Layout({ title, description, image, children, extraScripts = [], inlineScripts = [] }) {
   const pageTitle = title ? `${title} — ${siteMeta.siteTitle}` : siteMeta.siteTitle;
   const pageDescription = description || siteMeta.siteDescription;
-  const pageImage = withBasePath(image || siteMeta.defaultImage);
+  const pageImage = toAbsoluteUrl(image || siteMeta.defaultImage);
 
   return (
     <>
@@ -49,21 +49,38 @@ export default function Layout({ title, description, image, children, extraScrip
       <Script src={withBasePath('/assets/js/mobile-menu.js')} strategy="afterInteractive" />
       <Script id="global-copy-link" strategy="afterInteractive">{`
         window.copyLink = function copyLink() {
-          navigator.clipboard.writeText(window.location.href).then(() => {
-            const textSpan = document.getElementById('copyText');
-            const button = document.querySelector('.copy-btn');
+          const copyValue = window.location.href;
+          const textSpan = document.getElementById('copyText');
+          const button = document.querySelector('.copy-btn');
+          const originalText = textSpan ? textSpan.innerText : 'Копіювати';
+          const onSuccess = () => {
             if (!textSpan) return;
-            const originalText = textSpan.innerText;
             textSpan.innerText = 'Скопійовано!';
             if (button) button.classList.add('copied');
             setTimeout(() => {
               textSpan.innerText = originalText;
               if (button) button.classList.remove('copied');
             }, 2000);
-          });
+          };
+
+          if (navigator.clipboard && window.isSecureContext) {
+            navigator.clipboard.writeText(copyValue).then(onSuccess);
+            return;
+          }
+
+          const tempInput = document.createElement('input');
+          tempInput.value = copyValue;
+          document.body.appendChild(tempInput);
+          tempInput.select();
+          document.execCommand('copy');
+          document.body.removeChild(tempInput);
+          onSuccess();
         };
       `}</Script>
       {extraScripts.map((src) => <Script key={src} src={withBasePath(src)} strategy="afterInteractive" />)}
+      {inlineScripts.map((script, index) => (
+        <Script id={`inline-script-${index}`} key={`inline-script-${index}`} strategy="afterInteractive">{script}</Script>
+      ))}
 
       <div className="layout">
         <aside className="sidebar"><Sidebar /></aside>

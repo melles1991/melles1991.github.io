@@ -1,0 +1,77 @@
+[
+  {
+    "name": "Khayen",
+    "race": "Haranir",
+    "class": "Druid",
+    "region": "eu",
+    "realm": "Terokkar",
+    "avatar": "https://render.worldofwarcraft.com/eu/character/terokkar/153/189029529-avatar.jpg?alt=/wow/static/images/2d/avatar/86-0.jpg",
+    "link": "https://raider.io/characters/eu/terokkar/Khayen",
+    "guild": {
+      "name": "Mistblossom Vanguard",
+      "realm": "Terokkar"
+    },
+    "dps": {
+      "score": 1926.7,
+      "color": "#3ef23a"
+    },
+    "healer": {
+      "score": 2228.8,
+      "color": "#5fbe88"
+    },
+    "tank": {
+      "score": 0,
+      "color": "#ffffff"
+    }
+  },
+  {
+    "name": "Krouli",
+    "race": "Night Elf",
+    "class": "Demon Hunter",
+    "region": "eu",
+    "realm": "Terokkar",
+    "avatar": "https://render.worldofwarcraft.com/eu/character/terokkar/22/187314454-avatar.jpg?alt=/wow/static/images/2d/avatar/4-0.jpg",
+    "link": "https://raider.io/characters/eu/terokkar/Krouli",
+    "guild": {
+      "name": "Mistblossom Vanguard",
+      "realm": "Terokkar"
+    },
+    "dps": {
+      "score": 0,
+      "color": "#ffffff"
+    },
+    "healer": {
+      "score": 0,
+      "color": "#ffffff"
+    },
+    "tank": {
+      "score": 0,
+      "color": "#ffffff"
+    }
+  },
+  {
+    "name": "Sebas",
+    "race": "Night Elf",
+    "class": "Druid",
+    "region": "eu",
+    "realm": "Terokkar",
+    "avatar": "https://render.worldofwarcraft.com/eu/character/terokkar/58/182523706-avatar.jpg?alt=/wow/static/images/2d/avatar/4-0.jpg",
+    "link": "https://raider.io/characters/eu/terokkar/Sebas",
+    "guild": {
+      "name": "Ababagalamaga",
+      "realm": "Ravencrest"
+    },
+    "dps": {
+      "score": 0,
+      "color": "#ffffff"
+    },
+    "healer": {
+      "score": 0,
+      "color": "#ffffff"
+    },
+    "tank": {
+      "score": 0,
+      "color": "#ffffff"
+    }
+  }
+]

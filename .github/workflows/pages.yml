@@ -2,7 +2,7 @@ name: Deploy Next.js static export to GitHub Pages
 
 on:
   push:
-    branches: ["main"]
+    branches: ["main", "master"]
   workflow_dispatch:
 
 permissions:
@@ -11,37 +11,85 @@ permissions:
   id-token: write
 
 concurrency:
-  group: pages
+  group: github-pages
   cancel-in-progress: true
 
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      PAGES_BASE_PATH: ${{ vars.PAGES_BASE_PATH }}
+      PAGES_CNAME: ${{ vars.PAGES_CNAME }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Setup Node
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+
+      - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 20
           cache: npm
 
-      - name: Install dependencies
-        run: npm install
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install Python dependencies
+        run: python -m pip install --upgrade pip pyyaml
+
+      - name: Install Node.js dependencies
+        run: npm ci
+
+      - name: Resolve Pages URL settings
+        shell: bash
+        run: |
+          BASE_PATH="${PAGES_BASE_PATH}"
+          REPO_NAME="${GITHUB_REPOSITORY#*/}"
+          OWNER_NAME="${GITHUB_REPOSITORY_OWNER}"
+
+          if [ -n "${PAGES_CNAME}" ]; then
+            BASE_PATH=""
+            SITE_URL="https://${PAGES_CNAME}"
+          else
+            if [ -z "${BASE_PATH}" ]; then
+              if [ "${REPO_NAME}" = "${OWNER_NAME}.github.io" ]; then
+                BASE_PATH=""
+                SITE_URL="https://${REPO_NAME}"
+              else
+                BASE_PATH="/${REPO_NAME}"
+                SITE_URL="https://${OWNER_NAME}.github.io/${REPO_NAME}"
+              fi
+            else
+              BASE_PATH="${BASE_PATH%/}"
+              SITE_URL="https://${OWNER_NAME}.github.io${BASE_PATH}"
+            fi
+          fi
+
+          echo "NEXT_PUBLIC_BASE_PATH=${BASE_PATH}" >> "$GITHUB_ENV"
+          echo "NEXT_PUBLIC_SITE_URL=${SITE_URL%/}" >> "$GITHUB_ENV"
+          echo "Resolved base path: ${BASE_PATH:-/}"
+          echo "Resolved site url: ${SITE_URL%/}"
+
+      - name: Sync content
+        run: npm run content:sync
 
       - name: Build static export
         run: npm run build
-        env:
-          # Для custom domain лиши порожнім: ""
-          # Для repo Pages вкажи шлях типу: /repo-name
-          NEXT_PUBLIC_BASE_PATH: ""
 
-      - name: Setup Pages
-        uses: actions/configure-pages@v5
+      - name: Finalize GitHub Pages artifact
+        shell: bash
+        run: |
+          touch out/.nojekyll
+          if [ -n "${PAGES_CNAME}" ]; then
+            printf '%s\n' "${PAGES_CNAME}" > out/CNAME
+          fi
 
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v4
         with:
           path: ./out
 

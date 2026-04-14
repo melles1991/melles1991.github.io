@@ -1,0 +1,63 @@
+.section-header.is-centered,
+.section-header-compact {
+  margin-bottom: 22px;
+}
+
+.section-subtitle {
+  margin-top: 10px;
+  color: var(--muted);
+  max-width: 760px;
+}
+
+.socials-copy {
+  margin: 12px 0 18px;
+  color: var(--muted);
+  line-height: 1.65;
+}
+
+#characters {
+  display: grid;
+  gap: 14px;
+}
+
+.news-grid-home {
+  margin-top: 8px;
+}
+
+.area.section {
+  margin-top: 24px;
+}
+
+.read-more {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.mod-name {
+  margin: 0;
+}
+
+.mod-categories {
+  margin-top: 6px;
+}
+
+.history-card .empty-state {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.empty-action {
+  margin-top: 18px;
+}
+
+.character .rio-tooltip .tooltip-text {
+  color: currentColor;
+}
+
+@media (max-width: 900px) {
+  .mods-grid {
+    grid-template-columns: 1fr;
+  }
+}
